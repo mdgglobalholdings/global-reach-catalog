@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AProposRouteImport } from './routes/a-propos'
+import { Route as AssistanceVisaRouteImport } from './routes/assistance-visa'
 import { Route as SecteursRouteImport } from './routes/secteurs'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as CatalogueIndexRouteImport } from './routes/catalogue.index'
@@ -24,6 +25,11 @@ const IndexRoute = IndexRouteImport.update({
 const AProposRoute = AProposRouteImport.update({
   id: '/a-propos',
   path: '/a-propos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AssistanceVisaRoute = AssistanceVisaRouteImport.update({
+  id: '/assistance-visa',
+  path: '/assistance-visa',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SecteursRoute = SecteursRouteImport.update({
@@ -50,6 +56,7 @@ const CatalogueSlugRoute = CatalogueSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
+  '/assistance-visa': typeof AssistanceVisaRoute
   '/secteurs': typeof SecteursRoute
   '/services': typeof ServicesRoute
   '/catalogue/$slug': typeof CatalogueSlugRoute
@@ -58,6 +65,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
+  '/assistance-visa': typeof AssistanceVisaRoute
   '/secteurs': typeof SecteursRoute
   '/services': typeof ServicesRoute
   '/catalogue/$slug': typeof CatalogueSlugRoute
@@ -67,6 +75,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
+  '/assistance-visa': typeof AssistanceVisaRoute
   '/secteurs': typeof SecteursRoute
   '/services': typeof ServicesRoute
   '/catalogue/$slug': typeof CatalogueSlugRoute
@@ -77,6 +86,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/a-propos'
+    | '/assistance-visa'
     | '/secteurs'
     | '/services'
     | '/catalogue/$slug'
@@ -85,6 +95,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/a-propos'
+    | '/assistance-visa'
     | '/secteurs'
     | '/services'
     | '/catalogue/$slug'
@@ -93,6 +104,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/a-propos'
+    | '/assistance-visa'
     | '/secteurs'
     | '/services'
     | '/catalogue/$slug'
@@ -102,6 +114,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AProposRoute: typeof AProposRoute
+  AssistanceVisaRoute: typeof AssistanceVisaRoute
   SecteursRoute: typeof SecteursRoute
   ServicesRoute: typeof ServicesRoute
   CatalogueSlugRoute: typeof CatalogueSlugRoute
@@ -122,6 +135,13 @@ declare module '@tanstack/react-router' {
       path: '/a-propos'
       fullPath: '/a-propos'
       preLoaderRoute: typeof AProposRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/assistance-visa': {
+      id: '/assistance-visa'
+      path: '/assistance-visa'
+      fullPath: '/assistance-visa'
+      preLoaderRoute: typeof AssistanceVisaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/secteurs': {
@@ -158,6 +178,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AProposRoute: AProposRoute,
+  AssistanceVisaRoute: AssistanceVisaRoute,
   SecteursRoute: SecteursRoute,
   ServicesRoute: ServicesRoute,
   CatalogueSlugRoute: CatalogueSlugRoute,

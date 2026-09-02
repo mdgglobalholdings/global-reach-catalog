@@ -15,6 +15,7 @@ import { Route as AssistanceVisaRouteImport } from './routes/assistance-visa'
 import { Route as SecteursRouteImport } from './routes/secteurs'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as ActualitesIndexRouteImport } from './routes/actualites.index'
+import { Route as ActualitesSlugRouteImport } from './routes/actualites.$slug'
 import { Route as CatalogueIndexRouteImport } from './routes/catalogue.index'
 import { Route as CatalogueSlugRouteImport } from './routes/catalogue.$slug'
 
@@ -48,6 +49,11 @@ const ActualitesIndexRoute = ActualitesIndexRouteImport.update({
   path: '/actualites/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ActualitesSlugRoute = ActualitesSlugRouteImport.update({
+  id: '/actualites/$slug',
+  path: '/actualites/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CatalogueIndexRoute = CatalogueIndexRouteImport.update({
   id: '/catalogue/',
   path: '/catalogue/',
@@ -65,6 +71,7 @@ export interface FileRoutesByFullPath {
   '/assistance-visa': typeof AssistanceVisaRoute
   '/secteurs': typeof SecteursRoute
   '/services': typeof ServicesRoute
+  '/actualites/$slug': typeof ActualitesSlugRoute
   '/catalogue/$slug': typeof CatalogueSlugRoute
   '/actualites/': typeof ActualitesIndexRoute
   '/catalogue/': typeof CatalogueIndexRoute
@@ -75,6 +82,7 @@ export interface FileRoutesByTo {
   '/assistance-visa': typeof AssistanceVisaRoute
   '/secteurs': typeof SecteursRoute
   '/services': typeof ServicesRoute
+  '/actualites/$slug': typeof ActualitesSlugRoute
   '/catalogue/$slug': typeof CatalogueSlugRoute
   '/actualites': typeof ActualitesIndexRoute
   '/catalogue': typeof CatalogueIndexRoute
@@ -86,6 +94,7 @@ export interface FileRoutesById {
   '/assistance-visa': typeof AssistanceVisaRoute
   '/secteurs': typeof SecteursRoute
   '/services': typeof ServicesRoute
+  '/actualites/$slug': typeof ActualitesSlugRoute
   '/catalogue/$slug': typeof CatalogueSlugRoute
   '/actualites/': typeof ActualitesIndexRoute
   '/catalogue/': typeof CatalogueIndexRoute
@@ -98,6 +107,7 @@ export interface FileRouteTypes {
     | '/assistance-visa'
     | '/secteurs'
     | '/services'
+    | '/actualites/$slug'
     | '/catalogue/$slug'
     | '/actualites/'
     | '/catalogue/'
@@ -108,6 +118,7 @@ export interface FileRouteTypes {
     | '/assistance-visa'
     | '/secteurs'
     | '/services'
+    | '/actualites/$slug'
     | '/catalogue/$slug'
     | '/actualites'
     | '/catalogue'
@@ -118,6 +129,7 @@ export interface FileRouteTypes {
     | '/assistance-visa'
     | '/secteurs'
     | '/services'
+    | '/actualites/$slug'
     | '/catalogue/$slug'
     | '/actualites/'
     | '/catalogue/'
@@ -129,6 +141,7 @@ export interface RootRouteChildren {
   AssistanceVisaRoute: typeof AssistanceVisaRoute
   SecteursRoute: typeof SecteursRoute
   ServicesRoute: typeof ServicesRoute
+  ActualitesSlugRoute: typeof ActualitesSlugRoute
   CatalogueSlugRoute: typeof CatalogueSlugRoute
   ActualitesIndexRoute: typeof ActualitesIndexRoute
   CatalogueIndexRoute: typeof CatalogueIndexRoute
@@ -178,6 +191,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ActualitesIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/actualites/$slug': {
+      id: '/actualites/$slug'
+      path: '/actualites/$slug'
+      fullPath: '/actualites/$slug'
+      preLoaderRoute: typeof ActualitesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/catalogue/': {
       id: '/catalogue/'
       path: '/catalogue'
@@ -201,6 +221,7 @@ const rootRouteChildren: RootRouteChildren = {
   AssistanceVisaRoute: AssistanceVisaRoute,
   SecteursRoute: SecteursRoute,
   ServicesRoute: ServicesRoute,
+  ActualitesSlugRoute: ActualitesSlugRoute,
   CatalogueSlugRoute: CatalogueSlugRoute,
   ActualitesIndexRoute: ActualitesIndexRoute,
   CatalogueIndexRoute: CatalogueIndexRoute,

@@ -17,7 +17,7 @@ type Search = {
 };
 
 export const Route = createFileRoute("/catalogue/")({
-  validateSearch: (search: Record<string, unknown>): Search => ({
+  validateSearch: (search: Partial<Search>): Search => ({
     categorie: typeof search.categorie === "string" ? search.categorie : "",
     q: typeof search.q === "string" ? search.q : "",
     tri: typeof search.tri === "string" ? search.tri : "recent",
@@ -49,11 +49,11 @@ export const Route = createFileRoute("/catalogue/")({
 function CataloguePage() {
   const { categories, products } = Route.useLoaderData();
   const search = Route.useSearch();
-  const navigate = useNavigate({ from: "/catalogue" });
+  const navigate = useNavigate({ from: "/catalogue/" });
 
   const roots = categories.filter((c) => !c.parent_id);
   const update = (patch: Partial<Search>) =>
-    navigate({ search: (prev) => ({ ...prev, ...patch }) });
+    navigate({ search: { ...search, ...patch } });
 
   const selectClass =
     "rounded-md border border-input bg-card px-3 py-2.5 text-sm outline-none focus:border-amber focus:ring-2 focus:ring-amber/30";

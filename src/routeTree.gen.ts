@@ -14,6 +14,7 @@ import { Route as AProposRouteImport } from './routes/a-propos'
 import { Route as AssistanceVisaRouteImport } from './routes/assistance-visa'
 import { Route as SecteursRouteImport } from './routes/secteurs'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as ActualitesIndexRouteImport } from './routes/actualites.index'
 import { Route as CatalogueIndexRouteImport } from './routes/catalogue.index'
 import { Route as CatalogueSlugRouteImport } from './routes/catalogue.$slug'
 
@@ -42,6 +43,11 @@ const ServicesRoute = ServicesRouteImport.update({
   path: '/services',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ActualitesIndexRoute = ActualitesIndexRouteImport.update({
+  id: '/actualites/',
+  path: '/actualites/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CatalogueIndexRoute = CatalogueIndexRouteImport.update({
   id: '/catalogue/',
   path: '/catalogue/',
@@ -60,6 +66,7 @@ export interface FileRoutesByFullPath {
   '/secteurs': typeof SecteursRoute
   '/services': typeof ServicesRoute
   '/catalogue/$slug': typeof CatalogueSlugRoute
+  '/actualites/': typeof ActualitesIndexRoute
   '/catalogue/': typeof CatalogueIndexRoute
 }
 export interface FileRoutesByTo {
@@ -69,6 +76,7 @@ export interface FileRoutesByTo {
   '/secteurs': typeof SecteursRoute
   '/services': typeof ServicesRoute
   '/catalogue/$slug': typeof CatalogueSlugRoute
+  '/actualites': typeof ActualitesIndexRoute
   '/catalogue': typeof CatalogueIndexRoute
 }
 export interface FileRoutesById {
@@ -79,6 +87,7 @@ export interface FileRoutesById {
   '/secteurs': typeof SecteursRoute
   '/services': typeof ServicesRoute
   '/catalogue/$slug': typeof CatalogueSlugRoute
+  '/actualites/': typeof ActualitesIndexRoute
   '/catalogue/': typeof CatalogueIndexRoute
 }
 export interface FileRouteTypes {
@@ -90,6 +99,7 @@ export interface FileRouteTypes {
     | '/secteurs'
     | '/services'
     | '/catalogue/$slug'
+    | '/actualites/'
     | '/catalogue/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -99,6 +109,7 @@ export interface FileRouteTypes {
     | '/secteurs'
     | '/services'
     | '/catalogue/$slug'
+    | '/actualites'
     | '/catalogue'
   id:
     | '__root__'
@@ -108,6 +119,7 @@ export interface FileRouteTypes {
     | '/secteurs'
     | '/services'
     | '/catalogue/$slug'
+    | '/actualites/'
     | '/catalogue/'
   fileRoutesById: FileRoutesById
 }
@@ -118,6 +130,7 @@ export interface RootRouteChildren {
   SecteursRoute: typeof SecteursRoute
   ServicesRoute: typeof ServicesRoute
   CatalogueSlugRoute: typeof CatalogueSlugRoute
+  ActualitesIndexRoute: typeof ActualitesIndexRoute
   CatalogueIndexRoute: typeof CatalogueIndexRoute
 }
 
@@ -158,6 +171,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/actualites/': {
+      id: '/actualites/'
+      path: '/actualites'
+      fullPath: '/actualites/'
+      preLoaderRoute: typeof ActualitesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/catalogue/': {
       id: '/catalogue/'
       path: '/catalogue'
@@ -182,6 +202,7 @@ const rootRouteChildren: RootRouteChildren = {
   SecteursRoute: SecteursRoute,
   ServicesRoute: ServicesRoute,
   CatalogueSlugRoute: CatalogueSlugRoute,
+  ActualitesIndexRoute: ActualitesIndexRoute,
   CatalogueIndexRoute: CatalogueIndexRoute,
 }
 export const routeTree = rootRouteImport

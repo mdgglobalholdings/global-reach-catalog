@@ -30,12 +30,12 @@ export async function fetchCategories(): Promise<Category[]> {
 }
 
 export type ProductQuery = {
-  category?: string;
-  search?: string;
-  availability?: string;
-  sort?: string;
-  featured?: boolean;
-  limit?: number;
+  category?: string | undefined;
+  search?: string | undefined;
+  availability?: string | undefined;
+  sort?: string | undefined;
+  featured?: boolean | undefined;
+  limit?: number | undefined;
 };
 
 export async function fetchProducts(query: ProductQuery): Promise<ProductWithRelations[]> {
@@ -118,10 +118,20 @@ export async function fetchNewsBySlug(slug: string): Promise<NewsItem | null> {
   return data ?? null;
 }
 
-export async function insertQuoteRequest(
-  payload: Database["public"]["Tables"]["quote_requests"]["Insert"],
-) {
-  const { error } = await client().from("quote_requests").insert(payload);
+export async function insertQuoteRequest(payload: {
+  full_name: string;
+  email: string;
+  message: string;
+  company?: string | undefined;
+  phone?: string | undefined;
+  country?: string | undefined;
+  subject?: string | undefined;
+  product_id?: string | undefined;
+  product_name?: string | undefined;
+}) {
+  const { error } = await client()
+    .from("quote_requests")
+    .insert(payload as Database["public"]["Tables"]["quote_requests"]["Insert"]);
   if (error) throw new Error(error.message);
   return { ok: true };
 }

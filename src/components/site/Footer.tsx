@@ -10,7 +10,11 @@ export function Footer() {
           <div className="font-display text-lg text-white">{COMPANY.name}</div>
           <div className="label-mono mt-1 tracking-[0.25em] text-amber">{COMPANY.tagline}</div>
           <div className="mt-4 flex flex-wrap gap-4 font-mono text-[11px] uppercase tracking-[0.15em]">
-            <Link to="/catalogue" className="hover:text-amber">
+            <Link
+              to="/catalogue"
+              search={{ categorie: "", q: "", tri: "recent", dispo: "" }}
+              className="hover:text-amber"
+            >
               Catalogue
             </Link>
             <Link to="/services" className="hover:text-amber">

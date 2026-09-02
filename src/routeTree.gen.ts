@@ -12,8 +12,11 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AProposRouteImport } from './routes/a-propos'
 import { Route as AssistanceVisaRouteImport } from './routes/assistance-visa'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as SecteursRouteImport } from './routes/secteurs'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as ActualitesIndexRouteImport } from './routes/actualites.index'
+import { Route as ActualitesSlugRouteImport } from './routes/actualites.$slug'
 import { Route as CatalogueIndexRouteImport } from './routes/catalogue.index'
 import { Route as CatalogueSlugRouteImport } from './routes/catalogue.$slug'
 
@@ -32,6 +35,11 @@ const AssistanceVisaRoute = AssistanceVisaRouteImport.update({
   path: '/assistance-visa',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SecteursRoute = SecteursRouteImport.update({
   id: '/secteurs',
   path: '/secteurs',
@@ -40,6 +48,16 @@ const SecteursRoute = SecteursRouteImport.update({
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ActualitesIndexRoute = ActualitesIndexRouteImport.update({
+  id: '/actualites/',
+  path: '/actualites/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ActualitesSlugRoute = ActualitesSlugRouteImport.update({
+  id: '/actualites/$slug',
+  path: '/actualites/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CatalogueIndexRoute = CatalogueIndexRouteImport.update({
@@ -57,18 +75,24 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
   '/assistance-visa': typeof AssistanceVisaRoute
+  '/contact': typeof ContactRoute
   '/secteurs': typeof SecteursRoute
   '/services': typeof ServicesRoute
+  '/actualites/$slug': typeof ActualitesSlugRoute
   '/catalogue/$slug': typeof CatalogueSlugRoute
+  '/actualites/': typeof ActualitesIndexRoute
   '/catalogue/': typeof CatalogueIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
   '/assistance-visa': typeof AssistanceVisaRoute
+  '/contact': typeof ContactRoute
   '/secteurs': typeof SecteursRoute
   '/services': typeof ServicesRoute
+  '/actualites/$slug': typeof ActualitesSlugRoute
   '/catalogue/$slug': typeof CatalogueSlugRoute
+  '/actualites': typeof ActualitesIndexRoute
   '/catalogue': typeof CatalogueIndexRoute
 }
 export interface FileRoutesById {
@@ -76,9 +100,12 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
   '/assistance-visa': typeof AssistanceVisaRoute
+  '/contact': typeof ContactRoute
   '/secteurs': typeof SecteursRoute
   '/services': typeof ServicesRoute
+  '/actualites/$slug': typeof ActualitesSlugRoute
   '/catalogue/$slug': typeof CatalogueSlugRoute
+  '/actualites/': typeof ActualitesIndexRoute
   '/catalogue/': typeof CatalogueIndexRoute
 }
 export interface FileRouteTypes {
@@ -87,27 +114,36 @@ export interface FileRouteTypes {
     | '/'
     | '/a-propos'
     | '/assistance-visa'
+    | '/contact'
     | '/secteurs'
     | '/services'
+    | '/actualites/$slug'
     | '/catalogue/$slug'
+    | '/actualites/'
     | '/catalogue/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/a-propos'
     | '/assistance-visa'
+    | '/contact'
     | '/secteurs'
     | '/services'
+    | '/actualites/$slug'
     | '/catalogue/$slug'
+    | '/actualites'
     | '/catalogue'
   id:
     | '__root__'
     | '/'
     | '/a-propos'
     | '/assistance-visa'
+    | '/contact'
     | '/secteurs'
     | '/services'
+    | '/actualites/$slug'
     | '/catalogue/$slug'
+    | '/actualites/'
     | '/catalogue/'
   fileRoutesById: FileRoutesById
 }
@@ -115,9 +151,12 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AProposRoute: typeof AProposRoute
   AssistanceVisaRoute: typeof AssistanceVisaRoute
+  ContactRoute: typeof ContactRoute
   SecteursRoute: typeof SecteursRoute
   ServicesRoute: typeof ServicesRoute
+  ActualitesSlugRoute: typeof ActualitesSlugRoute
   CatalogueSlugRoute: typeof CatalogueSlugRoute
+  ActualitesIndexRoute: typeof ActualitesIndexRoute
   CatalogueIndexRoute: typeof CatalogueIndexRoute
 }
 
@@ -144,6 +183,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AssistanceVisaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/secteurs': {
       id: '/secteurs'
       path: '/secteurs'
@@ -156,6 +202,20 @@ declare module '@tanstack/react-router' {
       path: '/services'
       fullPath: '/services'
       preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/actualites/': {
+      id: '/actualites/'
+      path: '/actualites'
+      fullPath: '/actualites/'
+      preLoaderRoute: typeof ActualitesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/actualites/$slug': {
+      id: '/actualites/$slug'
+      path: '/actualites/$slug'
+      fullPath: '/actualites/$slug'
+      preLoaderRoute: typeof ActualitesSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/catalogue/': {
@@ -179,9 +239,12 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AProposRoute: AProposRoute,
   AssistanceVisaRoute: AssistanceVisaRoute,
+  ContactRoute: ContactRoute,
   SecteursRoute: SecteursRoute,
   ServicesRoute: ServicesRoute,
+  ActualitesSlugRoute: ActualitesSlugRoute,
   CatalogueSlugRoute: CatalogueSlugRoute,
+  ActualitesIndexRoute: ActualitesIndexRoute,
   CatalogueIndexRoute: CatalogueIndexRoute,
 }
 export const routeTree = rootRouteImport

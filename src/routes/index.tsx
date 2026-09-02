@@ -86,6 +86,7 @@ function Home() {
           <div className="mt-9 flex flex-wrap gap-3">
             <Link
               to="/catalogue"
+              search={{ categorie: "", q: "", tri: "recent", dispo: "" }}
               className="pill rounded-md bg-gradient-to-b from-amberhot to-amber px-7 py-3.5 font-bold text-ink ring-1 ring-white/40"
             >
               Voir le catalogue
@@ -177,6 +178,7 @@ function Home() {
           </div>
           <Link
             to="/catalogue"
+            search={{ categorie: "", q: "", tri: "recent", dispo: "" }}
             className="font-mono text-[11px] uppercase tracking-[0.15em] underline decoration-amber decoration-2 underline-offset-4"
           >
             Tout le catalogue

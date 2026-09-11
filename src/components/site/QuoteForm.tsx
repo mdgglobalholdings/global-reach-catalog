@@ -1,6 +1,7 @@
 import { useServerFn } from "@tanstack/react-start";
 import { useState } from "react";
 import { toast } from "sonner";
+import { AlertCircle } from "lucide-react";
 
 import { submitQuoteRequest } from "@/lib/catalog.functions";
 
@@ -10,26 +11,60 @@ type Props = {
   defaultSubject?: string;
 };
 
+type FormErrors = {
+  full_name?: string;
+  email?: string;
+  message?: string;
+};
+
 export function QuoteForm({ productId, productName, defaultSubject }: Props) {
   const submit = useServerFn(submitQuoteRequest);
   const [pending, setPending] = useState(false);
   const [done, setDone] = useState(false);
+  const [errors, setErrors] = useState<FormErrors>({});
 
   async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const form = event.currentTarget;
     const fd = new FormData(form);
+    
+    // Validation client-side
+    const newErrors: FormErrors = {};
+    const full_name = String(fd.get("full_name") ?? "").trim();
+    const email = String(fd.get("email") ?? "").trim();
+    const message = String(fd.get("message") ?? "").trim();
+
+    if (!full_name || full_name.length < 2) {
+      newErrors.full_name = "Le nom complet est requis (minimum 2 caractères)";
+    }
+    
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email || !emailRegex.test(email)) {
+      newErrors.email = "Veuillez entrer une adresse email valide";
+    }
+    
+    if (!message || message.length < 5) {
+      newErrors.message = "La description est requise (minimum 5 caractères)";
+    }
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      toast.error("Veuillez corriger les erreurs du formulaire");
+      return;
+    }
+
+    setErrors({});
     setPending(true);
     try {
       await submit({
         data: {
-          full_name: String(fd.get("full_name") ?? ""),
+          full_name,
           company: String(fd.get("company") ?? "") || undefined,
-          email: String(fd.get("email") ?? ""),
+          email,
           phone: String(fd.get("phone") ?? "") || undefined,
           country: String(fd.get("country") ?? "") || undefined,
           subject: String(fd.get("subject") ?? "") || undefined,
-          message: String(fd.get("message") ?? ""),
+          message,
           product_id: productId,
           product_name: productName,
         },
@@ -79,18 +114,30 @@ export function QuoteForm({ productId, productName, defaultSubject }: Props) {
   }
 
   return (
-    <form onSubmit={onSubmit} className="grid gap-3 rounded-xl bg-card p-5 ring-1 ring-black/5">
+    <form onSubmit={onSubmit} className="grid gap-4 rounded-xl bg-card p-5 ring-1 ring-black/5">
       {productName ? (
         <div className="label-mono rounded-md bg-muted px-3 py-2 text-ink/60">
           Produit concerné : {productName}
         </div>
       ) : null}
-      <div className="grid gap-3 sm:grid-cols-2">
+      
+      <div className="grid gap-4 sm:grid-cols-2">
         <div>
           <label className="label-mono text-ink/50" htmlFor="full_name">
-            Nom complet *
+            Nom complet * {errors.full_name && <span className="text-red-600">*</span>}
           </label>
-          <input id="full_name" name="full_name" required className={`mt-1 ${inputClass}`} />
+          <input 
+            id="full_name" 
+            name="full_name" 
+            required 
+            className={`mt-1 ${inputClass} ${errors.full_name ? "border-red-500 focus:border-red-500 focus:ring-red-500/30" : ""}`}
+            aria-invalid={!!errors.full_name}
+          />
+          {errors.full_name && (
+            <p className="mt-1 flex items-center gap-1 text-xs text-red-600">
+              <AlertCircle className="size-3" /> {errors.full_name}
+            </p>
+          )}
         </div>
         <div>
           <label className="label-mono text-ink/50" htmlFor="company">
@@ -100,9 +147,21 @@ export function QuoteForm({ productId, productName, defaultSubject }: Props) {
         </div>
         <div>
           <label className="label-mono text-ink/50" htmlFor="email">
-            E-mail *
+            E-mail * {errors.email && <span className="text-red-600">*</span>}
           </label>
-          <input id="email" name="email" type="email" required className={`mt-1 ${inputClass}`} />
+          <input 
+            id="email" 
+            name="email" 
+            type="email" 
+            required 
+            className={`mt-1 ${inputClass} ${errors.email ? "border-red-500 focus:border-red-500 focus:ring-red-500/30" : ""}`}
+            aria-invalid={!!errors.email}
+          />
+          {errors.email && (
+            <p className="mt-1 flex items-center gap-1 text-xs text-red-600">
+              <AlertCircle className="size-3" /> {errors.email}
+            </p>
+          )}
         </div>
         <div>
           <label className="label-mono text-ink/50" htmlFor="phone">
@@ -128,9 +187,10 @@ export function QuoteForm({ productId, productName, defaultSubject }: Props) {
           />
         </div>
       </div>
+      
       <div>
         <label className="label-mono text-ink/50" htmlFor="message">
-          Votre besoin *
+          Votre besoin * {errors.message && <span className="text-red-600">*</span>}
         </label>
         <textarea
           id="message"
@@ -138,13 +198,20 @@ export function QuoteForm({ productId, productName, defaultSubject }: Props) {
           required
           rows={5}
           placeholder="Type de matériel, quantité, délai souhaité, destination..."
-          className={`mt-1 ${inputClass}`}
+          className={`mt-1 ${inputClass} ${errors.message ? "border-red-500 focus:border-red-500 focus:ring-red-500/30" : ""}`}
+          aria-invalid={!!errors.message}
         />
+        {errors.message && (
+          <p className="mt-1 flex items-center gap-1 text-xs text-red-600">
+            <AlertCircle className="size-3" /> {errors.message}
+          </p>
+        )}
       </div>
+      
       <button
         type="submit"
         disabled={pending}
-        className="pill mt-1 rounded-md bg-gradient-to-b from-amberhot to-amber px-6 py-3 font-bold text-ink ring-1 ring-white/40 disabled:opacity-60"
+        className="pill mt-2 rounded-md bg-gradient-to-b from-amberhot to-amber px-6 py-3 font-bold text-ink ring-1 ring-white/40 disabled:opacity-60 smooth-transition hover:shadow-lg"
       >
         {pending ? "Envoi..." : "Envoyer la demande"}
       </button>

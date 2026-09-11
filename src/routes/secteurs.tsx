@@ -55,7 +55,7 @@ function SecteursPage() {
                   loading="lazy"
                   width={1000}
                   height={750}
-                  className="aspect-[4/3] w-full object-cover"
+                  className="aspect-[4/3] w-full object-cover transition-transform duration-500 hover:scale-105"
                 />
               </figure>
               <div>
@@ -66,26 +66,31 @@ function SecteursPage() {
                     "Sourcing international, contrôle qualité avant expédition et livraison suivie jusqu'à destination."}
                 </p>
                 {subs.length ? (
-                  <ul className="mt-5 flex flex-wrap gap-2">
-                    {subs.map((s) => (
-                      <li key={s.id}>
-                        <Link
-                          to="/catalogue"
-                          search={{ categorie: s.slug, q: "", tri: "recent", dispo: "" }}
-                          className="inline-block rounded-md bg-muted px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.12em] text-ink/70 hover:bg-chrome"
-                        >
-                          {s.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
+                  <div>
+                    <h3 className="mt-6 font-mono text-[11px] uppercase tracking-[0.15em] text-ink/50">
+                      Sous-catégories
+                    </h3>
+                    <ul className="mt-3 flex flex-wrap gap-2">
+                      {subs.map((s) => (
+                        <li key={s.id}>
+                          <Link
+                            to="/catalogue"
+                            search={{ categorie: s.slug, q: "", tri: "recent", dispo: "" }}
+                            className="inline-block rounded-md bg-gradient-to-b from-amber/20 to-amber/10 px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.12em] text-amber/80 ring-1 ring-amber/20 transition-colors hover:bg-gradient-to-b hover:from-amber/30 hover:to-amber/20 hover:ring-amber/40"
+                          >
+                            {s.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 ) : null}
                 <Link
                   to="/catalogue"
                   search={{ categorie: sector.slug, q: "", tri: "recent", dispo: "" }}
                   className="pill mt-6 inline-block rounded-md bg-gradient-to-b from-amberhot to-amber px-6 py-3 font-bold text-ink ring-1 ring-white/40"
                 >
-                  Voir le catalogue
+                  Voir le catalogue → {subs.length > 0 ? `(${subs.length} catégories)` : ""}
                 </Link>
               </div>
             </article>

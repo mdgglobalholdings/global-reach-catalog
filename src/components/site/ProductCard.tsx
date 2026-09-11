@@ -32,9 +32,9 @@ export function ProductCard({ product }: { product: ProductWithRelations }) {
     <Link
       to="/catalogue/$slug"
       params={{ slug: product.slug }}
-      className="group block overflow-hidden rounded-xl bg-card ring-1 ring-black/5 transition-shadow hover:shadow-lg"
+      className="group block overflow-hidden rounded-xl bg-card ring-1 ring-black/5 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
     >
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden bg-chrome/20">
         {image ? (
           <img
             src={image}
@@ -42,23 +42,33 @@ export function ProductCard({ product }: { product: ProductWithRelations }) {
             loading="lazy"
             width={800}
             height={600}
-            className="aspect-[4/3] w-full object-cover transition-transform duration-300 group-hover:scale-105"
+            className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
         ) : (
           <div className="grid aspect-[4/3] w-full place-items-center bg-chrome label-mono text-ink/30">
-            Photo à venir
+            <div className="text-center">
+              <div className="text-2xl mb-2">📷</div>
+              Photo à venir
+            </div>
           </div>
         )}
         <Badge product={product} />
       </div>
       <div className="p-4">
         <div className="label-mono text-ink/45">{product.brand ?? "MDG"}</div>
-        <div className="font-semibold leading-tight">{product.name}</div>
+        <h3 className="mt-1 font-semibold leading-tight line-clamp-2 text-ink group-hover:text-amberhot transition-colors">
+          {product.name}
+        </h3>
+        {product.year && (
+          <div className="label-mono mt-2 text-ink/40">Année : {product.year}</div>
+        )}
         <div className="mt-3 flex items-center justify-between">
-          <span className="font-mono text-[11px] text-ink/60">
+          <span className="font-mono text-[11px] text-ink/60 font-semibold">
             {product.price_text?.trim() ? product.price_text : "Sur demande"}
           </span>
-          <span className="text-sm font-semibold text-amberhot">Devis →</span>
+          <span className="text-sm font-semibold text-amberhot smooth-transition group-hover:translate-x-1">
+            Voir → 
+          </span>
         </div>
       </div>
     </Link>

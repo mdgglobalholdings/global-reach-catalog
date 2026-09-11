@@ -106,60 +106,86 @@ function Home() {
     <main>
 
       {/* ═══ HERO ═══ */}
-      <section className="relative isolate overflow-hidden" style={{ minHeight: "92vh" }}>
-        {/* Image de fond plein écran très visible */}
+      <section className="relative isolate overflow-hidden" style={{ minHeight: "88vh" }}>
+        {/* Image plein écran très visible */}
         <img
           src="/images/hero-port.jpg"
           alt="Commerce international MDG GLOBAL HOLDINGS"
           className="absolute inset-0 size-full object-cover object-center"
         />
-        {/* Overlay uniquement à gauche pour lisibilité du texte */}
+
+        {/* Overlay uniquement sur la moitié gauche — dégradé horizontal */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(90deg, rgba(2,24,7,0.88) 0%, rgba(2,24,7,0.72) 45%, rgba(2,24,7,0.15) 75%, rgba(2,24,7,0.0) 100%)",
+              "linear-gradient(90deg, rgba(2,24,7,0.95) 0%, rgba(2,24,7,0.90) 25%, rgba(2,24,7,0.65) 48%, rgba(2,24,7,0.0) 70%)",
           }}
         />
+
         {/* Liseré or en haut */}
-        <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-or-prestige via-or-lumiere to-or-prestige" />
+        <div className="absolute top-0 left-0 right-0 h-0.5" style={{ background: "linear-gradient(90deg, #BF9128, #F2DE83, #BF9128)" }} />
 
-        {/* Contenu aligné à gauche, en bas */}
-        <div className="relative flex h-full min-h-[92vh] flex-col justify-end pb-16 mx-auto max-w-[1280px] px-5">
+        {/* Contenu — aligné verticalement au centre */}
+        <div className="relative flex min-h-[88vh] items-center">
+          <div className="mx-auto w-full max-w-[1280px] px-5 py-16">
+            <div className="max-w-[480px]">
 
-          {/* Badge */}
-          <div className="rise mb-4 flex items-center gap-3">
-            <div className="h-0.5 w-8" style={{ background: "linear-gradient(90deg, #BF9128, #E8BD48)" }} />
-            <span className="label-mono font-bold tracking-[0.35em] text-or-lumiere">MDG GLOBAL HOLDINGS</span>
-          </div>
+              {/* Badge MDG */}
+              <div className="rise mb-5 flex items-center gap-3">
+                <div className="h-0.5 w-8" style={{ background: "linear-gradient(90deg, #BF9128, #F2DE83)" }} />
+                <span className="font-mono text-[11px] font-bold uppercase tracking-[0.35em] text-or-lumiere">
+                  MDG GLOBAL HOLDINGS
+                </span>
+              </div>
 
-          {/* Titre massif — sur 3 lignes comme dans l'image */}
-          <h1 className="rise text-white uppercase leading-[0.9]" style={{ fontSize: "clamp(3rem, 9vw, 7rem)", fontFamily: "Montserrat, sans-serif", fontWeight: 900 }}>
-            L'excellence<br />
-            <span style={{ background: "linear-gradient(135deg, #694A0C 0%, #BF9128 30%, #F2DE83 55%, #E8BD48 75%, #694A0C 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
-              au-delà des
-            </span><br />
-            frontières
-          </h1>
+              {/* Titre — 3 lignes comme sur la capture */}
+              <h1
+                className="rise uppercase leading-[0.92] text-white"
+                style={{
+                  fontFamily: "Montserrat, sans-serif",
+                  fontWeight: 900,
+                  fontSize: "clamp(2.8rem, 7vw, 5.5rem)",
+                }}
+              >
+                L'excellence<br />
+                <span
+                  style={{
+                    background: "linear-gradient(135deg, #694A0C 0%, #BF9128 25%, #F2DE83 50%, #E8BD48 75%, #694A0C 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                  }}
+                >
+                  au-delà des
+                </span><br />
+                frontières
+              </h1>
 
-          {/* Sous-titre */}
-          <p className="rise mt-5 max-w-[42ch] text-white/80 leading-relaxed" style={{ fontSize: "clamp(0.9rem, 1.8vw, 1.1rem)" }}>
-            Un groupe international au service du commerce,<br className="hidden sm:block" />
-            de la logistique et du développement de projets.
-          </p>
+              {/* Sous-titre */}
+              <p className="rise mt-6 text-white/90 leading-relaxed" style={{ fontSize: "clamp(0.9rem, 1.6vw, 1.05rem)" }}>
+                Un groupe international au service du commerce,<br />
+                de la logistique et du développement de projets.
+              </p>
 
-          {/* Boutons */}
-          <div className="rise mt-8 flex flex-wrap gap-4">
-            <Link to="/activites" className="btn-gold rounded-md flex items-center gap-2">
-              Découvrir nos activités <span>→</span>
-            </Link>
-            <Link
-              to="/contact"
-              className="rounded-md px-8 py-3.5 font-mono text-[11px] uppercase tracking-[0.18em] text-white smooth-transition"
-              style={{ border: "2px solid rgba(255,255,255,0.45)", background: "rgba(255,255,255,0.06)", backdropFilter: "blur(4px)" }}
-            >
-              Demander un devis
-            </Link>
+              {/* Boutons */}
+              <div className="rise mt-8 flex flex-wrap gap-4">
+                <Link
+                  to="/activites"
+                  className="inline-flex items-center gap-2 rounded-md px-7 py-3.5 font-mono text-[11px] font-bold uppercase tracking-[0.18em] text-noir smooth-transition hover:shadow-lg hover:-translate-y-0.5"
+                  style={{ background: "linear-gradient(135deg, #694A0C 0%, #BF9128 30%, #F2DE83 55%, #E8BD48 75%, #694A0C 100%)" }}
+                >
+                  Découvrir nos activités →
+                </Link>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center rounded-md px-7 py-3.5 font-mono text-[11px] font-bold uppercase tracking-[0.18em] text-white smooth-transition hover:bg-white/10"
+                  style={{ border: "2px solid rgba(255,255,255,0.5)", background: "rgba(255,255,255,0.05)", backdropFilter: "blur(4px)" }}
+                >
+                  Demander un devis
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>

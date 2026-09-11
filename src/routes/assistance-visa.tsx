@@ -42,7 +42,7 @@ function VisaPage() {
         <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-or-prestige to-transparent" />
         <div className="mx-auto max-w-[1280px] px-4 sm:px-6 py-12 sm:py-16">
           <p className="text-base sm:text-lg font-bold uppercase tracking-widest text-or-prestige">Mobilité & Assistance Visa</p>
-          <h1 className="mt-4 max-w-[18ch] text-3xl sm:text-xl sm:text-2xl font-bold uppercase leading-snug text-noir">
+          <h1 className="mt-2 text-lg sm:text-xl font-bold uppercase leading-none text-noir whitespace-nowrap overflow-hidden text-ellipsis">
             Voyagez sans blocage administratif
           </h1>
           <p className="mt-4 max-w-[58ch] text-noir/65 leading-relaxed text-sm sm:text-base">
@@ -55,7 +55,7 @@ function VisaPage() {
       {/* Processus */}
       <section className="py-20" style={{ backgroundColor: "#f5f5ee" }}>
         <div className="mx-auto max-w-[1280px] px-4 sm:px-6">
-          <div className="eyebrow text-or-prestige">Notre processus</div>
+          <p className="text-base sm:text-lg font-bold uppercase tracking-widest text-or-prestige">Notre processus</p>
           <h2 className="mt-4 text-xl sm:text-2xl lg:text-3xl font-bold uppercase text-noir">Quatre étapes</h2>
           <div className="mt-10 grid gap-4 grid-cols-2 md:grid-cols-4">
             {STEPS.map((s) => (
@@ -73,7 +73,7 @@ function VisaPage() {
       <section className="py-20" style={{ backgroundColor: "#eeeee6" }}>
         <div className="mx-auto max-w-[1280px] grid gap-10 px-5 lg:grid-cols-[1fr_1.2fr]">
           <div>
-            <div className="eyebrow text-or-prestige">Nos prestations</div>
+            <p className="text-base sm:text-lg font-bold uppercase tracking-widest text-or-prestige">Nos prestations</p>
             <h2 className="mt-4 text-xl sm:text-2xl lg:text-3xl font-bold uppercase text-noir">Ce que nous prenons en charge</h2>
             <ul className="mt-6 space-y-3">
               {SERVICES.map((s) => (

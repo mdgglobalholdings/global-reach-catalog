@@ -65,36 +65,46 @@ function Home() {
     <main>
 
       {/* ═══ HERO ═══ */}
-      <section className="relative isolate min-h-[100svh] flex items-center overflow-hidden">
-        {/* Image de fond port/conteneurs */}
+      <section className="relative isolate overflow-hidden" style={{ minHeight: "92vh" }}>
+        {/* Image de fond plein écran très visible */}
         <img
           src="/images/hero-port.jpg"
           alt="Commerce international MDG GLOBAL HOLDINGS"
-          className="absolute inset-0 size-full object-cover"
+          className="absolute inset-0 size-full object-cover object-center"
         />
-        {/* Overlay sombre premium */}
-        <div className="absolute inset-0" style={{ background: "linear-gradient(100deg, rgba(2,24,7,0.92) 40%, rgba(2,24,7,0.6) 100%)" }} />
+        {/* Overlay uniquement à gauche pour lisibilité du texte */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(90deg, rgba(2,24,7,0.88) 0%, rgba(2,24,7,0.72) 45%, rgba(2,24,7,0.15) 75%, rgba(2,24,7,0.0) 100%)",
+          }}
+        />
         {/* Liseré or en haut */}
-        <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-or-prestige to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-or-prestige via-or-lumiere to-or-prestige" />
 
-        <div className="relative mx-auto w-full max-w-[1280px] px-5 py-20">
+        {/* Contenu aligné à gauche, en bas */}
+        <div className="relative flex h-full min-h-[92vh] flex-col justify-end pb-16 mx-auto max-w-[1280px] px-5">
 
           {/* Badge */}
-          <div className="rise mb-5 inline-flex items-center gap-2">
-            <div className="h-0.5 w-8 bg-gradient-to-r from-or-prestige to-or-lumiere" />
-            <span className="label-mono text-or-lumiere font-semibold tracking-[0.3em]">MDG GLOBAL HOLDINGS</span>
+          <div className="rise mb-4 flex items-center gap-3">
+            <div className="h-0.5 w-8" style={{ background: "linear-gradient(90deg, #BF9128, #E8BD48)" }} />
+            <span className="label-mono font-bold tracking-[0.35em] text-or-lumiere">MDG GLOBAL HOLDINGS</span>
           </div>
 
-          {/* Titre */}
-          <h1 className="rise max-w-[14ch] text-[clamp(2.8rem,8vw,6.5rem)] uppercase leading-[0.88] text-white">
+          {/* Titre massif — sur 3 lignes comme dans l'image */}
+          <h1 className="rise text-white uppercase leading-[0.9]" style={{ fontSize: "clamp(3rem, 9vw, 7rem)", fontFamily: "Montserrat, sans-serif", fontWeight: 900 }}>
             L'excellence<br />
-            <span className="text-gold">au-delà des</span><br />
+            <span style={{ background: "linear-gradient(135deg, #694A0C 0%, #BF9128 30%, #F2DE83 55%, #E8BD48 75%, #694A0C 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
+              au-delà des
+            </span><br />
             frontières
           </h1>
 
           {/* Sous-titre */}
-          <p className="rise mt-6 max-w-[44ch] text-white/80 leading-relaxed text-base md:text-lg">
-            Un groupe international au service du commerce, de la logistique et du développement de projets.
+          <p className="rise mt-5 max-w-[42ch] text-white/80 leading-relaxed" style={{ fontSize: "clamp(0.9rem, 1.8vw, 1.1rem)" }}>
+            Un groupe international au service du commerce,<br className="hidden sm:block" />
+            de la logistique et du développement de projets.
           </p>
 
           {/* Boutons */}
@@ -104,7 +114,8 @@ function Home() {
             </Link>
             <Link
               to="/contact"
-              className="rounded-md border-2 border-white/40 bg-white/5 px-8 py-3.5 font-mono text-[11px] uppercase tracking-[0.18em] text-white backdrop-blur-sm smooth-transition hover:border-or-prestige hover:bg-or-prestige/10"
+              className="rounded-md px-8 py-3.5 font-mono text-[11px] uppercase tracking-[0.18em] text-white smooth-transition"
+              style={{ border: "2px solid rgba(255,255,255,0.45)", background: "rgba(255,255,255,0.06)", backdropFilter: "blur(4px)" }}
             >
               Demander un devis
             </Link>

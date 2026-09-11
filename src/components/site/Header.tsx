@@ -16,7 +16,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-40 bg-ivoire border-b border-or-prestige/25 shadow-sm" style={{ borderBottomColor: "rgba(2,24,7,0.15)" }}>
+    <nav className="sticky top-0 z-40 border-b border-or-prestige/20" style={{ backgroundColor: "#021807" }}>
       {/* Liseré or en haut */}
       <div className="h-0.5 bg-gradient-to-r from-transparent via-or-prestige to-transparent" />
 
@@ -30,7 +30,7 @@ export function Header() {
             className="h-12 w-12 rounded-full object-cover ring-2 ring-or-prestige/50 shadow-sm"
           />
           <div className="hidden sm:block leading-none">
-            <div className="font-display text-base tracking-widest text-noir sm:text-lg">
+            <div className="font-display text-base tracking-widest text-white sm:text-lg">
               {COMPANY.name}
             </div>
             <div className="label-mono mt-1 tracking-[0.28em] text-or-prestige font-bold">
@@ -40,14 +40,14 @@ export function Header() {
         </Link>
 
         {/* Navigation desktop */}
-        <div className="hidden items-center gap-5 font-mono text-[10px] uppercase tracking-[0.18em] text-noir/60 xl:flex">
+        <div className="hidden items-center gap-5 font-mono text-[10px] uppercase tracking-[0.18em] text-ivoire/70 xl:flex">
           {NAV.map((item) => (
             <Link
               key={item.to}
               to={item.to}
               {...('search' in item ? { search: item.search } : {})}
-              className="smooth-transition hover:text-or-prestige relative group"
-              activeProps={{ className: "text-or-prestige font-semibold" }}
+              className="smooth-transition hover:text-or-lumiere relative group"
+              activeProps={{ className: "text-or-lumiere font-semibold" }}
             >
               {item.label}
               <span className="absolute -bottom-1 left-0 h-px w-0 bg-gradient-to-r from-or-prestige to-or-lumiere smooth-transition group-hover:w-full" />
@@ -61,7 +61,7 @@ export function Header() {
             href={whatsappLink("Bonjour MDG GLOBAL HOLDINGS, je souhaite des informations.")}
             target="_blank"
             rel="noreferrer"
-            className="hidden items-center gap-2 rounded-md border border-or-prestige/40 bg-or-prestige/5 px-3 py-2 font-mono text-[10px] uppercase tracking-[0.15em] text-or-prestige smooth-transition hover:bg-or-prestige/10 hover:border-or-prestige lg:flex"
+            className="hidden items-center gap-2 rounded-md border border-or-prestige/40 bg-or-prestige/10 px-3 py-2 font-mono text-[10px] uppercase tracking-[0.15em] text-or-lumiere smooth-transition hover:bg-or-prestige/20 hover:border-or-lumiere lg:flex"
           >
             WhatsApp
           </a>
@@ -73,7 +73,7 @@ export function Header() {
             onClick={() => setOpen((v) => !v)}
             aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
             aria-expanded={open}
-            className="grid size-10 place-items-center rounded-md border border-or-prestige/30 text-noir smooth-transition hover:border-or-prestige xl:hidden"
+            className="grid size-10 place-items-center rounded-md border border-or-prestige/30 text-white smooth-transition hover:border-or-prestige xl:hidden"
           >
             {open ? <X className="size-5" /> : <Menu className="size-5" />}
           </button>
@@ -82,7 +82,7 @@ export function Header() {
 
       {/* Menu mobile */}
       {open && (
-        <div className="border-t border-or-prestige/20 bg-ivoire xl:hidden">
+        <div className="border-t border-or-prestige/20 xl:hidden" style={{ backgroundColor: "#021807" }}>
           <div className="mx-auto grid max-w-[1280px] gap-1 px-5 py-4">
             {NAV.map((item) => (
               <Link
@@ -90,7 +90,7 @@ export function Header() {
                 to={item.to}
                 {...('search' in item ? { search: item.search } : {})}
                 onClick={() => setOpen(false)}
-                className="flex items-center justify-between rounded-md px-3 py-3 font-mono text-[11px] uppercase tracking-[0.18em] text-noir/70 smooth-transition hover:bg-or-prestige/5 hover:text-or-prestige"
+                className="flex items-center justify-between rounded-md px-3 py-3 font-mono text-[11px] uppercase tracking-[0.18em] text-ivoire/70 smooth-transition hover:bg-or-prestige/10 hover:text-or-lumiere"
                 activeProps={{ className: "text-or-prestige bg-or-prestige/5" }}
               >
                 {item.label}

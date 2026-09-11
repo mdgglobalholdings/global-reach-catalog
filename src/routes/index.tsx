@@ -235,6 +235,52 @@ function Home() {
         </section>
       ) : null}
 
+      {/* FAQ */}
+      <section className="mx-auto max-w-[1200px] px-5 py-20">
+        <div className="text-center">
+          <div className="eyebrow text-amberhot">Questions fréquentes</div>
+          <h2 className="mt-3 text-4xl uppercase">Tout ce que vous devez savoir</h2>
+        </div>
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
+          <div className="rounded-xl bg-card p-6 ring-1 ring-black/5">
+            <h3 className="text-lg uppercase font-semibold">Quels sont les délais de livraison ?</h3>
+            <p className="mt-3 text-sm text-muted-foreground">
+              Nous proposons un devis détaillé sous 24h ouvrées. Les délais de livraison dépendent
+              de votre localisation et du type de fret (maritime, aérien ou terrestre).
+            </p>
+          </div>
+          <div className="rounded-xl bg-card p-6 ring-1 ring-black/5">
+            <h3 className="text-lg uppercase font-semibold">Acceptez-vous les petites commandes ?</h3>
+            <p className="mt-3 text-sm text-muted-foreground">
+              Oui ! Nous traitons aussi bien les commandes unitaires que les gros volumes. Chaque
+              demande est étudié individuellement pour vous proposer la meilleure offre.
+            </p>
+          </div>
+          <div className="rounded-xl bg-card p-6 ring-1 ring-black/5">
+            <h3 className="text-lg uppercase font-semibold">Quel est votre coût de sourcing ?</h3>
+            <p className="mt-3 text-sm text-muted-foreground">
+              Pas de frais de sourcing. Nos tarifs incluent la recherche de fournisseurs, le contrôle
+              qualité et la logistique. Transparence garantie.
+            </p>
+          </div>
+          <div className="rounded-xl bg-card p-6 ring-1 ring-black/5">
+            <h3 className="text-lg uppercase font-semibold">Possibilité de paiement à crédit ?</h3>
+            <p className="mt-3 text-sm text-muted-foreground">
+              Contactez-nous directement pour discuter des conditions de paiement adaptées à votre
+              situation. Nous étudions chaque dossier.
+            </p>
+          </div>
+        </div>
+        <div className="mt-10 text-center">
+          <Link
+            to="/contact"
+            className="pill rounded-md bg-gradient-to-b from-amberhot to-amber px-6 py-3 font-bold text-ink ring-1 ring-white/40"
+          >
+            D'autres questions ? Contactez-nous
+          </Link>
+        </div>
+      </section>
+
       {/* CTA Contact */}
       <section className="bg-gradient-to-r from-ink to-navy py-16 text-white">
         <div className="mx-auto max-w-[1200px] px-5 text-center">

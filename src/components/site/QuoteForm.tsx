@@ -49,19 +49,31 @@ export function QuoteForm({ productId, productName, defaultSubject }: Props) {
 
   if (done) {
     return (
-      <div className="rounded-xl bg-card p-6 ring-1 ring-black/5">
-        <div className="eyebrow text-amberhot">Merci</div>
-        <p className="mt-3 text-sm text-muted-foreground">
-          Votre demande est bien enregistrée. Notre équipe commerciale vous répond sous 24 heures
-          ouvrées avec les disponibilités et une offre adaptée.
-        </p>
-        <button
-          type="button"
-          onClick={() => setDone(false)}
-          className="mt-4 font-mono text-[11px] uppercase tracking-[0.15em] text-ink underline decoration-amber decoration-2 underline-offset-4"
-        >
-          Envoyer une autre demande
-        </button>
+      <div className="rounded-xl bg-gradient-to-br from-emerald-50 to-teal-50 p-6 ring-1 ring-emerald-200/50">
+        <div className="flex items-start gap-3">
+          <div className="mt-0.5 rounded-full bg-emerald-100 p-1">
+            <svg className="size-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <div>
+            <h3 className="font-semibold text-emerald-900">Demande reçue</h3>
+            <p className="mt-2 text-sm text-emerald-700">
+              Merci ! Votre demande est bien enregistrée. Notre équipe commerciale vous répond sous 24 heures
+              ouvrées avec les disponibilités et une offre détaillée.
+            </p>
+            <p className="mt-3 text-xs text-emerald-600">
+              📧 Vérifiez votre boîte email (et spam) | 💬 Vous pouvez aussi nous contacter par WhatsApp
+            </p>
+            <button
+              type="button"
+              onClick={() => setDone(false)}
+              className="mt-4 font-mono text-[11px] uppercase tracking-[0.15em] text-emerald-700 underline decoration-emerald-400 decoration-2 underline-offset-4 hover:text-emerald-900"
+            >
+              ← Envoyer une autre demande
+            </button>
+          </div>
+        </div>
       </div>
     );
   }

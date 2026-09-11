@@ -104,6 +104,44 @@ function AboutPage() {
         </div>
       </section>
 
+      {/* Zones géographiques */}
+      <section className="mx-auto max-w-[1200px] px-5 py-16">
+        <div className="eyebrow text-amberhot">Présence mondiale</div>
+        <h2 className="mt-3 text-3xl uppercase">Nos zones d'intervention</h2>
+        <div className="mt-10 grid gap-5 md:grid-cols-3">
+          <div className="rounded-xl bg-card p-6 ring-1 ring-black/5">
+            <div className="h-1 w-10 rounded bg-gradient-to-r from-amberhot to-amber" />
+            <h3 className="mt-5 text-xl uppercase">Afrique de l'Ouest</h3>
+            <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+              <li>• Siège social : Ouagadougou, Burkina Faso</li>
+              <li>• Marché prioritaire : Pays du Sahel</li>
+              <li>• Livraison directe garantie</li>
+              <li>• Équipe de suivi local 24/7</li>
+            </ul>
+          </div>
+          <div className="rounded-xl bg-card p-6 ring-1 ring-black/5">
+            <div className="h-1 w-10 rounded bg-gradient-to-r from-amberhot to-amber" />
+            <h3 className="mt-5 text-xl uppercase">Asie (sourcing)</h3>
+            <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+              <li>• Relais permanent en Chine</li>
+              <li>• Accès à 500+ fournisseurs</li>
+              <li>• Contrôle qualité avant expédition</li>
+              <li>• Négociation de prix optimisée</li>
+            </ul>
+          </div>
+          <div className="rounded-xl bg-card p-6 ring-1 ring-black/5">
+            <div className="h-1 w-10 rounded bg-gradient-to-r from-amberhot to-amber" />
+            <h3 className="mt-5 text-xl uppercase">Europe & Moyen-Orient</h3>
+            <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+              <li>• Sourcing en Allemagne, France</li>
+              <li>• Équipements certifiés Europe</li>
+              <li>• Marché Dubaï et Émirats</li>
+              <li>• Partenaires logistiques fiables</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <CtaBand title="Travaillons ensemble" />
     </main>
   );

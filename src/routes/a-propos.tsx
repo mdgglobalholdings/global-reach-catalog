@@ -40,23 +40,23 @@ function AboutPage() {
       </section>
 
       {/* Présentation principale */}
-      <section className="bg-noir py-20">
+      <section className="bg-paper py-20">
         <div className="mx-auto max-w-[1280px] px-5 grid gap-12 lg:grid-cols-2 items-center">
           <div>
             <div className="gold-line" />
             <h2 className="mt-6 text-3xl uppercase">Qui sommes-nous ?</h2>
-            <p className="mt-5 text-white/80 leading-relaxed">
+            <p className="mt-5 text-muted-foreground leading-relaxed">
               MDG GLOBAL HOLDINGS est un groupe diversifié à vocation internationale qui développe
               des activités dans le commerce international, la logistique, le négoce, les véhicules
               et équipements, la mobilité, l'agriculture, l'élevage ainsi que l'hôtellerie et la
               restauration.
             </p>
-            <p className="mt-4 text-white/80 leading-relaxed">
+            <p className="mt-4 text-muted-foreground leading-relaxed">
               Notre ambition est de créer des connexions fiables entre les marchés africains et les
               opportunités internationales — en proposant des solutions adaptées, un accompagnement
               rigoureux et un réseau de partenaires de confiance.
             </p>
-            <p className="mt-4 text-white/80 leading-relaxed">
+            <p className="mt-4 text-muted-foreground leading-relaxed">
               Grâce à notre présence à Ouagadougou et notre relais permanent en Chine pour le
               sourcing et le contrôle qualité, nous sommes en mesure de répondre à des demandes
               variées dans des délais compétitifs.
@@ -100,7 +100,7 @@ function AboutPage() {
       </section>
 
       {/* Valeurs */}
-      <section className="bg-noir py-20">
+      <section className="bg-paper py-20">
         <div className="mx-auto max-w-[1280px] px-5">
           <div className="text-center">
             <div className="eyebrow text-or-prestige">Nos valeurs</div>
@@ -108,10 +108,10 @@ function AboutPage() {
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {VALUES.map((v) => (
-              <div key={v.title} className="group rounded-xl border border-or-prestige/10 bg-emeraude/10 border border-or-prestige/15 p-7 smooth-transition hover:border-or-prestige/50">
+              <div key={v.title} className="group rounded-xl border border-or-prestige/10 bg-card p-7 ring-1 ring-black/5 smooth-transition hover:border-or-prestige/50">
                 <div className="gold-line" />
                 <h3 className="mt-6 text-xl uppercase">{v.title}</h3>
-                <p className="mt-3 text-sm text-white/80 leading-relaxed">{v.text}</p>
+                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{v.text}</p>
               </div>
             ))}
           </div>

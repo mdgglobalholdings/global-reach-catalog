@@ -61,7 +61,7 @@ function SecteursPage() {
               <div>
                 <div className="eyebrow text-amberhot">{sector.sub}</div>
                 <h2 className="mt-3 text-3xl uppercase">{sector.name}</h2>
-                <p className="mt-4 text-white/70">
+                <p className="mt-4 text-muted-foreground">
                   {root?.description ??
                     "Sourcing international, contrôle qualité avant expédition et livraison suivie jusqu'à destination."}
                 </p>

@@ -62,13 +62,13 @@ function NewsPage() {
                     {new Date(n.published_at).toLocaleDateString("fr-FR")}
                   </div>
                   <h2 className="mt-3 text-lg uppercase leading-tight">{n.title}</h2>
-                  <p className="mt-2 line-clamp-3 text-sm text-white/70">{n.excerpt}</p>
+                  <p className="mt-2 line-clamp-3 text-sm text-muted-foreground">{n.excerpt}</p>
                 </div>
               </Link>
             ))}
           </div>
         ) : (
-          <p className="text-white/70">Aucune actualité pour le moment.</p>
+          <p className="text-muted-foreground">Aucune actualité pour le moment.</p>
         )}
       </section>
 

@@ -145,7 +145,7 @@ function Home() {
                 <div className="gold-line" />
                 <h3 className="mt-5 text-xl font-bold uppercase text-white">{pole.title}</h3>
                 <p className="label-mono mt-1 text-or-prestige/70">{pole.subtitle}</p>
-                <p className="mt-4 text-sm text-white/70 leading-relaxed">{pole.description}</p>
+                <p className="mt-4 text-sm text-muted-foreground leading-relaxed">{pole.description}</p>
                 <div className="mt-5 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.15em] text-or-lumiere smooth-transition group-hover:gap-3">
                   En savoir plus <span>→</span>
                 </div>
@@ -167,7 +167,7 @@ function Home() {
               <div key={v.title} className="bg-noir px-6 py-10 smooth-transition hover:bg-emeraude/40">
                 <div className="gold-line" />
                 <h3 className="mt-6 text-xl font-bold uppercase text-or-lumiere">{v.title}</h3>
-                <p className="mt-3 text-sm text-white/70 leading-relaxed">{v.text}</p>
+                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{v.text}</p>
               </div>
             ))}
           </div>

@@ -31,7 +31,7 @@ export function ProductCard({ product }: { product: ProductWithRelations }) {
     <Link
       to="/catalogue/$slug"
       params={{ slug: product.slug }}
-      className="group block overflow-hidden rounded-xl bg-emeraude/10 border border-or-prestige/15 smooth-transition hover:shadow-2xl hover:-translate-y-2 hover:border-or-prestige/50"
+      className="group block overflow-hidden rounded-xl bg-card ring-1 ring-black/5 smooth-transition hover:shadow-2xl hover:-translate-y-2 hover:ring-or-prestige/20"
     >
       <div className="relative overflow-hidden bg-muted">
         {image ? (
@@ -55,14 +55,14 @@ export function ProductCard({ product }: { product: ProductWithRelations }) {
       </div>
       <div className="p-5">
         <div className="label-mono text-or-prestige/60">{product.brand ?? "MDG GLOBAL"}</div>
-        <h3 className="mt-1.5 font-semibold leading-snug line-clamp-2 smooth-transition text-white group-hover:text-or-lumiere">
+        <h3 className="mt-1.5 font-semibold leading-snug line-clamp-2 smooth-transition group-hover:text-or-prestige">
           {product.name}
         </h3>
         {product.year && (
           <div className="label-mono mt-2 text-foreground/35">Année {product.year}</div>
         )}
-        <div className="mt-4 flex items-center justify-between border-t border-or-prestige/15 pt-3">
-          <span className="font-mono text-[11px] text-white/60 font-medium">
+        <div className="mt-4 flex items-center justify-between border-t border-black/5 pt-3">
+          <span className="font-mono text-[11px] text-foreground/50 font-medium">
             {product.price_text?.trim() ? product.price_text : "Prix sur demande"}
           </span>
           <span className="font-mono text-[10px] font-bold uppercase tracking-[0.15em] text-or-prestige smooth-transition group-hover:tracking-[0.25em]">

@@ -80,7 +80,7 @@ export function QuoteForm({ productId, productName, defaultSubject }: Props) {
   }
 
   const inputClass =
-    "w-full rounded-md border border-or-prestige/20 bg-noir px-3 py-2.5 text-sm text-white placeholder:text-white/40 outline-none focus:border-or-lumiere focus:ring-2 focus:ring-or-prestige/30";
+    "w-full rounded-md border border-input bg-card px-3 py-2.5 text-sm outline-none focus:border-or-prestige focus:ring-2 focus:ring-or-prestige/30";
 
   if (done) {
     return (
@@ -114,16 +114,16 @@ export function QuoteForm({ productId, productName, defaultSubject }: Props) {
   }
 
   return (
-    <form onSubmit={onSubmit} className="grid gap-4 rounded-xl bg-emeraude/10 border border-or-prestige/20 p-5">
+    <form onSubmit={onSubmit} className="grid gap-4 rounded-xl bg-card p-5 ring-1 ring-black/5">
       {productName ? (
-        <div className="label-mono rounded-md bg-noir/60 border border-or-prestige/15 px-3 py-2 text-or-lumiere/70">
+        <div className="label-mono rounded-md bg-muted px-3 py-2 text-ink/60">
           Produit concerné : {productName}
         </div>
       ) : null}
       
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
-          <label className="label-mono text-white/70" htmlFor="full_name">
+          <label className="label-mono text-ink/50" htmlFor="full_name">
             Nom complet * {errors.full_name && <span className="text-red-600">*</span>}
           </label>
           <input 
@@ -140,13 +140,13 @@ export function QuoteForm({ productId, productName, defaultSubject }: Props) {
           )}
         </div>
         <div>
-          <label className="label-mono text-white/70" htmlFor="company">
+          <label className="label-mono text-ink/50" htmlFor="company">
             Société
           </label>
           <input id="company" name="company" className={`mt-1 ${inputClass}`} />
         </div>
         <div>
-          <label className="label-mono text-white/70" htmlFor="email">
+          <label className="label-mono text-ink/50" htmlFor="email">
             E-mail * {errors.email && <span className="text-red-600">*</span>}
           </label>
           <input 
@@ -164,19 +164,19 @@ export function QuoteForm({ productId, productName, defaultSubject }: Props) {
           )}
         </div>
         <div>
-          <label className="label-mono text-white/70" htmlFor="phone">
+          <label className="label-mono text-ink/50" htmlFor="phone">
             Téléphone / WhatsApp
           </label>
           <input id="phone" name="phone" className={`mt-1 ${inputClass}`} />
         </div>
         <div>
-          <label className="label-mono text-white/70" htmlFor="country">
+          <label className="label-mono text-ink/50" htmlFor="country">
             Pays
           </label>
           <input id="country" name="country" className={`mt-1 ${inputClass}`} />
         </div>
         <div>
-          <label className="label-mono text-white/70" htmlFor="subject">
+          <label className="label-mono text-ink/50" htmlFor="subject">
             Objet
           </label>
           <input
@@ -189,7 +189,7 @@ export function QuoteForm({ productId, productName, defaultSubject }: Props) {
       </div>
       
       <div>
-        <label className="label-mono text-white/70" htmlFor="message">
+        <label className="label-mono text-ink/50" htmlFor="message">
           Votre besoin * {errors.message && <span className="text-red-600">*</span>}
         </label>
         <textarea

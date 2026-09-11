@@ -106,13 +106,13 @@ function GuidesPage() {
           {GUIDES.map((guide, i) => (
             <article
               key={i}
-              className="rounded-xl bg-emeraude/10 border border-or-prestige/15 p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              className="rounded-xl bg-card p-6 ring-1 ring-black/5 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
             >
               <div className="flex items-start justify-between gap-4">
                 <div className="flex-1">
                   <div className="label-mono text-amberhot">{guide.category}</div>
                   <h3 className="mt-3 text-lg uppercase leading-tight">{guide.title}</h3>
-                  <p className="mt-3 text-sm text-white/70">{guide.description}</p>
+                  <p className="mt-3 text-sm text-muted-foreground">{guide.description}</p>
                   <div className="mt-4 flex flex-wrap gap-2">
                     {guide.topics.map((topic) => (
                       <span
@@ -143,7 +143,7 @@ function GuidesPage() {
           <h2 className="mt-3 text-3xl uppercase">Réponses aux questions d'importateurs</h2>
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             {FAQS.map((faq, i) => (
-              <div key={i} className="rounded-xl bg-emeraude/10 border border-or-prestige/15 p-6">
+              <div key={i} className="rounded-xl bg-card p-6 ring-1 ring-black/5">
                 <details className="group cursor-pointer">
                   <summary className="flex items-center justify-between font-semibold text-ink hover:text-amberhot smooth-transition">
                     <span>{faq.q}</span>
@@ -151,7 +151,7 @@ function GuidesPage() {
                       ▼
                     </span>
                   </summary>
-                  <p className="mt-4 text-sm text-white/70 leading-relaxed">{faq.a}</p>
+                  <p className="mt-4 text-sm text-muted-foreground leading-relaxed">{faq.a}</p>
                 </details>
               </div>
             ))}
@@ -168,31 +168,31 @@ function GuidesPage() {
             href="https://www.douanes.bf"
             target="_blank"
             rel="noreferrer"
-            className="rounded-xl bg-emeraude/10 border border-or-prestige/15 p-6 transition-all hover:shadow-lg hover:bg-emeraude/20"
+            className="rounded-xl bg-card p-6 ring-1 ring-black/5 transition-all hover:shadow-lg hover:bg-emeraude/20"
           >
             <div className="text-2xl mb-2">📋</div>
             <h3 className="uppercase font-semibold">Douanes Burkina Faso</h3>
-            <p className="mt-2 text-sm text-white/70">Tarifs douaniers, nomenclature HS et droits de douane.</p>
+            <p className="mt-2 text-sm text-muted-foreground">Tarifs douaniers, nomenclature HS et droits de douane.</p>
           </a>
           <a
             href="https://www.china-chamber.org"
             target="_blank"
             rel="noreferrer"
-            className="rounded-xl bg-emeraude/10 border border-or-prestige/15 p-6 transition-all hover:shadow-lg hover:bg-emeraude/20"
+            className="rounded-xl bg-card p-6 ring-1 ring-black/5 transition-all hover:shadow-lg hover:bg-emeraude/20"
           >
             <div className="text-2xl mb-2">🏭</div>
             <h3 className="uppercase font-semibold">Chambre Commerce Chine</h3>
-            <p className="mt-2 text-sm text-white/70">Annuaires fournisseurs, certifications et normes.</p>
+            <p className="mt-2 text-sm text-muted-foreground">Annuaires fournisseurs, certifications et normes.</p>
           </a>
           <a
             href="https://www.aduanex.com"
             target="_blank"
             rel="noreferrer"
-            className="rounded-xl bg-emeraude/10 border border-or-prestige/15 p-6 transition-all hover:shadow-lg hover:bg-emeraude/20"
+            className="rounded-xl bg-card p-6 ring-1 ring-black/5 transition-all hover:shadow-lg hover:bg-emeraude/20"
           >
             <div className="text-2xl mb-2">🚢</div>
             <h3 className="uppercase font-semibold">Plateforme Logistique</h3>
-            <p className="mt-2 text-sm text-white/70">Comparateur fret maritime, aérien et terrestre.</p>
+            <p className="mt-2 text-sm text-muted-foreground">Comparateur fret maritime, aérien et terrestre.</p>
           </a>
         </div>
       </section>

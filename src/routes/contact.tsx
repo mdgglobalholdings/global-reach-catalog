@@ -37,7 +37,7 @@ function ContactPage() {
         </div>
       </section>
 
-      <section className="bg-noir py-16">
+      <section className="bg-paper py-16">
         <div className="mx-auto max-w-[1280px] px-5">
           <div className="grid gap-10 lg:grid-cols-[1fr_1.4fr]">
 
@@ -45,7 +45,7 @@ function ContactPage() {
             <div>
               <div className="gold-line" />
               <h2 className="mt-6 text-2xl uppercase">Nos coordonnées</h2>
-              <p className="mt-3 text-sm text-white/70">
+              <p className="mt-3 text-sm text-muted-foreground">
                 Du lundi au samedi, 08h00–18h00 (GMT)
               </p>
 
@@ -59,7 +59,7 @@ function ContactPage() {
                   <div key={c.label}>
                     <dt className="label-mono text-or-prestige/60">{c.label}</dt>
                     <dd className="mt-1">
-                      <a href={c.href} className="text-white hover:text-or-lumiere smooth-transition text-sm font-medium">{c.value}</a>
+                      <a href={c.href} className="text-foreground hover:text-or-prestige smooth-transition text-sm font-medium">{c.value}</a>
                     </dd>
                   </div>
                 ))}
@@ -85,7 +85,7 @@ function ContactPage() {
                 </a>
                 <a
                   href={telLink(COMPANY.phoneBf)}
-                  className="flex items-center justify-center gap-2 rounded-md border border-or-prestige/30 bg-noir/40 py-3 font-mono text-[10px] uppercase tracking-[0.15em] text-or-prestige smooth-transition hover:bg-or-prestige/5"
+                  className="flex items-center justify-center gap-2 rounded-md border border-or-prestige/30 py-3 font-mono text-[10px] uppercase tracking-[0.15em] text-or-prestige smooth-transition hover:bg-or-prestige/5"
                 >
                   Appeler maintenant
                 </a>
@@ -94,7 +94,7 @@ function ContactPage() {
               {/* Garanties */}
               <div className="mt-10 space-y-3">
                 {["Réponse sous 24 heures ouvrées", "Devis gratuit et sans engagement", "Interlocuteur unique dédié"].map((g) => (
-                  <div key={g} className="flex items-center gap-3 text-sm text-white/70">
+                  <div key={g} className="flex items-center gap-3 text-sm text-muted-foreground">
                     <span className="text-or-prestige font-bold">✓</span>
                     {g}
                   </div>
@@ -106,7 +106,7 @@ function ContactPage() {
             <div>
               <div className="gold-line" />
               <h2 className="mt-6 text-2xl uppercase">Demande de devis</h2>
-              <p className="mt-2 text-sm text-white/70">
+              <p className="mt-2 text-sm text-muted-foreground">
                 Décrivez votre besoin. Notre équipe prépare une offre personnalisée.
               </p>
               <div className="mt-6">

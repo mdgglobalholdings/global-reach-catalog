@@ -235,6 +235,32 @@ function Home() {
         </section>
       ) : null}
 
+      {/* CTA Contact */}
+      <section className="bg-gradient-to-r from-ink to-navy py-16 text-white">
+        <div className="mx-auto max-w-[1200px] px-5 text-center">
+          <h2 className="text-3xl uppercase md:text-4xl">Besoin d'un matériel spécifique ?</h2>
+          <p className="mt-4 text-chrome/75">
+            Notre équipe de sourcing vous accompagne pour trouver exactement ce dont vous avez
+            besoin, même en cas de demande spéciale.
+          </p>
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <Link
+              to="/contact"
+              className="pill rounded-md bg-gradient-to-b from-amberhot to-amber px-8 py-3 font-bold text-ink ring-1 ring-white/40"
+            >
+              Nous contacter
+            </Link>
+            <Link
+              to="/catalogue"
+              search={{ categorie: "", q: "", tri: "recent", dispo: "" }}
+              className="rounded-md bg-white/10 px-8 py-3 font-semibold ring-1 ring-white/15 hover:bg-white/15"
+            >
+              Parcourir le catalogue
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <CtaBand />
     </main>
   );

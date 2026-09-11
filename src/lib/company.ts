@@ -48,7 +48,7 @@ export const POLES = [
     description: "Véhicules particuliers, SUV, utilitaires, camions, bus, engins de chantier et machines industrielles.",
     services: ["Véhicules particuliers & SUV", "Camions & Bus", "Engins de chantier", "Machines agricoles", "Équipements industriels", "Pièces détachées"],
     image: "/images/sect-vehicules.jpg",
-    link: "/catalogue",
+    link: "/services",
   },
   {
     id: "logistique",

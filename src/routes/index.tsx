@@ -54,10 +54,10 @@ const WHY_ITEMS = [
 ];
 
 const ZONES = [
-  { icon: "🌍", name: "Afrique", desc: "Marchés & opportunités" },
-  { icon: "🌏", name: "Asie", desc: "Sourcing & fournisseurs" },
-  { icon: "🌍", name: "Europe", desc: "Partenariats & échanges" },
-  { icon: "🌙", name: "Moyen-Orient", desc: "Commerce & développement" },
+  { icon: "🌍", name: "Afrique", desc: "Marchés &\nopportunités" },
+  { icon: "🌏", name: "Asie", desc: "Sourcing &\nfournisseurs" },
+  { icon: "🌍", name: "Europe", desc: "Partenariats &\néchanges" },
+  { icon: "🌙", name: "Moyen-Orient", desc: "Commerce &\ndéveloppement" },
 ];
 
 function Home() {
@@ -214,22 +214,33 @@ function Home() {
       </section>
 
       {/* ═══ POURQUOI MDG ═══ */}
-      <section className="py-20" style={{ backgroundColor: "#eeeee6" }}>
+      <section className="py-16" style={{ backgroundColor: "#f5f5ee" }}>
         <div className="mx-auto max-w-[1280px] px-5">
-          <h2 className="text-center text-3xl uppercase text-noir mb-12">
-            Pourquoi choisir MDG GLOBAL HOLDINGS ?
-          </h2>
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+
+          {/* Titre avec tirets or */}
+          <div className="flex items-center justify-center gap-5 mb-12">
+            <div className="h-px flex-1 max-w-[80px]" style={{ background: "linear-gradient(90deg, transparent, #BF9128)" }} />
+            <h2 className="text-2xl uppercase text-noir text-center tracking-wide">
+              Pourquoi choisir MDG GLOBAL HOLDINGS ?
+            </h2>
+            <div className="h-px flex-1 max-w-[80px]" style={{ background: "linear-gradient(90deg, #BF9128, transparent)" }} />
+          </div>
+
+          {/* 4 items horizontaux */}
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {WHY_ITEMS.map((item) => (
-              <div
-                key={item.title}
-                className="rounded-xl bg-white border border-or-prestige/15 p-6 smooth-transition hover:border-or-prestige/50 hover:shadow-lg hover:-translate-y-1"
-              >
-                <div className="mb-4 flex size-12 items-center justify-center rounded-full border border-or-prestige/30 bg-or-prestige/8 text-2xl">
-                  {item.icon}
+              <div key={item.title} className="flex items-start gap-4">
+                {/* Icône ronde or */}
+                <div
+                  className="shrink-0 flex size-14 items-center justify-center rounded-full text-2xl shadow-md"
+                  style={{ background: "linear-gradient(135deg, #694A0C 0%, #BF9128 40%, #F2DE83 70%, #BF9128 100%)" }}
+                >
+                  <span style={{ filter: "brightness(0) invert(0)" }}>{item.icon}</span>
                 </div>
-                <h3 className="text-sm uppercase text-noir">{item.title}</h3>
-                <p className="mt-2 text-sm text-noir/60 leading-relaxed">{item.text}</p>
+                <div>
+                  <h3 className="font-bold uppercase text-noir text-sm tracking-wide">{item.title}</h3>
+                  <p className="mt-1.5 text-sm text-noir/60 leading-relaxed">{item.text}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -237,31 +248,41 @@ function Home() {
       </section>
 
       {/* ═══ RÉSEAU INTERNATIONAL ═══ */}
-      <section className="py-20" style={{ backgroundColor: "#021807" }}>
+      <section className="py-16" style={{ backgroundColor: "#021807" }}>
         <div className="mx-auto max-w-[1280px] px-5 text-center">
-          <h2 className="text-4xl uppercase text-white">Notre réseau international</h2>
-          <div className="mt-2 gold-line mx-auto" />
-          <p className="mt-6 text-white/70 max-w-[60ch] mx-auto leading-relaxed">
-            Des connexions stratégiques au service de vos projets.
-          </p>
-          <p className="mt-2 text-white/55 max-w-[72ch] mx-auto text-sm leading-relaxed">
+
+          {/* Titre */}
+          <h2 className="text-3xl uppercase text-white tracking-wide">Notre réseau international</h2>
+          <p className="mt-3 text-white/70 text-lg">Des connexions stratégiques au service de vos projets.</p>
+          <p className="mt-2 text-white/45 text-sm max-w-[72ch] mx-auto leading-relaxed">
             MDG GLOBAL HOLDINGS développe un réseau de partenaires, fournisseurs et assureurs commerciaux et vos projets internationaux.
           </p>
 
-          <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {/* 4 zones — cartes blanches arrondies sur fond vert */}
+          <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {ZONES.map((z) => (
               <div
                 key={z.name}
-                className="rounded-xl border border-or-prestige/20 bg-white/5 p-6 text-center smooth-transition hover:border-or-prestige/50 hover:bg-white/10"
+                className="flex items-center gap-4 rounded-2xl bg-white/10 px-5 py-4 text-left smooth-transition hover:bg-white/15"
+                style={{ border: "1px solid rgba(191,145,40,0.25)" }}
               >
-                <div className="text-4xl mb-3">{z.icon}</div>
-                <h3 className="text-or-lumiere font-bold uppercase text-lg">{z.name}</h3>
-                <p className="mt-2 text-white/55 text-sm">{z.desc}</p>
+                {/* Icône ronde or */}
+                <div
+                  className="shrink-0 flex size-14 items-center justify-center rounded-full text-2xl shadow-md"
+                  style={{ background: "linear-gradient(135deg, #694A0C 0%, #BF9128 40%, #F2DE83 70%, #BF9128 100%)" }}
+                >
+                  {z.icon}
+                </div>
+                <div>
+                  <h3 className="font-bold uppercase text-white text-sm tracking-wide">{z.name}</h3>
+                  <p className="mt-0.5 text-white/55 text-sm leading-snug whitespace-pre-line">{z.desc}</p>
+                </div>
               </div>
             ))}
           </div>
 
-          <p className="mt-12 text-or-lumiere/80 font-bold text-lg italic">
+          {/* Citation finale */}
+          <p className="mt-10 text-or-lumiere font-bold text-lg italic">
             « Un réseau en construction. Une vision internationale. »
           </p>
         </div>

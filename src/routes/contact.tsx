@@ -23,15 +23,14 @@ function ContactPage() {
     <main>
 
       {/* Hero */}
-      <section className="relative isolate overflow-hidden" style={{ backgroundColor: "#eeeee6" }}>
-        <div className="absolute inset-0 bg-gradient-to-br from-noir via-emeraude/20 to-noir" />
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-or-prestige/40 to-transparent" />
-        <div className="relative mx-auto max-w-[1280px] px-5 py-20">
+      <section className="relative overflow-hidden" style={{ backgroundColor: "#eeeee6" }}>
+        <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-or-prestige to-transparent" />
+        <div className="mx-auto max-w-[1280px] px-5 py-20">
           <div className="eyebrow text-or-prestige">Contact</div>
-          <h1 className="mt-4 max-w-[18ch] text-5xl uppercase leading-[0.92] md:text-6xl">
+          <h1 className="mt-4 max-w-[18ch] text-5xl font-bold uppercase leading-[0.92] text-noir md:text-6xl">
             Parlons de votre projet
           </h1>
-          <p className="mt-5 max-w-[52ch] text-noir/65 leading-relaxed">
+          <p className="mt-5 max-w-[52ch] text-noir/65 leading-relaxed text-lg">
             Notre équipe commerciale vous répond sous 24 heures ouvrées avec une offre personnalisée.
           </p>
         </div>

@@ -36,7 +36,6 @@ export function Footer() {
                 { to: "/", label: "Accueil" },
                 { to: "/a-propos", label: "À propos" },
                 { to: "/activites", label: "Nos activités" },
-                { to: "/catalogue", label: "Catalogue", search: { categorie: "", q: "", tri: "recent", dispo: "" } },
                 { to: "/services", label: "Logistique" },
               ].map((item) => (
                 <Link

@@ -23,17 +23,14 @@ function ActivitesPage() {
     <main>
 
       {/* Hero */}
-      <section className="relative isolate overflow-hidden" style={{ backgroundColor: "#eeeee6" }}>
-        <div className="absolute inset-0 bg-gradient-to-br from-noir via-emeraude/30 to-noir" />
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-or-prestige/40 to-transparent" />
-        <div className="relative mx-auto max-w-[1280px] px-5 py-20">
+      <section className="relative overflow-hidden" style={{ backgroundColor: "#eeeee6" }}>
+        <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-or-prestige to-transparent" />
+        <div className="mx-auto max-w-[1280px] px-5 py-20">
           <div className="eyebrow text-or-prestige">Nos activités</div>
-          <h1 className="mt-4 max-w-[18ch] text-5xl uppercase leading-[0.92] md:text-7xl">
-            Un groupe.<br />
-            <span className="text-gold">Plusieurs expertises.</span><br />
-            Une seule vision.
+          <h1 className="mt-4 max-w-[18ch] text-5xl font-bold uppercase leading-[0.92] text-noir md:text-7xl">
+            Un groupe.{" "}<span className="text-gold">Plusieurs expertises.</span>{" "}Une seule vision.
           </h1>
-          <p className="mt-6 max-w-[58ch] text-noir/65 leading-relaxed">
+          <p className="mt-6 max-w-[58ch] text-noir/65 leading-relaxed text-lg">
             MDG GLOBAL HOLDINGS développe des activités complémentaires qui couvrent l'ensemble
             de la chaîne commerciale internationale — du sourcing à la livraison, en passant
             par la logistique et la mobilité.
@@ -77,19 +74,9 @@ function ActivitesPage() {
                 </ul>
 
                 <div className="mt-8 flex flex-wrap gap-3">
-                  {pole.id === "vehicules" ? (
-                    <Link
-                      to="/catalogue"
-                      search={{ categorie: "", q: "", tri: "recent", dispo: "" }}
-                      className="btn-gold rounded-md"
-                    >
-                      Voir le catalogue
-                    </Link>
-                  ) : (
-                    <Link to={pole.link} className="btn-gold rounded-md">
-                      En savoir plus
-                    </Link>
-                  )}
+                  <Link to={pole.link} className="btn-gold rounded-md">
+                    En savoir plus
+                  </Link>
                   <Link to="/contact" className="rounded-md border border-or-prestige/30 px-6 py-3 font-mono text-[10px] uppercase tracking-[0.15em] text-or-prestige smooth-transition hover:bg-or-prestige/5">
                     Nous contacter
                   </Link>

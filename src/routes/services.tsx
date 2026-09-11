@@ -1,8 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-
 import { CtaBand } from "@/components/site/CtaBand";
 
-const TITLE = "Services : import-export, logistique et sourcing — MDG GLOBAL HOLDINGS";
+const TITLE = "Logistique & Services — MDG GLOBAL HOLDINGS | Import-Export, Fret, Dédouanement";
 const DESCRIPTION =
   "Sourcing international, fret maritime et aérien, dédouanement, distribution et assistance visa : les services de MDG GLOBAL HOLDINGS pour vos projets Afrique-Asie-Europe.";
 
@@ -61,53 +60,56 @@ const STEPS = [
 function ServicesPage() {
   return (
     <main>
-      <section className="bg-ink text-noir">
-        <div className="mx-auto max-w-[1200px] px-5 py-16">
-          <div className="eyebrow text-or-prestige">Services</div>
-          <h1 className="mt-4 max-w-[18ch] text-4xl uppercase leading-[0.95] md:text-6xl">
+
+      {/* Hero — même style que À propos */}
+      <section className="relative overflow-hidden" style={{ backgroundColor: "#eeeee6" }}>
+        <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-or-prestige to-transparent" />
+        <div className="mx-auto max-w-[1280px] px-5 py-20">
+          <div className="eyebrow text-or-prestige">Logistique & Services</div>
+          <h1 className="mt-4 max-w-[18ch] text-5xl font-bold uppercase leading-[0.92] text-noir md:text-7xl">
             De la commande à la livraison
           </h1>
-          <p className="mt-5 max-w-[58ch] text-noir/65">
-            Un interlocuteur unique pour l'ensemble de la chaîne : achat, transport, douane et
-            distribution.
+          <p className="mt-6 max-w-[58ch] text-noir/65 leading-relaxed text-lg">
+            Un interlocuteur unique pour l'ensemble de la chaîne : achat, transport, douane et distribution.
           </p>
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1200px] px-5 py-16">
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {SERVICES.map((s) => (
-            <article key={s.title} className="rounded-xl bg-card p-6 ring-1 ring-black/5">
-              <div className="h-1 w-10 rounded bg-gradient-to-r from-amberhot to-amber" />
-              <h2 className="mt-5 text-xl uppercase">{s.title}</h2>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
-              <ul className="mt-4 space-y-1.5 font-mono text-[11px] uppercase tracking-[0.12em] text-ink/55">
-                {s.points.map((p) => (
-                  <li key={p}>— {p}</li>
-                ))}
-              </ul>
-            </article>
-          ))}
+      {/* Services */}
+      <section className="py-20" style={{ backgroundColor: "#f5f5ee" }}>
+        <div className="mx-auto max-w-[1280px] px-5">
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {SERVICES.map((s) => (
+              <article key={s.title} className="rounded-xl bg-white border border-or-prestige/20 p-7 smooth-transition hover:border-or-prestige/50 hover:shadow-lg hover:-translate-y-1">
+                <div className="gold-line" />
+                <h2 className="mt-5 text-xl font-bold uppercase text-noir">{s.title}</h2>
+                <p className="mt-3 text-sm leading-relaxed text-noir/65">{s.text}</p>
+                <ul className="mt-4 space-y-1.5 font-mono text-[11px] uppercase tracking-[0.12em] text-or-prestige">
+                  {s.points.map((p) => (
+                    <li key={p}>— {p}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="bg-emeraude/20 py-16">
-        <div className="mx-auto max-w-[1200px] px-5">
-          <div className="eyebrow text-or-prestige">Méthode</div>
-          <h2 className="mt-3 text-3xl uppercase">Comment nous travaillons</h2>
+      {/* Méthode */}
+      <section className="py-20" style={{ backgroundColor: "#eeeee6" }}>
+        <div className="mx-auto max-w-[1280px] px-5">
+          <div className="eyebrow text-or-prestige">Notre méthode</div>
+          <h2 className="mt-4 text-3xl font-bold uppercase text-noir">Comment nous travaillons</h2>
           <div className="mt-10 grid gap-5 md:grid-cols-4">
             {STEPS.map((s) => (
-              <div key={s.n} className="rounded-xl bg-card p-6 ring-1 ring-black/5">
-                <div className="font-display text-3xl text-amberhot">{s.n}</div>
-                <h3 className="mt-3 text-lg uppercase">{s.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{s.text}</p>
+              <div key={s.n} className="rounded-xl bg-white border border-or-prestige/20 p-6 smooth-transition hover:border-or-prestige/50 hover:shadow-md">
+                <div className="text-gold font-display text-3xl">{s.n}</div>
+                <h3 className="mt-4 text-lg font-bold uppercase text-noir">{s.title}</h3>
+                <p className="mt-2 text-sm text-noir/65 leading-relaxed">{s.text}</p>
               </div>
             ))}
           </div>
-          <Link
-            to="/contact"
-            className="pill mt-10 inline-block rounded-md bg-gradient-to-b from-amberhot to-amber px-6 py-3 font-bold text-ink ring-1 ring-white/40"
-          >
+          <Link to="/contact" className="btn-gold mt-10 inline-block rounded-md">
             Lancer une demande
           </Link>
         </div>

@@ -315,7 +315,7 @@ function Home() {
                     src={z.map}
                     alt={z.name}
                     className="size-9 object-contain"
-                    style={z.isJpg ? { mixBlendMode: "multiply" } : {}}
+                    style={{ mixBlendMode: "multiply" }}
                   />
                 </div>
                 <div>

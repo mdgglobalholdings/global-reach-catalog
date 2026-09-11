@@ -17,7 +17,7 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 16px);
 
-  --font-display: "Anton", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Montserrat", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 
@@ -123,9 +123,11 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  h1, h2, h3 {
-    font-family: var(--font-display);
-    letter-spacing: 0.01em;
+  /* Montserrat Black 900 sur tous les titres */
+  h1, h2, h3, h4 {
+    font-family: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.01em;
   }
 }
 
@@ -191,7 +193,7 @@
   }
 }
 
-/* Carte premium fond ivoire légèrement distinct */
+/* Carte premium — survol vert émeraude profond */
 @utility card-prestige {
   background: #ffffff;
   border: 1px solid rgba(191,145,40,0.2);
@@ -201,7 +203,8 @@
   &:hover {
     border-color: rgba(191,145,40,0.5);
     transform: translateY(-4px);
-    box-shadow: 0 20px 50px rgba(5,8,4,0.12), 0 0 0 1px rgba(191,145,40,0.2);
+    box-shadow: 0 20px 50px rgba(2,24,7,0.15), 0 0 0 1px rgba(191,145,40,0.25);
+    background: linear-gradient(160deg, #ffffff 60%, rgba(2,24,7,0.04) 100%);
   }
 }
 

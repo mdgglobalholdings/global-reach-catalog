@@ -107,15 +107,15 @@ function Home() {
         </div>
       </section>
 
-      {/* ═══ POSITIONNEMENT — ivoire légèrement plus sombre ═══ */}
-      <section className="py-20" style={{ backgroundColor: "#eeeee6" }}>
+      {/* ═══ POSITIONNEMENT — vert émeraude profond ═══ */}
+      <section className="py-20" style={{ backgroundColor: "#021807" }}>
         <div className="mx-auto max-w-[1280px] px-5">
           <div className="mx-auto max-w-[760px] text-center">
             <div className="gold-line mx-auto" />
-            <h2 className="mt-8 text-3xl font-bold uppercase text-noir md:text-4xl">
+            <h2 className="mt-8 text-3xl font-bold uppercase text-white md:text-4xl">
               Votre partenaire pour entreprendre, acheter et développer au-delà des frontières
             </h2>
-            <p className="mt-6 text-noir/70 leading-relaxed">
+            <p className="mt-6 text-white/75 leading-relaxed">
               MDG GLOBAL HOLDINGS accompagne particuliers, entreprises, investisseurs et partenaires dans leurs
               opérations commerciales et leurs projets à l'international. Grâce à notre réseau en Afrique,
               en Asie, en Europe et au Moyen-Orient, nous facilitons l'accès à des produits, équipements,
@@ -159,19 +159,19 @@ function Home() {
         </div>
       </section>
 
-      {/* ═══ VALEURS — fond blanc avec bordures or ═══ */}
-      <section className="py-20" style={{ backgroundColor: "#eeeee6" }}>
+      {/* ═══ VALEURS — vert émeraude profond ═══ */}
+      <section className="py-20" style={{ backgroundColor: "#021807" }}>
         <div className="mx-auto max-w-[1280px] px-5">
           <div className="text-center">
-            <div className="eyebrow text-or-prestige">Nos engagements</div>
-            <h2 className="mt-4 text-4xl font-bold uppercase text-noir">Ce qui nous distingue</h2>
+            <div className="eyebrow text-or-prestige/80">Nos engagements</div>
+            <h2 className="mt-4 text-4xl font-bold uppercase text-white">Ce qui nous distingue</h2>
           </div>
           <div className="mt-14 grid gap-5 md:grid-cols-4">
             {VALUES.map((v) => (
-              <div key={v.title} className="rounded-xl bg-white border border-or-prestige/20 px-6 py-10 smooth-transition hover:border-or-prestige/60 hover:shadow-lg hover:-translate-y-1">
+              <div key={v.title} className="rounded-xl border border-or-prestige/20 bg-white/5 px-6 py-10 smooth-transition hover:border-or-prestige/50 hover:bg-white/10 hover:-translate-y-1">
                 <div className="gold-line" />
-                <h3 className="mt-6 text-xl font-bold uppercase text-noir">{v.title}</h3>
-                <p className="mt-3 text-sm text-noir/65 leading-relaxed">{v.text}</p>
+                <h3 className="mt-6 text-xl font-bold uppercase text-or-lumiere">{v.title}</h3>
+                <p className="mt-3 text-sm text-white/70 leading-relaxed">{v.text}</p>
               </div>
             ))}
           </div>
@@ -227,16 +227,16 @@ function Home() {
         </div>
       </section>
 
-      {/* ═══ CTA FINAL — liseré or, fond ivoire ═══ */}
-      <section className="py-24 relative" style={{ backgroundColor: "#eeeee6" }}>
+      {/* ═══ CTA FINAL — vert émeraude profond ═══ */}
+      <section className="py-24 relative" style={{ backgroundColor: "#021807" }}>
         <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-or-prestige to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-or-prestige to-transparent" />
         <div className="mx-auto max-w-[1280px] px-5 text-center">
           <div className="gold-line mx-auto" />
-          <h2 className="mt-8 text-4xl font-bold uppercase text-noir md:text-5xl">
+          <h2 className="mt-8 text-4xl font-bold uppercase text-white md:text-5xl">
             <span className="whitespace-nowrap">Un projet&nbsp;? Un besoin&nbsp;?</span>
           </h2>
-          <p className="mt-5 max-w-[52ch] mx-auto text-noir/70 leading-relaxed">
+          <p className="mt-5 max-w-[52ch] mx-auto text-white/70 leading-relaxed">
             Contactez-nous pour discuter de votre projet et recevoir une offre personnalisée sous 24 heures ouvrées.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">

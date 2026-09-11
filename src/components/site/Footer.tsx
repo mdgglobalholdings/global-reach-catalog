@@ -3,7 +3,7 @@ import { COMPANY, telLink, whatsappLink } from "@/lib/company";
 
 export function Footer() {
   return (
-    <footer style={{ backgroundColor: "#eeeee6" }} className="text-noir">
+    <footer style={{ backgroundColor: "#021807" }} className="text-white">
       {/* Liseré or en haut */}
       <div className="h-0.5 bg-gradient-to-r from-transparent via-or-prestige to-transparent" />
 
@@ -16,21 +16,21 @@ export function Footer() {
               <img src="/images/logo-mdg.jpeg" alt="MDG GLOBAL HOLDINGS"
                 className="size-12 rounded-full object-cover ring-2 ring-or-prestige/40 shadow-sm" />
               <div>
-                <div className="font-display text-sm text-noir tracking-wider">{COMPANY.name}</div>
+                <div className="font-display text-sm text-white tracking-wider">{COMPANY.name}</div>
                 <div className="mt-0.5 text-or-prestige font-bold text-xs">{COMPANY.tagline}</div>
               </div>
             </div>
-            <p className="mt-5 text-sm text-noir/70 leading-relaxed max-w-[26ch]">
+            <p className="mt-5 text-sm text-white/70 leading-relaxed max-w-[26ch]">
               Votre partenaire pour entreprendre, acheter et développer au-delà des frontières.
             </p>
-            <div className="mt-4 font-mono text-[10px] uppercase tracking-[0.15em] text-noir/45">
+            <div className="mt-4 font-mono text-[10px] uppercase tracking-[0.15em] text-white/45">
               Logistique · Import-Export · Transport
             </div>
           </div>
 
           {/* Navigation */}
           <div>
-            <h3 className="text-base font-bold uppercase tracking-wider text-noir mb-6">Navigation</h3>
+            <h3 className="text-base font-bold uppercase tracking-wider text-white mb-6">Navigation</h3>
             <nav className="space-y-3">
               {[
                 { to: "/", label: "Accueil" },
@@ -43,7 +43,7 @@ export function Footer() {
                 <Link
                   key={item.label}
                   to={item.to}
-                  className="block text-sm text-noir/70 smooth-transition hover:text-or-prestige"
+                  className="block text-sm text-white/70 smooth-transition hover:text-or-lumiere"
                 >
                   {item.label}
                 </Link>
@@ -53,7 +53,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-base font-bold uppercase tracking-wider text-noir mb-6">Contact</h3>
+            <h3 className="text-base font-bold uppercase tracking-wider text-white mb-6">Contact</h3>
             <dl className="space-y-4 text-sm">
               {[
                 { label: "Burkina Faso", value: COMPANY.phoneBf, href: telLink(COMPANY.phoneBf) },
@@ -63,13 +63,13 @@ export function Footer() {
                 <div key={c.label}>
                   <dt className="font-bold text-or-prestige text-[10px] uppercase tracking-wider mb-1">{c.label}</dt>
                   <dd>
-                    <a href={c.href} className="text-noir/70 hover:text-or-prestige smooth-transition">{c.value}</a>
+                    <a href={c.href} className="text-white/70 hover:text-or-lumiere smooth-transition">{c.value}</a>
                   </dd>
                 </div>
               ))}
               <div>
                 <dt className="font-bold text-or-prestige text-[10px] uppercase tracking-wider mb-1">Adresse</dt>
-                <dd className="text-noir/70">{COMPANY.city}, {COMPANY.country}</dd>
+                <dd className="text-white/70">{COMPANY.city}, {COMPANY.country}</dd>
               </div>
             </dl>
 
@@ -91,15 +91,15 @@ export function Footer() {
       </div>
 
       {/* Bottom */}
-      <div className="border-t border-or-prestige/20">
+      <div className="border-t border-or-prestige/25">
         <div className="mx-auto max-w-[1280px] px-5 py-5 flex flex-col gap-3 md:flex-row md:justify-between md:items-center">
-          <div className="text-sm text-noir/60">
+          <div className="text-sm text-white/50">
             © {new Date().getFullYear()} {COMPANY.name} · Tous droits réservés
           </div>
           <div className="flex flex-wrap gap-5 text-sm">
-            <Link to="/mentions-legales" className="text-noir/60 hover:text-or-prestige smooth-transition">Mentions légales</Link>
-            <Link to="/politique-confidentialite" className="text-noir/60 hover:text-or-prestige smooth-transition">Politique</Link>
-            <Link to="/conditions-utilisation" className="text-noir/60 hover:text-or-prestige smooth-transition">Conditions</Link>
+            <Link to="/mentions-legales" className="text-white/50 hover:text-or-lumiere smooth-transition">Mentions légales</Link>
+            <Link to="/politique-confidentialite" className="text-white/50 hover:text-or-lumiere smooth-transition">Politique</Link>
+            <Link to="/conditions-utilisation" className="text-white/50 hover:text-or-lumiere smooth-transition">Conditions</Link>
           </div>
         </div>
       </div>

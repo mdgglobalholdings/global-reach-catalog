@@ -16,7 +16,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-40 bg-ivoire border-b border-or-prestige/25 shadow-sm">
+    <nav className="sticky top-0 z-40 bg-ivoire border-b border-or-prestige/25 shadow-sm" style={{ borderBottomColor: "rgba(2,24,7,0.15)" }}>
       {/* Liseré or en haut */}
       <div className="h-0.5 bg-gradient-to-r from-transparent via-or-prestige to-transparent" />
 

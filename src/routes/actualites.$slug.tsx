@@ -1,13 +1,14 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 
 import { CtaBand } from "@/components/site/CtaBand";
-import { getNewsItem } from "@/lib/catalog.functions";
+import { getNews, getNewsItem } from "@/lib/catalog.functions";
 
 export const Route = createFileRoute("/actualites/$slug")({
   loader: async ({ params }) => {
     const item = await getNewsItem({ data: { slug: params.slug } });
     if (!item) throw notFound();
-    return { item };
+    const related = await getNews({ data: { limit: 3 } });
+    return { item, related: related.filter((n) => n.id !== item.id).slice(0, 2) };
   },
   head: ({ loaderData }) => {
     if (!loaderData) {
@@ -34,7 +35,7 @@ export const Route = createFileRoute("/actualites/$slug")({
 });
 
 function NewsDetail() {
-  const { item } = Route.useLoaderData();
+  const { item, related } = Route.useLoaderData();
 
   return (
     <main>
@@ -67,6 +68,42 @@ function NewsDetail() {
           <div className="mt-8 whitespace-pre-line leading-relaxed text-ink/80">{item.body}</div>
         ) : null}
       </article>
+
+      {related.length ? (
+        <section className="border-t border-black/5 bg-chrome/40 py-16">
+          <div className="mx-auto max-w-[1200px] px-5">
+            <h2 className="text-2xl uppercase">À lire aussi</h2>
+            <div className="mt-8 grid gap-5 md:grid-cols-2">
+              {related.map((n) => (
+                <Link
+                  key={n.id}
+                  to="/actualites/$slug"
+                  params={{ slug: n.slug }}
+                  className="overflow-hidden rounded-xl bg-card ring-1 ring-black/5 transition-shadow hover:shadow-lg"
+                >
+                  {n.cover_url ? (
+                    <img
+                      src={n.cover_url}
+                      alt={n.title}
+                      loading="lazy"
+                      width={800}
+                      height={500}
+                      className="aspect-[16/10] w-full object-cover"
+                    />
+                  ) : null}
+                  <div className="p-6">
+                    <div className="label-mono text-ink/40">
+                      {new Date(n.published_at).toLocaleDateString("fr-FR")}
+                    </div>
+                    <h3 className="mt-3 text-lg uppercase leading-tight">{n.title}</h3>
+                    <p className="mt-2 line-clamp-2 text-sm text-muted-foreground">{n.excerpt}</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       <CtaBand />
     </main>

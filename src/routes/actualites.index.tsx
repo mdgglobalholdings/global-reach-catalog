@@ -45,7 +45,7 @@ function NewsPage() {
                 key={n.id}
                 to="/actualites/$slug"
                 params={{ slug: n.slug }}
-                className="overflow-hidden rounded-xl bg-card ring-1 ring-black/5 transition-shadow hover:shadow-lg"
+                className="overflow-hidden rounded-xl bg-card border border-or-prestige/15 smooth-transition hover:shadow-lg"
               >
                 {n.cover_url ? (
                   <img
@@ -62,13 +62,13 @@ function NewsPage() {
                     {new Date(n.published_at).toLocaleDateString("fr-FR")}
                   </div>
                   <h2 className="mt-3 text-lg uppercase leading-tight">{n.title}</h2>
-                  <p className="mt-2 line-clamp-3 text-sm text-muted-foreground">{n.excerpt}</p>
+                  <p className="mt-2 line-clamp-3 text-sm text-white/70">{n.excerpt}</p>
                 </div>
               </Link>
             ))}
           </div>
         ) : (
-          <p className="text-muted-foreground">Aucune actualité pour le moment.</p>
+          <p className="text-white/70">Aucune actualité pour le moment.</p>
         )}
       </section>
 

@@ -15,14 +15,14 @@ export const Route = createFileRoute("/mentions-legales")({
 
 function LegalNoticesPage() {
   return (
-    <main>
+    <main className="bg-noir text-white">
       <article className="mx-auto max-w-[820px] px-5 py-14">
-        <h1 className="text-4xl uppercase leading-[0.95]">Mentions Légales</h1>
+        <h1 className="text-4xl uppercase leading-[0.95] text-white">Mentions Légales</h1>
         <div className="label-mono mt-6 text-amberhot">Mise à jour : {new Date().toLocaleDateString('fr-FR')}</div>
 
         <section className="mt-10">
-          <h2 className="text-2xl uppercase mt-8 mb-3">Éditeur du site</h2>
-          <div className="space-y-2 text-muted-foreground">
+          <h2 className="text-2xl uppercase mt-8 mb-3 text-or-lumiere">Éditeur du site</h2>
+          <div className="space-y-2 text-white/80">
             <p><strong>Nom :</strong> MDG GLOBAL HOLDINGS</p>
             <p><strong>Localisation :</strong> Ouagadougou, Burkina Faso</p>
             <p><strong>Téléphone :</strong> +226 76 97 85 51</p>
@@ -32,8 +32,8 @@ function LegalNoticesPage() {
         </section>
 
         <section className="mt-8">
-          <h2 className="text-2xl uppercase mt-8 mb-3">Hébergement</h2>
-          <div className="space-y-2 text-muted-foreground">
+          <h2 className="text-2xl uppercase mt-8 mb-3 text-or-lumiere">Hébergement</h2>
+          <div className="space-y-2 text-white/80">
             <p><strong>Hébergeur :</strong> Vercel Inc.</p>
             <p><strong>Adresse :</strong> 340 S Lemon Ave, Walnut, CA 91789, États-Unis</p>
             <p><strong>Site :</strong> https://vercel.com</p>
@@ -41,31 +41,31 @@ function LegalNoticesPage() {
         </section>
 
         <section className="mt-8">
-          <h2 className="text-2xl uppercase mt-8 mb-3">Responsable de publication</h2>
-          <p className="text-muted-foreground">
+          <h2 className="text-2xl uppercase mt-8 mb-3 text-or-lumiere">Responsable de publication</h2>
+          <p className="text-white/80">
             Le responsable de la publication du site est MDG GLOBAL HOLDINGS, représentée par sa direction.
           </p>
         </section>
 
         <section className="mt-8">
-          <h2 className="text-2xl uppercase mt-8 mb-3">Propriété intellectuelle</h2>
-          <p className="text-muted-foreground">
+          <h2 className="text-2xl uppercase mt-8 mb-3 text-or-lumiere">Propriété intellectuelle</h2>
+          <p className="text-white/80">
             L'ensemble du contenu de ce site (textes, images, logos, graphismes, vidéos, sons) est protégé par 
             les droits d'auteur. Toute reproduction, même partielle, est interdite sans l'autorisation écrite de MDG GLOBAL HOLDINGS.
           </p>
         </section>
 
         <section className="mt-8">
-          <h2 className="text-2xl uppercase mt-8 mb-3">Liens externes</h2>
-          <p className="text-muted-foreground">
+          <h2 className="text-2xl uppercase mt-8 mb-3 text-or-lumiere">Liens externes</h2>
+          <p className="text-white/80">
             MDG GLOBAL HOLDINGS n'est pas responsable des contenus des sites externes vers lesquels pointe des liens 
             figurant sur son site. L'accès à ces sites s'effectue aux risques de l'utilisateur.
           </p>
         </section>
 
         <section className="mt-8">
-          <h2 className="text-2xl uppercase mt-8 mb-3">Limitation de responsabilité</h2>
-          <p className="text-muted-foreground">
+          <h2 className="text-2xl uppercase mt-8 mb-3 text-or-lumiere">Limitation de responsabilité</h2>
+          <p className="text-white/80">
             MDG GLOBAL HOLDINGS s'efforce d'assurer l'exactitude et la mise à jour du contenu de son site. 
             Cependant, MDG GLOBAL HOLDINGS ne garantit pas l'absence d'erreurs, l'exactitude ou la complétude 
             du contenu du site et ne peut être tenu responsable des dommages directs ou indirects qui pourraient 
@@ -74,31 +74,31 @@ function LegalNoticesPage() {
         </section>
 
         <section className="mt-8">
-          <h2 className="text-2xl uppercase mt-8 mb-3">Données personnelles</h2>
-          <p className="text-muted-foreground mb-3">
+          <h2 className="text-2xl uppercase mt-8 mb-3 text-or-lumiere">Données personnelles</h2>
+          <p className="text-white/80 mb-3">
             Pour toute question concernant le traitement de vos données personnelles, veuillez consulter 
             notre <strong>Politique de Confidentialité</strong> disponible sur ce site.
           </p>
-          <p className="text-muted-foreground">
+          <p className="text-white/80">
             Les données collectées via les formulaires de contact sont traitées conformément à la réglementation 
             en vigueur et utilisées exclusivement pour répondre à votre demande.
           </p>
         </section>
 
         <section className="mt-8">
-          <h2 className="text-2xl uppercase mt-8 mb-3">Droit applicable</h2>
-          <p className="text-muted-foreground">
+          <h2 className="text-2xl uppercase mt-8 mb-3 text-or-lumiere">Droit applicable</h2>
+          <p className="text-white/80">
             Ce site et l'ensemble de ses contenus sont régis par la loi du Burkina Faso. Tout litige relatif à 
             l'utilisation du site est soumis à la compétence exclusive des tribunaux de Ouagadougou.
           </p>
         </section>
 
         <section className="mt-8">
-          <h2 className="text-2xl uppercase mt-8 mb-3">Contact</h2>
-          <p className="text-muted-foreground">
+          <h2 className="text-2xl uppercase mt-8 mb-3 text-or-lumiere">Contact</h2>
+          <p className="text-white/80">
             Pour toute question concernant ces mentions légales :
           </p>
-          <div className="mt-4 space-y-2 text-sm text-muted-foreground">
+          <div className="mt-4 space-y-2 text-sm text-white/80">
             <p>📧 Email : <strong>contact@mdgglobalholdings.com</strong></p>
             <p>📞 Téléphone : <strong>+226 76 97 85 51</strong></p>
             <p>🌍 Adresse : <strong>Ouagadougou, Burkina Faso</strong></p>

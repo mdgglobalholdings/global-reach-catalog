@@ -11,7 +11,7 @@ export function CtaBand({
   text = "Contactez-nous pour discuter de votre projet et recevoir une offre sous 24 heures.",
 }: Props) {
   return (
-    <section className="py-16 bg-paper">
+    <section className="py-16 bg-noir">
       <div className="mx-auto max-w-[1280px] px-5">
         <div className="relative overflow-hidden rounded-2xl bg-noir p-10 md:p-14">
           {/* Dégradé de fond */}

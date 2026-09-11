@@ -56,7 +56,7 @@ function CataloguePage() {
     navigate({ search: { ...search, ...patch } });
 
   const selectClass =
-    "rounded-md border border-input bg-card px-3 py-2.5 text-sm outline-none focus:border-amber focus:ring-2 focus:ring-amber/30";
+    "rounded-md border border-or-prestige/20 bg-noir px-3 py-2.5 text-sm text-white outline-none focus:border-amber focus:ring-2 focus:ring-amber/30";
 
   return (
     <main>
@@ -80,7 +80,7 @@ function CataloguePage() {
             const fd = new FormData(e.currentTarget);
             update({ q: String(fd.get("q") ?? "") });
           }}
-          className="grid gap-3 rounded-xl bg-card p-4 ring-1 ring-black/5 md:grid-cols-[2fr_1fr_1fr_1fr]"
+          className="grid gap-3 rounded-xl bg-emeraude/10 border border-or-prestige/15 p-4 md:grid-cols-[2fr_1fr_1fr_1fr]"
         >
           <input
             name="q"
@@ -149,8 +149,8 @@ function CataloguePage() {
             ))}
           </div>
         ) : (
-          <div className="mt-8 rounded-xl bg-card p-10 text-center ring-1 ring-black/5">
-            <p className="text-muted-foreground">
+          <div className="mt-8 rounded-xl bg-emeraude/10 border border-or-prestige/15 p-10 text-center">
+            <p className="text-white/70">
               Aucun produit ne correspond à votre recherche. Contactez-nous : nous sourçons sur
               demande.
             </p>

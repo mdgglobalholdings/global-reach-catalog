@@ -77,10 +77,10 @@ function ServicesPage() {
       <section className="mx-auto max-w-[1200px] px-5 py-16">
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((s) => (
-            <article key={s.title} className="rounded-xl bg-card p-6 ring-1 ring-black/5">
+            <article key={s.title} className="rounded-xl bg-emeraude/10 border border-or-prestige/15 p-6">
               <div className="h-1 w-10 rounded bg-gradient-to-r from-amberhot to-amber" />
               <h2 className="mt-5 text-xl uppercase">{s.title}</h2>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
+              <p className="mt-3 text-sm leading-relaxed text-white/70">{s.text}</p>
               <ul className="mt-4 space-y-1.5 font-mono text-[11px] uppercase tracking-[0.12em] text-ink/55">
                 {s.points.map((p) => (
                   <li key={p}>— {p}</li>
@@ -91,16 +91,16 @@ function ServicesPage() {
         </div>
       </section>
 
-      <section className="bg-chrome/40 py-16">
+      <section className="bg-emeraude/20 py-16">
         <div className="mx-auto max-w-[1200px] px-5">
           <div className="eyebrow text-amberhot">Méthode</div>
           <h2 className="mt-3 text-3xl uppercase">Comment nous travaillons</h2>
           <div className="mt-10 grid gap-5 md:grid-cols-4">
             {STEPS.map((s) => (
-              <div key={s.n} className="rounded-xl bg-card p-6 ring-1 ring-black/5">
+              <div key={s.n} className="rounded-xl bg-emeraude/10 border border-or-prestige/15 p-6">
                 <div className="font-display text-3xl text-amberhot">{s.n}</div>
                 <h3 className="mt-3 text-lg uppercase">{s.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{s.text}</p>
+                <p className="mt-2 text-sm text-white/70">{s.text}</p>
               </div>
             ))}
           </div>

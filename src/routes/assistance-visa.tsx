@@ -64,28 +64,28 @@ function VisaPage() {
         <h2 className="mt-3 text-3xl uppercase">Quatre étapes</h2>
         <div className="mt-10 grid gap-5 md:grid-cols-4">
           {STEPS.map((s) => (
-            <div key={s.n} className="rounded-xl bg-card p-6 ring-1 ring-black/5">
+            <div key={s.n} className="rounded-xl bg-emeraude/10 border border-or-prestige/15 p-6">
               <div className="font-display text-3xl text-amberhot">{s.n}</div>
               <h3 className="mt-3 text-lg uppercase">{s.title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{s.text}</p>
+              <p className="mt-2 text-sm text-white/70">{s.text}</p>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="bg-chrome/40 py-16">
+      <section className="bg-emeraude/20 py-16">
         <div className="mx-auto grid max-w-[1200px] gap-8 px-5 lg:grid-cols-[1fr_1.2fr]">
           <div>
             <div className="eyebrow text-amberhot">Prestations</div>
             <h2 className="mt-3 text-3xl uppercase">Ce que nous prenons en charge</h2>
-            <ul className="mt-6 space-y-2 text-sm text-muted-foreground">
+            <ul className="mt-6 space-y-2 text-sm text-white/70">
               {SERVICES.map((s) => (
                 <li key={s} className="border-b border-black/5 pb-2">
                   — {s}
                 </li>
               ))}
             </ul>
-            <p className="mt-6 text-xs text-muted-foreground">
+            <p className="mt-6 text-xs text-white/70">
               MDG GLOBAL HOLDINGS est un prestataire d'accompagnement administratif ; la décision
               d'octroi du visa relève exclusivement des autorités consulaires.
             </p>

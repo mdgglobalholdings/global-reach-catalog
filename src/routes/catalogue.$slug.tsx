@@ -133,10 +133,10 @@ function ProductPage() {
           </div>
 
           {product.summary ? (
-            <p className="mt-5 text-muted-foreground">{product.summary}</p>
+            <p className="mt-5 text-white/70">{product.summary}</p>
           ) : null}
 
-          <div className="mt-6 rounded-xl bg-card p-5 ring-1 ring-black/5">
+          <div className="mt-6 rounded-xl bg-emeraude/10 border border-or-prestige/15 p-5">
             <div className="label-mono text-ink/45">Prix</div>
             <div className="font-display text-2xl">
               {product.price_text?.trim() ? product.price_text : "Sur demande"}
@@ -164,7 +164,7 @@ function ProductPage() {
               <h2 className="text-xl uppercase">Caractéristiques</h2>
               <dl className="mt-4 grid gap-px overflow-hidden rounded-xl bg-black/5 sm:grid-cols-2">
                 {specs.map((s, i) => (
-                  <div key={i} className="bg-card px-4 py-3">
+                  <div key={i} className="bg-emeraude/10 border-b border-or-prestige/10 px-4 py-3">
                     <dt className="label-mono text-ink/45">{s.label}</dt>
                     <dd className="text-sm font-medium">{s.value}</dd>
                   </div>
@@ -178,18 +178,18 @@ function ProductPage() {
       {product.description ? (
         <section className="mx-auto max-w-[1200px] px-5 pb-8">
           <h2 className="text-xl uppercase">Description</h2>
-          <p className="mt-3 max-w-[70ch] whitespace-pre-line text-muted-foreground">
+          <p className="mt-3 max-w-[70ch] whitespace-pre-line text-white/70">
             {product.description}
           </p>
         </section>
       ) : null}
 
-      <section id="devis" className="bg-chrome/40 py-16">
+      <section id="devis" className="bg-emeraude/20 py-16">
         <div className="mx-auto grid max-w-[1200px] gap-8 px-5 lg:grid-cols-[1fr_1.2fr]">
           <div>
             <div className="eyebrow text-amberhot">Devis</div>
             <h2 className="mt-3 text-3xl uppercase">Demandez une offre</h2>
-            <p className="mt-3 max-w-[42ch] text-muted-foreground">
+            <p className="mt-3 max-w-[42ch] text-white/70">
               Indiquez la quantité, la destination et le délai souhaité. Nous revenons vers vous
               sous 24 heures ouvrées avec un prix rendu.
             </p>

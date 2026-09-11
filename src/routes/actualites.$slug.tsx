@@ -54,7 +54,7 @@ function NewsDetail() {
           })}
         </div>
         <h1 className="mt-3 text-4xl uppercase leading-[0.95]">{item.title}</h1>
-        {item.excerpt ? <p className="mt-4 text-lg text-muted-foreground">{item.excerpt}</p> : null}
+        {item.excerpt ? <p className="mt-4 text-lg text-white/70">{item.excerpt}</p> : null}
         {item.cover_url ? (
           <img
             src={item.cover_url}
@@ -70,7 +70,7 @@ function NewsDetail() {
       </article>
 
       {related.length ? (
-        <section className="border-t border-black/5 bg-chrome/40 py-16">
+        <section className="border-t border-black/5 bg-emeraude/20 py-16">
           <div className="mx-auto max-w-[1200px] px-5">
             <h2 className="text-2xl uppercase">À lire aussi</h2>
             <div className="mt-8 grid gap-5 md:grid-cols-2">
@@ -79,7 +79,7 @@ function NewsDetail() {
                   key={n.id}
                   to="/actualites/$slug"
                   params={{ slug: n.slug }}
-                  className="overflow-hidden rounded-xl bg-card ring-1 ring-black/5 transition-shadow hover:shadow-lg"
+                  className="overflow-hidden rounded-xl bg-emeraude/10 border border-or-prestige/15 transition-shadow hover:shadow-lg"
                 >
                   {n.cover_url ? (
                     <img
@@ -96,7 +96,7 @@ function NewsDetail() {
                       {new Date(n.published_at).toLocaleDateString("fr-FR")}
                     </div>
                     <h3 className="mt-3 text-lg uppercase leading-tight">{n.title}</h3>
-                    <p className="mt-2 line-clamp-2 text-sm text-muted-foreground">{n.excerpt}</p>
+                    <p className="mt-2 line-clamp-2 text-sm text-white/70">{n.excerpt}</p>
                   </div>
                 </Link>
               ))}

@@ -42,7 +42,7 @@ function ActivitesPage() {
       </section>
 
       {/* Les 6 pôles */}
-      <section className="bg-paper py-20">
+      <section className="bg-noir py-20">
         <div className="mx-auto max-w-[1280px] px-5 space-y-24">
           {POLES.map((pole, index) => (
             <article
@@ -65,7 +65,7 @@ function ActivitesPage() {
                 <div className="gold-line mt-4" />
                 <h2 className="mt-5 text-3xl uppercase">{pole.title}</h2>
                 <p className="label-mono mt-2 text-or-prestige">{pole.subtitle}</p>
-                <p className="mt-5 text-muted-foreground leading-relaxed">{pole.description}</p>
+                <p className="mt-5 text-white/80 leading-relaxed">{pole.description}</p>
 
                 <ul className="mt-6 grid grid-cols-2 gap-2">
                   {pole.services.map((s) => (

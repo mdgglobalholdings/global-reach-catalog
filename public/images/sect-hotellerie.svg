@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <linearGradient id="floorGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#c8a96e"/>
+      <stop offset="100%" style="stop-color:#a07840"/>
+    </linearGradient>
+    <linearGradient id="wallGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2c2c3e"/>
+      <stop offset="50%" style="stop-color:#3a3a52"/>
+      <stop offset="100%" style="stop-color:#2c2c3e"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#BF9128"/>
+      <stop offset="50%" style="stop-color:#F2DE83"/>
+      <stop offset="100%" style="stop-color:#BF9128"/>
+    </linearGradient>
+    <linearGradient id="tableGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5f0e8"/>
+      <stop offset="100%" style="stop-color:#e8e0d0"/>
+    </linearGradient>
+    <radialGradient id="chandelier" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" style="stop-color:#FFF9C4;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#FFD700;stop-opacity:0.1"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Fond salle de restaurant luxe -->
+  <rect width="1200" height="800" fill="url(#bgGrad)"/>
+
+  <!-- Mur du fond avec boiserie -->
+  <rect x="0" y="0" width="1200" height="620" fill="url(#wallGrad)"/>
+
+  <!-- Panneaux muraux décoratifs -->
+  <rect x="40" y="40" width="220" height="380" rx="4" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.6"/>
+  <rect x="55" y="55" width="190" height="350" rx="3" fill="none" stroke="url(#goldGrad)" stroke-width="1" opacity="0.4"/>
+  <rect x="280" y="40" width="220" height="380" rx="4" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.6"/>
+  <rect x="295" y="55" width="190" height="350" rx="3" fill="none" stroke="url(#goldGrad)" stroke-width="1" opacity="0.4"/>
+  <rect x="700" y="40" width="220" height="380" rx="4" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.6"/>
+  <rect x="940" y="40" width="220" height="380" rx="4" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.6"/>
+
+  <!-- Grande fenêtre centrale avec vue nocturne -->
+  <rect x="520" y="30" width="280" height="400" rx="6" fill="#0a0a1a"/>
+  <rect x="524" y="34" width="272" height="392" rx="4" fill="#0d0d22"/>
+  <!-- Reflets fenêtre -->
+  <rect x="524" y="34" width="3" height="392" fill="white" opacity="0.1"/>
+  <rect x="524" y="34" width="272" height="3" fill="white" opacity="0.1"/>
+  <!-- Étoiles -->
+  <circle cx="580" cy="80" r="1.5" fill="white" opacity="0.8"/>
+  <circle cx="630" cy="60" r="1" fill="white" opacity="0.6"/>
+  <circle cx="680" cy="90" r="1.5" fill="white" opacity="0.7"/>
+  <circle cx="720" cy="70" r="1" fill="white" opacity="0.5"/>
+  <circle cx="760" cy="110" r="1.5" fill="white" opacity="0.8"/>
+  <circle cx="555" cy="120" r="1" fill="white" opacity="0.6"/>
+  <circle cx="770" cy="55" r="1" fill="white" opacity="0.6"/>
+  <!-- Lune -->
+  <circle cx="750" cy="100" r="22" fill="#FFF9C4" opacity="0.85"/>
+  <circle cx="760" cy="94" r="18" fill="#0d0d22" opacity="0.5"/>
+  <!-- Lumières ville en bas de la fenêtre -->
+  <rect x="524" y="330" width="272" height="96" fill="#0a0a18"/>
+  <circle cx="545" cy="370" r="3" fill="#FFD700" opacity="0.7"/>
+  <circle cx="570" cy="360" r="2" fill="#FFA500" opacity="0.6"/>
+  <circle cx="600" cy="375" r="3" fill="#FFD700" opacity="0.7"/>
+  <circle cx="635" cy="365" r="2" fill="#FFF" opacity="0.5"/>
+  <circle cx="670" cy="380" r="3" fill="#FFA500" opacity="0.7"/>
+  <circle cx="710" cy="360" r="2" fill="#FFD700" opacity="0.6"/>
+  <circle cx="750" cy="370" r="3" fill="#FFF" opacity="0.5"/>
+  <circle cx="780" cy="355" r="2" fill="#FFA500" opacity="0.7"/>
+  <!-- Rideaux -->
+  <path d="M520,30 Q505,200 515,430" stroke="#4a3728" stroke-width="20" fill="none" opacity="0.9"/>
+  <path d="M520,30 Q500,180 508,430" stroke="#3d2e20" stroke-width="8" fill="none" opacity="0.7"/>
+  <path d="M800,30 Q815,200 805,430" stroke="#4a3728" stroke-width="20" fill="none" opacity="0.9"/>
+  <path d="M800,30 Q820,180 812,430" stroke="#3d2e20" stroke-width="8" fill="none" opacity="0.7"/>
+
+  <!-- Lustre / Chandelier -->
+  <line x1="600" y1="0" x2="600" y2="80" stroke="url(#goldGrad)" stroke-width="3"/>
+  <ellipse cx="600" cy="90" rx="80" ry="20" fill="url(#goldGrad)" opacity="0.8"/>
+  <ellipse cx="600" cy="90" rx="60" ry="14" fill="#FFF9C4" opacity="0.4"/>
+  <!-- Bras du lustre -->
+  <line x1="540" y1="90" x2="520" y2="130" stroke="url(#goldGrad)" stroke-width="2.5"/>
+  <circle cx="520" cy="136" r="6" fill="#FFD700" filter="url(#glow)"/>
+  <line x1="560" y1="90" x2="545" y2="135" stroke="url(#goldGrad)" stroke-width="2.5"/>
+  <circle cx="545" cy="141" r="6" fill="#FFD700" filter="url(#glow)"/>
+  <line x1="600" y1="90" x2="600" y2="140" stroke="url(#goldGrad)" stroke-width="2.5"/>
+  <circle cx="600" cy="146" r="7" fill="#FFF9C4" filter="url(#glow)"/>
+  <line x1="640" y1="90" x2="655" y2="135" stroke="url(#goldGrad)" stroke-width="2.5"/>
+  <circle cx="655" cy="141" r="6" fill="#FFD700" filter="url(#glow)"/>
+  <line x1="660" y1="90" x2="680" y2="130" stroke="url(#goldGrad)" stroke-width="2.5"/>
+  <circle cx="680" cy="136" r="6" fill="#FFD700" filter="url(#glow)"/>
+  <!-- Halo lumière lustre -->
+  <ellipse cx="600" cy="200" rx="250" ry="100" fill="url(#chandelier)" opacity="0.25"/>
+
+  <!-- Sol parquet en perspective -->
+  <polygon points="0,620 1200,620 1200,800 0,800" fill="url(#floorGrad)"/>
+  <!-- Lignes parquet -->
+  <line x1="0" y1="650" x2="1200" y2="650" stroke="#8B6914" stroke-width="1" opacity="0.4"/>
+  <line x1="0" y1="680" x2="1200" y2="680" stroke="#8B6914" stroke-width="1" opacity="0.4"/>
+  <line x1="0" y1="710" x2="1200" y2="710" stroke="#8B6914" stroke-width="1" opacity="0.4"/>
+  <line x1="0" y1="740" x2="1200" y2="740" stroke="#8B6914" stroke-width="1" opacity="0.4"/>
+  <line x1="0" y1="770" x2="1200" y2="770" stroke="#8B6914" stroke-width="1" opacity="0.4"/>
+  <line x1="150" y1="620" x2="100" y2="800" stroke="#8B6914" stroke-width="1" opacity="0.3"/>
+  <line x1="350" y1="620" x2="300" y2="800" stroke="#8B6914" stroke-width="1" opacity="0.3"/>
+  <line x1="550" y1="620" x2="500" y2="800" stroke="#8B6914" stroke-width="1" opacity="0.3"/>
+  <line x1="750" y1="620" x2="700" y2="800" stroke="#8B6914" stroke-width="1" opacity="0.3"/>
+  <line x1="950" y1="620" x2="900" y2="800" stroke="#8B6914" stroke-width="1" opacity="0.3"/>
+  <line x1="1150" y1="620" x2="1100" y2="800" stroke="#8B6914" stroke-width="1" opacity="0.3"/>
+
+  <!-- Table principale (nappe blanche) -->
+  <ellipse cx="600" cy="650" rx="280" ry="90" fill="url(#tableGrad)"/>
+  <ellipse cx="600" cy="640" rx="270" ry="80" fill="white" opacity="0.95"/>
+  <!-- Plis nappe -->
+  <ellipse cx="600" cy="640" rx="260" ry="72" fill="none" stroke="#e0d8c8" stroke-width="1.5"/>
+
+  <!-- Assiettes -->
+  <circle cx="480" cy="640" r="38" fill="#f8f8f8" stroke="#ddd" stroke-width="1.5"/>
+  <circle cx="480" cy="640" r="28" fill="#fafafa" stroke="#ccc" stroke-width="1"/>
+  <circle cx="480" cy="640" r="12" fill="#f0f0f0"/>
+  <circle cx="720" cy="640" r="38" fill="#f8f8f8" stroke="#ddd" stroke-width="1.5"/>
+  <circle cx="720" cy="640" r="28" fill="#fafafa" stroke="#ccc" stroke-width="1"/>
+  <circle cx="720" cy="640" r="12" fill="#f0f0f0"/>
+  <circle cx="600" cy="620" r="32" fill="#f8f8f8" stroke="#ddd" stroke-width="1.5"/>
+  <circle cx="600" cy="620" r="22" fill="#fafafa" stroke="#ccc" stroke-width="1"/>
+
+  <!-- Verres à vin -->
+  <g transform="translate(530, 600)">
+    <path d="M10,0 Q0,15 0,25 Q0,40 10,45 L6,65 L-6,65 L-6,68 L26,68 L26,65 L14,65 L10,45 Q20,40 20,25 Q20,15 10,0 Z" fill="#C5E8F5" opacity="0.7"/>
+    <path d="M10,0 Q0,15 0,25 Q0,40 10,45 L6,65 L-6,65" fill="none" stroke="#90CAD9" stroke-width="1"/>
+  </g>
+  <g transform="translate(655, 600)">
+    <path d="M10,0 Q0,15 0,25 Q0,40 10,45 L6,65 L-6,65 L-6,68 L26,68 L26,65 L14,65 L10,45 Q20,40 20,25 Q20,15 10,0 Z" fill="#F5C5C5" opacity="0.6"/>
+    <path d="M10,0 Q0,15 0,25 Q0,40 10,45 L6,65 L-6,65" fill="none" stroke="#D99090" stroke-width="1"/>
+  </g>
+
+  <!-- Bougie centre table -->
+  <rect x="594" y="560" width="12" height="40" rx="3" fill="#FFFDE7"/>
+  <ellipse cx="600" cy="558" rx="7" ry="4" fill="#FFF9C4"/>
+  <path d="M600,550 Q603,545 600,538 Q597,545 600,550 Z" fill="#FFA000"/>
+  <circle cx="600" cy="547" r="4" fill="#FFD700" opacity="0.8" filter="url(#glow)"/>
+  <!-- Halo bougie -->
+  <ellipse cx="600" cy="580" rx="60" ry="30" fill="#FFF9C4" opacity="0.12"/>
+
+  <!-- Fleurs centre -->
+  <circle cx="600" cy="590" r="8" fill="#E91E63" opacity="0.8"/>
+  <circle cx="593" cy="586" r="6" fill="#F06292"/>
+  <circle cx="607" cy="586" r="6" fill="#AD1457"/>
+
+  <!-- Couverts gauche -->
+  <rect x="432" y="618" width="4" height="50" rx="2" fill="#C0C0C0"/>
+  <rect x="440" y="618" width="3" height="50" rx="1" fill="#C0C0C0"/>
+  <!-- Cuillère droite -->
+  <rect x="540" y="618" width="4" height="50" rx="2" fill="#C0C0C0"/>
+  <ellipse cx="542" cy="616" rx="5" ry="7" fill="#C0C0C0"/>
+
+  <!-- Chaises -->
+  <rect x="380" y="720" width="80" height="12" rx="4" fill="#4a3728"/>
+  <rect x="390" y="730" width="12" height="50" rx="3" fill="#3d2e20"/>
+  <rect x="458" y="730" width="12" height="50" rx="3" fill="#3d2e20"/>
+  <rect x="730" y="720" width="80" height="12" rx="4" fill="#4a3728"/>
+  <rect x="740" y="730" width="12" height="50" rx="3" fill="#3d2e20"/>
+  <rect x="808" y="730" width="12" height="50" rx="3" fill="#3d2e20"/>
+
+  <!-- Table latérale gauche -->
+  <ellipse cx="160" cy="660" rx="130" ry="55" fill="white" opacity="0.9"/>
+  <circle cx="120" cy="658" r="28" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <circle cx="200" cy="658" r="28" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <rect x="154" y="640" width="12" height="35" rx="3" fill="#FFFDE7"/>
+  <circle cx="160" cy="638" r="5" fill="#FFD700" opacity="0.9" filter="url(#glow)"/>
+
+  <!-- Table latérale droite -->
+  <ellipse cx="1040" cy="660" rx="130" ry="55" fill="white" opacity="0.9"/>
+  <circle cx="1000" cy="658" r="28" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <circle cx="1080" cy="658" r="28" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <rect x="1034" y="640" width="12" height="35" rx="3" fill="#FFFDE7"/>
+  <circle cx="1040" cy="638" r="5" fill="#FFD700" opacity="0.9" filter="url(#glow)"/>
+
+  <!-- Voile sombre élégant -->
+  <rect x="0" y="0" width="1200" height="800" fill="rgba(10,10,20,0.2)"/>
+</svg>

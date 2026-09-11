@@ -77,7 +77,7 @@ export const POLES = [
     icon: "🌾",
     description: "Production agricole, élevage, transformation et commercialisation de produits.",
     services: ["Production agricole", "Élevage", "Transformation", "Commercialisation", "Développement de projets"],
-    image: "/images/sect-equipements.jpg",
+    image: "/images/sect-agriculture.svg",
     link: "/contact",
   },
   {
@@ -87,7 +87,7 @@ export const POLES = [
     icon: "🏨",
     description: "Hébergement, restauration, services hôteliers et développement de projets touristiques.",
     services: ["Hôtellerie", "Hébergement", "Restauration", "Événementiel", "Développement de projets"],
-    image: "/images/sect-electronique.jpg",
+    image: "/images/sect-hotellerie.svg",
     link: "/contact",
   },
 ] as const;

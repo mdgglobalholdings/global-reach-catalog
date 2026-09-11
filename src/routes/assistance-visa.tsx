@@ -37,7 +37,7 @@ const SERVICES = [
 function VisaPage() {
   return (
     <main>
-      <section className="relative isolate overflow-hidden bg-ink text-white">
+      <section className="relative isolate overflow-hidden bg-ink text-noir">
         <img
           src="/images/sect-visa.jpg"
           alt="Voyage d'affaires international"
@@ -48,11 +48,11 @@ function VisaPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ink/70 to-ink" />
         <div className="relative mx-auto max-w-[1200px] px-5 py-16">
-          <div className="eyebrow text-amber">Assistance visa</div>
+          <div className="eyebrow text-or-prestige">Assistance visa</div>
           <h1 className="mt-4 max-w-[18ch] text-4xl uppercase leading-[0.95] md:text-6xl">
             Voyagez sans blocage administratif
           </h1>
-          <p className="mt-5 max-w-[58ch] text-chrome/70">
+          <p className="mt-5 max-w-[58ch] text-noir/65">
             Nous préparons et suivons votre dossier de visa pour vos déplacements d'affaires,
             missions de sourcing et salons professionnels.
           </p>
@@ -60,7 +60,7 @@ function VisaPage() {
       </section>
 
       <section className="mx-auto max-w-[1200px] px-5 py-16">
-        <div className="eyebrow text-amberhot">Processus</div>
+        <div className="eyebrow text-or-prestige">Processus</div>
         <h2 className="mt-3 text-3xl uppercase">Quatre étapes</h2>
         <div className="mt-10 grid gap-5 md:grid-cols-4">
           {STEPS.map((s) => (
@@ -76,7 +76,7 @@ function VisaPage() {
       <section className="bg-emeraude/20 py-16">
         <div className="mx-auto grid max-w-[1200px] gap-8 px-5 lg:grid-cols-[1fr_1.2fr]">
           <div>
-            <div className="eyebrow text-amberhot">Prestations</div>
+            <div className="eyebrow text-or-prestige">Prestations</div>
             <h2 className="mt-3 text-3xl uppercase">Ce que nous prenons en charge</h2>
             <ul className="mt-6 space-y-2 text-sm text-muted-foreground">
               {SERVICES.map((s) => (

@@ -56,17 +56,17 @@ function CataloguePage() {
     navigate({ search: { ...search, ...patch } });
 
   const selectClass =
-    "rounded-md border border-or-prestige/20 bg-noir px-3 py-2.5 text-sm text-white outline-none focus:border-amber focus:ring-2 focus:ring-amber/30";
+    "rounded-md border border-or-prestige/20 bg-noir px-3 py-2.5 text-sm text-noir outline-none focus:border-amber focus:ring-2 focus:ring-amber/30";
 
   return (
     <main>
-      <section className="bg-ink text-white">
+      <section className="bg-ink text-noir">
         <div className="mx-auto max-w-[1200px] px-5 py-16">
-          <div className="eyebrow text-amber">Catalogue</div>
+          <div className="eyebrow text-or-prestige">Catalogue</div>
           <h1 className="mt-4 max-w-[18ch] text-4xl uppercase leading-[0.95] md:text-6xl">
             Matériel disponible et sur commande
           </h1>
-          <p className="mt-5 max-w-[58ch] text-chrome/70">
+          <p className="mt-5 max-w-[58ch] text-noir/65">
             Notre catalogue est une vitrine : aucune vente en ligne. Sélectionnez un produit et
             recevez une offre chiffrée sous 24 heures ouvrées.
           </p>

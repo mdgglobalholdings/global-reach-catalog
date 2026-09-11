@@ -25,13 +25,13 @@ function NewsPage() {
 
   return (
     <main>
-      <section className="bg-ink text-white">
+      <section className="bg-ink text-noir">
         <div className="mx-auto max-w-[1200px] px-5 py-16">
-          <div className="eyebrow text-amber">Actualités</div>
+          <div className="eyebrow text-or-prestige">Actualités</div>
           <h1 className="mt-4 max-w-[18ch] text-4xl uppercase leading-[0.95] md:text-6xl">
             Arrivages & informations
           </h1>
-          <p className="mt-5 max-w-[56ch] text-chrome/70">
+          <p className="mt-5 max-w-[56ch] text-noir/65">
             Nouveaux lots, conteneurs en route et évolutions de nos services.
           </p>
         </div>

@@ -23,17 +23,17 @@ function ActivitesPage() {
     <main>
 
       {/* Hero */}
-      <section className="relative isolate overflow-hidden bg-noir text-white">
+      <section className="relative isolate overflow-hidden" style={{ backgroundColor: "#eeeee6" }}>
         <div className="absolute inset-0 bg-gradient-to-br from-noir via-emeraude/30 to-noir" />
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-or-prestige/40 to-transparent" />
         <div className="relative mx-auto max-w-[1280px] px-5 py-20">
-          <div className="eyebrow text-or-prestige/70">Nos activités</div>
+          <div className="eyebrow text-or-prestige">Nos activités</div>
           <h1 className="mt-4 max-w-[18ch] text-5xl uppercase leading-[0.92] md:text-7xl">
             Un groupe.<br />
             <span className="text-gold">Plusieurs expertises.</span><br />
             Une seule vision.
           </h1>
-          <p className="mt-6 max-w-[58ch] text-ivoire/60 leading-relaxed">
+          <p className="mt-6 max-w-[58ch] text-noir/65 leading-relaxed">
             MDG GLOBAL HOLDINGS développe des activités complémentaires qui couvrent l'ensemble
             de la chaîne commerciale internationale — du sourcing à la livraison, en passant
             par la logistique et la mobilité.
@@ -42,7 +42,7 @@ function ActivitesPage() {
       </section>
 
       {/* Les 6 pôles */}
-      <section className="bg-paper py-20">
+      <section className="py-20" style={{ backgroundColor: "#f5f5ee" }}>
         <div className="mx-auto max-w-[1280px] px-5 space-y-24">
           {POLES.map((pole, index) => (
             <article
@@ -101,11 +101,11 @@ function ActivitesPage() {
       </section>
 
       {/* Note agriculture & hôtellerie */}
-      <section className="bg-noir py-16 text-white">
+      <section className="py-16 text-noir">
         <div className="mx-auto max-w-[1280px] px-5 text-center">
           <div className="gold-line mx-auto" />
           <h2 className="mt-8 text-2xl uppercase">Agriculture, Élevage & Hôtellerie</h2>
-          <p className="mt-4 max-w-[60ch] mx-auto text-ivoire/55 leading-relaxed">
+          <p className="mt-4 max-w-[60ch] mx-auto text-noir/65 leading-relaxed">
             Ces pôles sont en cours de développement. Les projets agricoles, d'élevage et
             hôteliers du groupe seront présentés prochainement. Contactez-nous pour toute
             opportunité de partenariat ou de co-investissement.

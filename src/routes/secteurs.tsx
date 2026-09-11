@@ -26,13 +26,13 @@ function SecteursPage() {
 
   return (
     <main>
-      <section className="bg-ink text-white">
+      <section className="bg-ink text-noir">
         <div className="mx-auto max-w-[1200px] px-5 py-16">
-          <div className="eyebrow text-amber">Secteurs</div>
+          <div className="eyebrow text-or-prestige">Secteurs</div>
           <h1 className="mt-4 max-w-[20ch] text-4xl uppercase leading-[0.95] md:text-6xl">
             Quatre secteurs, une chaîne d'approvisionnement
           </h1>
-          <p className="mt-5 max-w-[58ch] text-chrome/70">
+          <p className="mt-5 max-w-[58ch] text-noir/65">
             De l'engin de chantier au smartphone, nous sourçons, contrôlons et acheminons le
             matériel dont vos activités ont besoin.
           </p>
@@ -59,7 +59,7 @@ function SecteursPage() {
                 />
               </figure>
               <div>
-                <div className="eyebrow text-amberhot">{sector.sub}</div>
+                <div className="eyebrow text-or-prestige">{sector.sub}</div>
                 <h2 className="mt-3 text-3xl uppercase">{sector.name}</h2>
                 <p className="mt-4 text-muted-foreground">
                   {root?.description ??

@@ -116,7 +116,7 @@ function ProductPage() {
           <div className="eyebrow text-amberhot">{product.categories?.name ?? "Catalogue"}</div>
           <h1 className="mt-3 text-4xl uppercase leading-[0.95]">{product.name}</h1>
           <div className="mt-4 flex flex-wrap gap-2 font-mono text-[11px] uppercase tracking-[0.15em]">
-            <span className="rounded bg-navy px-3 py-1.5 text-white">
+            <span className="rounded bg-navy px-3 py-1.5 text-noir">
               {AVAILABILITY_LABELS[product.availability] ?? product.availability}
             </span>
             {product.brand ? (

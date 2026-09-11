@@ -61,13 +61,13 @@ const STEPS = [
 function ServicesPage() {
   return (
     <main>
-      <section className="bg-ink text-white">
+      <section className="bg-ink text-noir">
         <div className="mx-auto max-w-[1200px] px-5 py-16">
-          <div className="eyebrow text-amber">Services</div>
+          <div className="eyebrow text-or-prestige">Services</div>
           <h1 className="mt-4 max-w-[18ch] text-4xl uppercase leading-[0.95] md:text-6xl">
             De la commande à la livraison
           </h1>
-          <p className="mt-5 max-w-[58ch] text-chrome/70">
+          <p className="mt-5 max-w-[58ch] text-noir/65">
             Un interlocuteur unique pour l'ensemble de la chaîne : achat, transport, douane et
             distribution.
           </p>
@@ -93,7 +93,7 @@ function ServicesPage() {
 
       <section className="bg-emeraude/20 py-16">
         <div className="mx-auto max-w-[1200px] px-5">
-          <div className="eyebrow text-amberhot">Méthode</div>
+          <div className="eyebrow text-or-prestige">Méthode</div>
           <h2 className="mt-3 text-3xl uppercase">Comment nous travaillons</h2>
           <div className="mt-10 grid gap-5 md:grid-cols-4">
             {STEPS.map((s) => (

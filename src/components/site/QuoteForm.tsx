@@ -114,7 +114,7 @@ export function QuoteForm({ productId, productName, defaultSubject }: Props) {
   }
 
   return (
-    <form onSubmit={onSubmit} className="grid gap-4 rounded-xl bg-card p-5 ring-1 ring-black/5">
+    <form onSubmit={onSubmit} className="grid gap-4 rounded-xl bg-white border border-or-prestige/20 p-5 shadow-sm">
       {productName ? (
         <div className="label-mono rounded-md bg-muted px-3 py-2 text-ink/60">
           Produit concerné : {productName}

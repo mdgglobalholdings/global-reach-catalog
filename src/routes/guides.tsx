@@ -85,13 +85,13 @@ const FAQS = [
 function GuidesPage() {
   return (
     <main>
-      <section className="bg-ink text-white">
+      <section className="bg-ink text-noir">
         <div className="mx-auto max-w-[1200px] px-5 py-16">
-          <div className="eyebrow text-amber">Ressources</div>
+          <div className="eyebrow text-or-prestige">Ressources</div>
           <h1 className="mt-4 max-w-[20ch] text-4xl uppercase leading-[0.95] md:text-6xl">
             Guides & Conseils pratiques
           </h1>
-          <p className="mt-5 max-w-[60ch] text-chrome/70">
+          <p className="mt-5 max-w-[60ch] text-noir/65">
             Apprenez les meilleures pratiques pour vos achats à l'international, la logistique et
             l'accompagnement administratif.
           </p>
@@ -100,7 +100,7 @@ function GuidesPage() {
 
       {/* Guides */}
       <section className="mx-auto max-w-[1200px] px-5 py-16">
-        <div className="eyebrow text-amberhot">Guides complets</div>
+        <div className="eyebrow text-or-prestige">Guides complets</div>
         <h2 className="mt-3 text-3xl uppercase">À lire et consulter</h2>
         <div className="mt-10 grid gap-5 md:grid-cols-2">
           {GUIDES.map((guide, i) => (
@@ -139,7 +139,7 @@ function GuidesPage() {
       {/* FAQ Avancée */}
       <section className="bg-emeraude/20 py-16">
         <div className="mx-auto max-w-[1200px] px-5">
-          <div className="eyebrow text-amberhot">Questions fréquentes</div>
+          <div className="eyebrow text-or-prestige">Questions fréquentes</div>
           <h2 className="mt-3 text-3xl uppercase">Réponses aux questions d'importateurs</h2>
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             {FAQS.map((faq, i) => (
@@ -161,7 +161,7 @@ function GuidesPage() {
 
       {/* Ressources externes */}
       <section className="mx-auto max-w-[1200px] px-5 py-16">
-        <div className="eyebrow text-amberhot">Ressources utiles</div>
+        <div className="eyebrow text-or-prestige">Ressources utiles</div>
         <h2 className="mt-3 text-3xl uppercase">Liens et organisations</h2>
         <div className="mt-10 grid gap-5 md:grid-cols-3">
           <a

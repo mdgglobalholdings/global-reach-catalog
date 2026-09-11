@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { CtaBand } from "@/components/site/CtaBand";
-import { getNews, getProducts } from "@/lib/catalog.functions";
+import { getProducts } from "@/lib/catalog.functions";
 import { COMPANY, POLES, STATS, VALUES, whatsappLink } from "@/lib/company";
 import { getOrganizationSchema, getLocalBusinessSchema } from "@/lib/schema";
 
@@ -12,7 +12,7 @@ const DESCRIPTION =
 export const Route = createFileRoute("/")({
   loader: async () => ({
     featured: await getProducts({ data: { featured: true, limit: 4 } }),
-    news: await getNews({ data: { limit: 2 } }),
+    
   }),
   head: () => ({
     meta: [
@@ -33,7 +33,7 @@ export const Route = createFileRoute("/")({
 });
 
 function Home() {
-  const { featured, news } = Route.useLoaderData();
+  const { featured } = Route.useLoaderData();
 
   return (
     <main>

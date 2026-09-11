@@ -8,7 +8,7 @@ export function Footer() {
       <div className="h-0.5 bg-gradient-to-r from-transparent via-or-prestige to-transparent" />
 
       <div className="mx-auto max-w-[1280px] px-5 py-16">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
 
           {/* Marque */}
           <div>
@@ -37,32 +37,14 @@ export function Footer() {
                 { to: "/a-propos", label: "À propos" },
                 { to: "/activites", label: "Nos activités" },
                 { to: "/services", label: "Logistique" },
+                { to: "/assistance-visa", label: "Mobilité & Visa" },
+                { to: "/contact", label: "Contact" },
               ].map((item) => (
                 <Link
                   key={item.label}
                   to={item.to}
-                  {...('search' in item ? { search: item.search } : {})}
                   className="block text-sm text-noir/70 smooth-transition hover:text-or-prestige"
                 >
-                  {item.label}
-                </Link>
-              ))}
-            </nav>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h3 className="text-base font-bold uppercase tracking-wider text-noir mb-6">Services</h3>
-            <nav className="space-y-3">
-              {[
-                { to: "/assistance-visa", label: "Mobilité & Visa" },
-                { to: "/actualites", label: "Actualités" },
-                { to: "/guides", label: "Guides" },
-                { to: "/contact", label: "Contact" },
-                { to: "/mentions-legales", label: "Mentions légales" },
-              ].map((item) => (
-                <Link key={item.label} to={item.to}
-                  className="block text-sm text-noir/70 smooth-transition hover:text-or-prestige">
                   {item.label}
                 </Link>
               ))}

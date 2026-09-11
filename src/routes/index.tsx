@@ -52,21 +52,29 @@ function Home() {
         <div className="relative w-full max-w-[1280px] mx-auto px-4 sm:px-6 py-20">
           <div className="w-full max-w-[520px]">
 
-            {/* Badge */}
-            <div className="mb-5 flex items-center gap-3">
-              <div className="h-0.5 w-6 shrink-0" style={{ background: "linear-gradient(90deg,#BF9128,#F2DE83)" }} />
-              <span className="font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-or-lumiere leading-none">MDG GLOBAL HOLDINGS</span>
-            </div>
-
-            {/* Titre responsive */}
-            <h1 className="uppercase leading-tight text-white"
-              style={{ fontFamily: "Montserrat,sans-serif", fontWeight: 900, fontSize: "clamp(2.2rem,8vw,5.5rem)" }}>
-              L'excellence<br />
-              <span style={{ background: "linear-gradient(135deg,#694A0C 0%,#BF9128 25%,#F2DE83 50%,#E8BD48 75%,#694A0C 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
-                au-delà des
-              </span><br />
-              frontières
+            {/* MDG GLOBAL HOLDINGS — très grand, Montserrat Black 900, or métallique */}
+            <h1
+              className="uppercase leading-none"
+              style={{
+                fontFamily: "Montserrat, sans-serif",
+                fontWeight: 900,
+                fontSize: "clamp(2.4rem, 7.5vw, 6rem)",
+                background: "linear-gradient(135deg, #694A0C 0%, #BF9128 25%, #F2DE83 50%, #E8BD48 75%, #694A0C 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
+              MDG GLOBAL HOLDINGS
             </h1>
+
+            {/* Slogan — très petit, discret, blanc */}
+            <p
+              className="mt-2 uppercase text-white/70 font-medium tracking-[0.25em]"
+              style={{ fontSize: "clamp(0.6rem, 1.4vw, 0.85rem)" }}
+            >
+              L'excellence au-delà des frontières
+            </p>
 
             {/* Sous-titre */}
             <p className="mt-5 text-white/90 leading-relaxed text-sm sm:text-base">

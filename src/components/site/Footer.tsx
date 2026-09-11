@@ -105,8 +105,20 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/5">
-        <div className="mx-auto max-w-[1200px] px-5 py-4 font-mono text-[10px] uppercase tracking-[0.2em]">
-          © {new Date().getFullYear()} {COMPANY.name} · Tous droits réservés · <Link to="/">Accueil</Link>
+        <div className="mx-auto max-w-[1200px] px-5 py-6">
+          <div className="flex flex-col gap-4 md:flex-row md:justify-between md:items-center">
+            <div className="font-mono text-[10px] uppercase tracking-[0.2em]">
+              © {new Date().getFullYear()} {COMPANY.name} · Tous droits réservés
+            </div>
+            <div className="flex flex-wrap gap-4 font-mono text-[10px] uppercase tracking-[0.15em]">
+              <Link to="/politique-confidentialite" className="hover:text-amber">
+                Politique
+              </Link>
+              <Link to="/conditions-utilisation" className="hover:text-amber">
+                Conditions
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

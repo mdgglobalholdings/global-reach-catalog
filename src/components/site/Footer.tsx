@@ -46,6 +46,9 @@ export function Footer() {
               <Link to="/services" className="block hover:text-amber">
                 Services
               </Link>
+              <Link to="/guides" className="block hover:text-amber">
+                Guides
+              </Link>
             </nav>
           </div>
 

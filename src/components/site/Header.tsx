@@ -8,6 +8,7 @@ const NAV = [
   { to: "/catalogue", label: "Catalogue" },
   { to: "/secteurs", label: "Secteurs" },
   { to: "/services", label: "Services" },
+  { to: "/guides", label: "Guides" },
   { to: "/assistance-visa", label: "Visa" },
   { to: "/actualites", label: "Actualités" },
   { to: "/a-propos", label: "À propos" },

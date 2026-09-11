@@ -4,6 +4,7 @@ import { CtaBand } from "@/components/site/CtaBand";
 import { ProductCard } from "@/components/site/ProductCard";
 import { getNews, getProducts } from "@/lib/catalog.functions";
 import { COMPANY, SECTORS } from "@/lib/company";
+import { getOrganizationSchema, getLocalBusinessSchema } from "@/lib/schema";
 
 const TITLE = "MDG GLOBAL HOLDINGS — Import-Export Véhicules & Équipements | Sourcing Chine-Afrique";
 const DESCRIPTION =
@@ -20,6 +21,20 @@ export const Route = createFileRoute("/")({
       { name: "description", content: DESCRIPTION },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://mdgglobalholdings.com" },
+      { name: "robots", content: "index, follow" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        innerHTML: JSON.stringify(getOrganizationSchema()),
+      },
+      {
+        type: "application/ld+json",
+        innerHTML: JSON.stringify(getLocalBusinessSchema()),
+      },
     ],
   }),
   component: Home,

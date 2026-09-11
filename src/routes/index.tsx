@@ -59,7 +59,7 @@ function Home() {
             </div>
 
             {/* Titre responsive */}
-            <h1 className="uppercase leading-[0.92] text-white"
+            <h1 className="uppercase leading-tight text-white"
               style={{ fontFamily: "Montserrat,sans-serif", fontWeight: 900, fontSize: "clamp(2.2rem,8vw,5.5rem)" }}>
               L'excellence<br />
               <span style={{ background: "linear-gradient(135deg,#694A0C 0%,#BF9128 25%,#F2DE83 50%,#E8BD48 75%,#694A0C 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>

@@ -90,7 +90,7 @@ function AboutPage() {
         <div className="mx-auto max-w-[1280px] px-4 sm:px-6">
           <div className="text-center mb-12">
             <div className="eyebrow text-or-prestige">Présence internationale</div>
-            <h2 className="mt-4 text-2xl sm:text-3xl lg:text-4xl font-bold uppercase text-noir">Nos zones d'intervention</h2>
+            <h2 className="mt-4 text-xl sm:text-2xl font-bold uppercase text-noir">Nos zones d'intervention</h2>
           </div>
           <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
             {[

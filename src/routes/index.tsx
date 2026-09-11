@@ -78,39 +78,26 @@ const ZONES = [
   {
     name: "Afrique",
     desc: "Marchés &\nopportunités",
-    svg: (
-      <svg viewBox="0 0 585 615" className="size-7" fill="#050804">
-        <path d="M293,12 L318,8 L344,10 L368,18 L385,30 L393,46 L388,58 L395,70 L402,86 L408,104 L410,124 L406,142 L412,158 L420,176 L424,196 L422,216 L416,234 L410,252 L400,268 L386,282 L372,294 L362,308 L356,324 L352,340 L348,356 L342,370 L334,384 L324,396 L312,408 L300,418 L288,428 L276,436 L264,442 L252,444 L240,440 L228,432 L218,422 L210,410 L204,396 L200,380 L198,364 L196,348 L194,332 L190,316 L184,302 L176,290 L168,278 L162,264 L158,250 L156,234 L156,218 L158,202 L162,186 L160,170 L156,154 L154,138 L156,122 L162,108 L172,96 L184,86 L198,78 L214,72 L228,64 L242,56 L254,46 L264,34 L274,22 Z"/>
-      </svg>
-    ),
+    map: "/images/map-afrique.png",
+    isJpg: false,
   },
   {
     name: "Asie",
     desc: "Sourcing &\nfournisseurs",
-    svg: (
-      <svg viewBox="0 0 900 600" className="size-9" fill="#050804">
-        <path d="M80,80 L120,60 L160,50 L200,48 L240,50 L270,48 L300,44 L330,44 L360,50 L390,46 L420,40 L450,38 L480,40 L510,44 L538,40 L566,40 L594,48 L616,60 L630,74 L628,88 L640,98 L658,104 L672,116 L680,130 L676,144 L688,154 L706,160 L718,172 L720,186 L714,198 L700,206 L686,212 L680,224 L676,238 L668,250 L656,258 L642,262 L628,268 L616,278 L606,290 L598,302 L590,314 L578,322 L564,326 L550,320 L538,310 L526,302 L512,298 L498,302 L486,310 L476,320 L466,330 L454,338 L440,342 L426,338 L414,328 L402,318 L390,310 L376,306 L362,308 L350,316 L340,326 L330,336 L318,344 L304,348 L290,344 L278,334 L268,322 L258,310 L246,300 L232,294 L218,292 L204,296 L192,304 L182,314 L172,324 L160,330 L146,332 L132,326 L120,316 L110,304 L100,292 L90,280 L80,268 L72,254 L68,240 L68,226 L70,212 L68,198 L64,184 L62,170 L64,156 L68,142 L72,128 L76,114 L78,100 Z"/>
-      </svg>
-    ),
+    map: "/images/map-asie.png",
+    isJpg: false,
   },
   {
     name: "Europe",
     desc: "Partenariats &\néchanges",
-    svg: (
-      <svg viewBox="0 0 500 520" className="size-7" fill="#050804">
-        <path d="M220,20 L244,16 L268,18 L290,24 L310,34 L324,48 L330,62 L326,74 L334,84 L346,90 L354,102 L352,114 L344,122 L350,132 L358,142 L356,154 L346,160 L340,170 L344,182 L340,194 L328,200 L320,210 L316,222 L308,232 L296,238 L282,240 L268,238 L256,232 L244,224 L232,218 L220,214 L208,212 L196,214 L186,220 L178,228 L170,236 L160,240 L148,240 L136,234 L126,224 L118,212 L114,200 L116,188 L112,178 L104,170 L100,158 L102,146 L110,136 L116,126 L118,114 L114,102 L110,90 L112,78 L120,68 L132,60 L146,54 L160,50 L174,48 L186,42 L196,34 L206,26 Z M290,24 L314,20 L336,22 L330,34 L318,38 L306,32 Z M160,50 L148,44 L140,36 L150,28 L162,32 L168,42 Z"/>
-      </svg>
-    ),
+    map: "/images/map-europe.jpg",
+    isJpg: true,
   },
   {
     name: "Moyen-Orient",
     desc: "Commerce &\ndéveloppement",
-    svg: (
-      <svg viewBox="0 0 500 480" className="size-7" fill="#050804">
-        {/* Péninsule arabique + Levant + Iran + Irak + Turquie */}
-        <path d="M60,60 L90,52 L120,48 L150,48 L178,52 L200,46 L222,42 L248,42 L272,48 L292,58 L306,72 L310,88 L306,100 L314,112 L324,120 L330,134 L326,148 L316,158 L304,164 L296,176 L290,190 L284,204 L276,218 L266,230 L254,240 L244,250 L234,260 L224,270 L214,280 L204,290 L196,300 L190,312 L186,324 L182,336 L178,324 L174,310 L170,296 L168,282 L172,270 L168,258 L160,248 L152,238 L144,228 L138,216 L134,204 L130,190 L128,176 L126,162 L122,148 L116,136 L108,124 L100,112 L92,100 L84,88 L76,76 Z M292,58 L316,54 L340,56 L358,64 L366,78 L362,90 L350,96 L336,92 L320,84 L306,74 Z"/>
-      </svg>
-    ),
+    map: "/images/map-moyen-orient.png",
+    isJpg: false,
   },
 ];
 
@@ -319,12 +306,17 @@ function Home() {
                 className="flex items-center gap-4 rounded-2xl px-5 py-4 text-left smooth-transition hover:bg-white/5"
                 style={{ backgroundColor: "rgba(255,255,255,0.08)", border: "1px solid rgba(191,145,40,0.25)" }}
               >
-                {/* Icône ronde or avec forme du continent */}
+                {/* Cercle or avec vraie image du continent */}
                 <div
-                  className="shrink-0 flex size-14 items-center justify-center rounded-full shadow-md"
+                  className="shrink-0 flex size-14 items-center justify-center rounded-full shadow-md overflow-hidden"
                   style={{ background: "linear-gradient(135deg, #694A0C 0%, #BF9128 40%, #F2DE83 70%, #BF9128 100%)" }}
                 >
-                  {z.svg}
+                  <img
+                    src={z.map}
+                    alt={z.name}
+                    className="size-9 object-contain"
+                    style={z.isJpg ? { mixBlendMode: "multiply" } : {}}
+                  />
                 </div>
                 <div>
                   <h3 className="font-bold uppercase text-white text-sm tracking-wide">{z.name}</h3>

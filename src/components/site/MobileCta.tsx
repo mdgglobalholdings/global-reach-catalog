@@ -1,14 +1,13 @@
 import { Link } from "@tanstack/react-router";
-
 import { COMPANY, telLink, whatsappLink } from "@/lib/company";
 
 export function MobileCta() {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-ink/95 backdrop-blur md:hidden">
+    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-or-prestige/20 bg-noir/98 backdrop-blur-md md:hidden">
       <div className="grid grid-cols-3 gap-1 p-2">
         <Link
           to="/contact"
-          className="pill rounded-md bg-gradient-to-b from-amberhot to-amber py-3 text-center text-sm font-bold text-ink ring-1 ring-white/40"
+          className="btn-gold rounded-md py-3 text-center text-xs"
         >
           Devis
         </Link>
@@ -16,13 +15,13 @@ export function MobileCta() {
           href={whatsappLink("Bonjour MDG GLOBAL HOLDINGS, je souhaite un renseignement.")}
           target="_blank"
           rel="noreferrer"
-          className="rounded-md bg-white/5 py-3 text-center text-sm font-medium text-white ring-1 ring-white/15"
+          className="rounded-md border border-or-prestige/30 py-3 text-center font-mono text-[10px] uppercase tracking-[0.12em] text-or-lumiere"
         >
           WhatsApp
         </a>
         <a
           href={telLink(COMPANY.phoneBf)}
-          className="rounded-md bg-white/5 py-3 text-center text-sm font-medium text-white ring-1 ring-white/15"
+          className="rounded-md border border-or-prestige/20 py-3 text-center font-mono text-[10px] uppercase tracking-[0.12em] text-ivoire/60"
         >
           Appeler
         </a>

@@ -11,73 +11,48 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AProposRouteImport } from './routes/a-propos'
+import { Route as ActivitesRouteImport } from './routes/activites'
 import { Route as AssistanceVisaRouteImport } from './routes/assistance-visa'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as SecteursRouteImport } from './routes/secteurs'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as GuidesRouteImport } from './routes/guides'
+import { Route as MentionsLegalesRouteImport } from './routes/mentions-legales'
+import { Route as PolitiqueConfidentialiteRouteImport } from './routes/politique-confidentialite'
+import { Route as ConditionsUtilisationRouteImport } from './routes/conditions-utilisation'
 import { Route as ActualitesIndexRouteImport } from './routes/actualites.index'
 import { Route as ActualitesSlugRouteImport } from './routes/actualites.$slug'
 import { Route as CatalogueIndexRouteImport } from './routes/catalogue.index'
 import { Route as CatalogueSlugRouteImport } from './routes/catalogue.$slug'
 
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AProposRoute = AProposRouteImport.update({
-  id: '/a-propos',
-  path: '/a-propos',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AssistanceVisaRoute = AssistanceVisaRouteImport.update({
-  id: '/assistance-visa',
-  path: '/assistance-visa',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContactRoute = ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SecteursRoute = SecteursRouteImport.update({
-  id: '/secteurs',
-  path: '/secteurs',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ServicesRoute = ServicesRouteImport.update({
-  id: '/services',
-  path: '/services',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ActualitesIndexRoute = ActualitesIndexRouteImport.update({
-  id: '/actualites/',
-  path: '/actualites/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ActualitesSlugRoute = ActualitesSlugRouteImport.update({
-  id: '/actualites/$slug',
-  path: '/actualites/$slug',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CatalogueIndexRoute = CatalogueIndexRouteImport.update({
-  id: '/catalogue/',
-  path: '/catalogue/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CatalogueSlugRoute = CatalogueSlugRouteImport.update({
-  id: '/catalogue/$slug',
-  path: '/catalogue/$slug',
-  getParentRoute: () => rootRouteImport,
-} as any)
+const IndexRoute = IndexRouteImport.update({ id: '/', path: '/', getParentRoute: () => rootRouteImport } as any)
+const AProposRoute = AProposRouteImport.update({ id: '/a-propos', path: '/a-propos', getParentRoute: () => rootRouteImport } as any)
+const ActivitesRoute = ActivitesRouteImport.update({ id: '/activites', path: '/activites', getParentRoute: () => rootRouteImport } as any)
+const AssistanceVisaRoute = AssistanceVisaRouteImport.update({ id: '/assistance-visa', path: '/assistance-visa', getParentRoute: () => rootRouteImport } as any)
+const ContactRoute = ContactRouteImport.update({ id: '/contact', path: '/contact', getParentRoute: () => rootRouteImport } as any)
+const SecteursRoute = SecteursRouteImport.update({ id: '/secteurs', path: '/secteurs', getParentRoute: () => rootRouteImport } as any)
+const ServicesRoute = ServicesRouteImport.update({ id: '/services', path: '/services', getParentRoute: () => rootRouteImport } as any)
+const GuidesRoute = GuidesRouteImport.update({ id: '/guides', path: '/guides', getParentRoute: () => rootRouteImport } as any)
+const MentionsLegalesRoute = MentionsLegalesRouteImport.update({ id: '/mentions-legales', path: '/mentions-legales', getParentRoute: () => rootRouteImport } as any)
+const PolitiqueConfidentialiteRoute = PolitiqueConfidentialiteRouteImport.update({ id: '/politique-confidentialite', path: '/politique-confidentialite', getParentRoute: () => rootRouteImport } as any)
+const ConditionsUtilisationRoute = ConditionsUtilisationRouteImport.update({ id: '/conditions-utilisation', path: '/conditions-utilisation', getParentRoute: () => rootRouteImport } as any)
+const ActualitesIndexRoute = ActualitesIndexRouteImport.update({ id: '/actualites/', path: '/actualites/', getParentRoute: () => rootRouteImport } as any)
+const ActualitesSlugRoute = ActualitesSlugRouteImport.update({ id: '/actualites/$slug', path: '/actualites/$slug', getParentRoute: () => rootRouteImport } as any)
+const CatalogueIndexRoute = CatalogueIndexRouteImport.update({ id: '/catalogue/', path: '/catalogue/', getParentRoute: () => rootRouteImport } as any)
+const CatalogueSlugRoute = CatalogueSlugRouteImport.update({ id: '/catalogue/$slug', path: '/catalogue/$slug', getParentRoute: () => rootRouteImport } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
+  '/activites': typeof ActivitesRoute
   '/assistance-visa': typeof AssistanceVisaRoute
   '/contact': typeof ContactRoute
   '/secteurs': typeof SecteursRoute
   '/services': typeof ServicesRoute
+  '/guides': typeof GuidesRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
+  '/politique-confidentialite': typeof PolitiqueConfidentialiteRoute
+  '/conditions-utilisation': typeof ConditionsUtilisationRoute
   '/actualites/$slug': typeof ActualitesSlugRoute
   '/catalogue/$slug': typeof CatalogueSlugRoute
   '/actualites/': typeof ActualitesIndexRoute
@@ -86,10 +61,15 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
+  '/activites': typeof ActivitesRoute
   '/assistance-visa': typeof AssistanceVisaRoute
   '/contact': typeof ContactRoute
   '/secteurs': typeof SecteursRoute
   '/services': typeof ServicesRoute
+  '/guides': typeof GuidesRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
+  '/politique-confidentialite': typeof PolitiqueConfidentialiteRoute
+  '/conditions-utilisation': typeof ConditionsUtilisationRoute
   '/actualites/$slug': typeof ActualitesSlugRoute
   '/catalogue/$slug': typeof CatalogueSlugRoute
   '/actualites': typeof ActualitesIndexRoute
@@ -99,10 +79,15 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
+  '/activites': typeof ActivitesRoute
   '/assistance-visa': typeof AssistanceVisaRoute
   '/contact': typeof ContactRoute
   '/secteurs': typeof SecteursRoute
   '/services': typeof ServicesRoute
+  '/guides': typeof GuidesRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
+  '/politique-confidentialite': typeof PolitiqueConfidentialiteRoute
+  '/conditions-utilisation': typeof ConditionsUtilisationRoute
   '/actualites/$slug': typeof ActualitesSlugRoute
   '/catalogue/$slug': typeof CatalogueSlugRoute
   '/actualites/': typeof ActualitesIndexRoute
@@ -110,50 +95,24 @@ export interface FileRoutesById {
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths:
-    | '/'
-    | '/a-propos'
-    | '/assistance-visa'
-    | '/contact'
-    | '/secteurs'
-    | '/services'
-    | '/actualites/$slug'
-    | '/catalogue/$slug'
-    | '/actualites/'
-    | '/catalogue/'
+  fullPaths: '/' | '/a-propos' | '/activites' | '/assistance-visa' | '/contact' | '/secteurs' | '/services' | '/guides' | '/mentions-legales' | '/politique-confidentialite' | '/conditions-utilisation' | '/actualites/$slug' | '/catalogue/$slug' | '/actualites/' | '/catalogue/'
   fileRoutesByTo: FileRoutesByTo
-  to:
-    | '/'
-    | '/a-propos'
-    | '/assistance-visa'
-    | '/contact'
-    | '/secteurs'
-    | '/services'
-    | '/actualites/$slug'
-    | '/catalogue/$slug'
-    | '/actualites'
-    | '/catalogue'
-  id:
-    | '__root__'
-    | '/'
-    | '/a-propos'
-    | '/assistance-visa'
-    | '/contact'
-    | '/secteurs'
-    | '/services'
-    | '/actualites/$slug'
-    | '/catalogue/$slug'
-    | '/actualites/'
-    | '/catalogue/'
+  to: '/' | '/a-propos' | '/activites' | '/assistance-visa' | '/contact' | '/secteurs' | '/services' | '/guides' | '/mentions-legales' | '/politique-confidentialite' | '/conditions-utilisation' | '/actualites/$slug' | '/catalogue/$slug' | '/actualites' | '/catalogue'
+  id: '__root__' | '/' | '/a-propos' | '/activites' | '/assistance-visa' | '/contact' | '/secteurs' | '/services' | '/guides' | '/mentions-legales' | '/politique-confidentialite' | '/conditions-utilisation' | '/actualites/$slug' | '/catalogue/$slug' | '/actualites/' | '/catalogue/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AProposRoute: typeof AProposRoute
+  ActivitesRoute: typeof ActivitesRoute
   AssistanceVisaRoute: typeof AssistanceVisaRoute
   ContactRoute: typeof ContactRoute
   SecteursRoute: typeof SecteursRoute
   ServicesRoute: typeof ServicesRoute
+  GuidesRoute: typeof GuidesRoute
+  MentionsLegalesRoute: typeof MentionsLegalesRoute
+  PolitiqueConfidentialiteRoute: typeof PolitiqueConfidentialiteRoute
+  ConditionsUtilisationRoute: typeof ConditionsUtilisationRoute
   ActualitesSlugRoute: typeof ActualitesSlugRoute
   CatalogueSlugRoute: typeof CatalogueSlugRoute
   ActualitesIndexRoute: typeof ActualitesIndexRoute
@@ -162,90 +121,40 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/a-propos': {
-      id: '/a-propos'
-      path: '/a-propos'
-      fullPath: '/a-propos'
-      preLoaderRoute: typeof AProposRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/assistance-visa': {
-      id: '/assistance-visa'
-      path: '/assistance-visa'
-      fullPath: '/assistance-visa'
-      preLoaderRoute: typeof AssistanceVisaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/secteurs': {
-      id: '/secteurs'
-      path: '/secteurs'
-      fullPath: '/secteurs'
-      preLoaderRoute: typeof SecteursRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/services': {
-      id: '/services'
-      path: '/services'
-      fullPath: '/services'
-      preLoaderRoute: typeof ServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/actualites/': {
-      id: '/actualites/'
-      path: '/actualites'
-      fullPath: '/actualites/'
-      preLoaderRoute: typeof ActualitesIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/actualites/$slug': {
-      id: '/actualites/$slug'
-      path: '/actualites/$slug'
-      fullPath: '/actualites/$slug'
-      preLoaderRoute: typeof ActualitesSlugRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/catalogue/': {
-      id: '/catalogue/'
-      path: '/catalogue'
-      fullPath: '/catalogue/'
-      preLoaderRoute: typeof CatalogueIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/catalogue/$slug': {
-      id: '/catalogue/$slug'
-      path: '/catalogue/$slug'
-      fullPath: '/catalogue/$slug'
-      preLoaderRoute: typeof CatalogueSlugRouteImport
-      parentRoute: typeof rootRouteImport
-    }
+    '/': { id: '/'; path: '/'; fullPath: '/'; preLoaderRoute: typeof IndexRouteImport; parentRoute: typeof rootRouteImport }
+    '/a-propos': { id: '/a-propos'; path: '/a-propos'; fullPath: '/a-propos'; preLoaderRoute: typeof AProposRouteImport; parentRoute: typeof rootRouteImport }
+    '/activites': { id: '/activites'; path: '/activites'; fullPath: '/activites'; preLoaderRoute: typeof ActivitesRouteImport; parentRoute: typeof rootRouteImport }
+    '/assistance-visa': { id: '/assistance-visa'; path: '/assistance-visa'; fullPath: '/assistance-visa'; preLoaderRoute: typeof AssistanceVisaRouteImport; parentRoute: typeof rootRouteImport }
+    '/contact': { id: '/contact'; path: '/contact'; fullPath: '/contact'; preLoaderRoute: typeof ContactRouteImport; parentRoute: typeof rootRouteImport }
+    '/secteurs': { id: '/secteurs'; path: '/secteurs'; fullPath: '/secteurs'; preLoaderRoute: typeof SecteursRouteImport; parentRoute: typeof rootRouteImport }
+    '/services': { id: '/services'; path: '/services'; fullPath: '/services'; preLoaderRoute: typeof ServicesRouteImport; parentRoute: typeof rootRouteImport }
+    '/guides': { id: '/guides'; path: '/guides'; fullPath: '/guides'; preLoaderRoute: typeof GuidesRouteImport; parentRoute: typeof rootRouteImport }
+    '/mentions-legales': { id: '/mentions-legales'; path: '/mentions-legales'; fullPath: '/mentions-legales'; preLoaderRoute: typeof MentionsLegalesRouteImport; parentRoute: typeof rootRouteImport }
+    '/politique-confidentialite': { id: '/politique-confidentialite'; path: '/politique-confidentialite'; fullPath: '/politique-confidentialite'; preLoaderRoute: typeof PolitiqueConfidentialiteRouteImport; parentRoute: typeof rootRouteImport }
+    '/conditions-utilisation': { id: '/conditions-utilisation'; path: '/conditions-utilisation'; fullPath: '/conditions-utilisation'; preLoaderRoute: typeof ConditionsUtilisationRouteImport; parentRoute: typeof rootRouteImport }
+    '/actualites/': { id: '/actualites/'; path: '/actualites'; fullPath: '/actualites/'; preLoaderRoute: typeof ActualitesIndexRouteImport; parentRoute: typeof rootRouteImport }
+    '/actualites/$slug': { id: '/actualites/$slug'; path: '/actualites/$slug'; fullPath: '/actualites/$slug'; preLoaderRoute: typeof ActualitesSlugRouteImport; parentRoute: typeof rootRouteImport }
+    '/catalogue/': { id: '/catalogue/'; path: '/catalogue'; fullPath: '/catalogue/'; preLoaderRoute: typeof CatalogueIndexRouteImport; parentRoute: typeof rootRouteImport }
+    '/catalogue/$slug': { id: '/catalogue/$slug'; path: '/catalogue/$slug'; fullPath: '/catalogue/$slug'; preLoaderRoute: typeof CatalogueSlugRouteImport; parentRoute: typeof rootRouteImport }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
-  IndexRoute: IndexRoute,
-  AProposRoute: AProposRoute,
-  AssistanceVisaRoute: AssistanceVisaRoute,
-  ContactRoute: ContactRoute,
-  SecteursRoute: SecteursRoute,
-  ServicesRoute: ServicesRoute,
-  ActualitesSlugRoute: ActualitesSlugRoute,
-  CatalogueSlugRoute: CatalogueSlugRoute,
-  ActualitesIndexRoute: ActualitesIndexRoute,
-  CatalogueIndexRoute: CatalogueIndexRoute,
+  IndexRoute,
+  AProposRoute,
+  ActivitesRoute,
+  AssistanceVisaRoute,
+  ContactRoute,
+  SecteursRoute,
+  ServicesRoute,
+  GuidesRoute,
+  MentionsLegalesRoute,
+  PolitiqueConfidentialiteRoute,
+  ConditionsUtilisationRoute,
+  ActualitesSlugRoute,
+  CatalogueSlugRoute,
+  ActualitesIndexRoute,
+  CatalogueIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

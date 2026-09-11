@@ -1,126 +1,127 @@
 import { Link } from "@tanstack/react-router";
-
 import { COMPANY, telLink, whatsappLink } from "@/lib/company";
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-ink text-chrome/60">
-      <div className="mx-auto max-w-[1200px] px-5 py-12">
-        <div className="grid gap-8 md:grid-cols-4">
+    <footer className="bg-noir text-ivoire/50">
+      {/* Bande or */}
+      <div className="h-px bg-gradient-to-r from-transparent via-or-prestige/50 to-transparent" />
+
+      <div className="mx-auto max-w-[1280px] px-5 py-16">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+
           {/* Marque */}
-          <div>
-            <div className="font-display text-lg text-white">{COMPANY.name}</div>
-            <div className="label-mono mt-1 tracking-[0.25em] text-amber">{COMPANY.tagline}</div>
-            <div className="mt-4 flex gap-3">
-              <a
-                href={whatsappLink("Bonjour MDG GLOBAL HOLDINGS")}
-                target="_blank"
-                rel="noreferrer"
-                className="grid size-8 place-items-center rounded-md bg-white/5 text-white transition-colors hover:bg-amberhot hover:text-ink"
-                title="WhatsApp"
-              >
-                <svg className="size-4" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 14.8c-.4.1-.47-.17-.74-.91-.17-.43-.89-2.4-1.03-2.84-.12-.32-.3-.38-.52-.4-.2-.02-1.08-.14-2.13-.98-.78-.68-1.3-1.53-1.45-1.85-.04-.1-.17-.25.01-.4.25-.2.56-.47.84-.62.2-.1.33-.27.25-.43-.1-.2-1.43-3.59-1.97-4.84-.26-.58-.5-.5-.68-.51-.16-.01-.34-.02-.52-.02-.55 0-1.08.27-1.36.81-.56 1.09-2.14 5.18-2.14 5.18 0 2.89 2.04 4.79 3.98 5.15 2.08.38 3.92-.48 4.7-1.63.25-.38.44-.98.44-1.65 0-.22-.02-.41-.07-.58z" />
-                </svg>
-              </a>
+          <div className="lg:col-span-1">
+            <div className="flex items-center gap-3">
+              <img src="/images/logo-mdg.jpeg" alt="MDG GLOBAL HOLDINGS" className="size-12 rounded-full object-cover ring-2 ring-or-prestige/30" />
+              <div>
+                <div className="font-display text-sm text-white tracking-wider">{COMPANY.name}</div>
+                <div className="label-mono mt-0.5 text-or-prestige/60">{COMPANY.tagline}</div>
+              </div>
+            </div>
+            <p className="mt-5 text-xs text-ivoire/40 leading-relaxed max-w-[26ch]">
+              Votre partenaire pour entreprendre, acheter et développer au-delà des frontières.
+            </p>
+            <div className="mt-5 space-y-2 font-mono text-[10px] uppercase tracking-[0.15em]">
+              <div className="text-ivoire/30">Logistique · Import-Export · Transport</div>
             </div>
           </div>
 
           {/* Navigation */}
           <div>
-            <h3 className="font-mono text-[11px] font-bold uppercase tracking-[0.15em] text-white">Navigation</h3>
-            <nav className="mt-4 space-y-2 font-mono text-[11px] uppercase tracking-[0.12em]">
-              <Link to="/" className="block hover:text-amber">
-                Accueil
-              </Link>
-              <Link
-                to="/catalogue"
-                search={{ categorie: "", q: "", tri: "recent", dispo: "" }}
-                className="block hover:text-amber"
-              >
-                Catalogue
-              </Link>
-              <Link to="/secteurs" className="block hover:text-amber">
-                Secteurs
-              </Link>
-              <Link to="/services" className="block hover:text-amber">
-                Services
-              </Link>
-              <Link to="/guides" className="block hover:text-amber">
-                Guides
-              </Link>
+            <h3 className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-or-prestige/60 mb-5">Navigation</h3>
+            <nav className="space-y-3">
+              {[
+                { to: "/", label: "Accueil" },
+                { to: "/a-propos", label: "À propos" },
+                { to: "/activites", label: "Nos activités" },
+                { to: "/catalogue", label: "Catalogue", search: { categorie: "", q: "", tri: "recent", dispo: "" } },
+                { to: "/services", label: "Logistique" },
+              ].map((item) => (
+                <Link
+                  key={item.label}
+                  to={item.to}
+                  {...('search' in item ? { search: item.search } : {})}
+                  className="block font-mono text-[10px] uppercase tracking-[0.12em] text-ivoire/40 smooth-transition hover:text-or-lumiere"
+                >
+                  {item.label}
+                </Link>
+              ))}
             </nav>
           </div>
 
-          {/* À propos */}
+          {/* Services */}
           <div>
-            <h3 className="font-mono text-[11px] font-bold uppercase tracking-[0.15em] text-white">Entreprise</h3>
-            <nav className="mt-4 space-y-2 font-mono text-[11px] uppercase tracking-[0.12em]">
-              <Link to="/a-propos" className="block hover:text-amber">
-                À propos
-              </Link>
-              <Link to="/assistance-visa" className="block hover:text-amber">
-                Assistance visa
-              </Link>
-              <Link to="/actualites" className="block hover:text-amber">
-                Actualités
-              </Link>
-              <Link to="/contact" className="block hover:text-amber">
-                Contact
-              </Link>
+            <h3 className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-or-prestige/60 mb-5">Services</h3>
+            <nav className="space-y-3">
+              {[
+                { to: "/assistance-visa", label: "Mobilité & Visa" },
+                { to: "/actualites", label: "Actualités" },
+                { to: "/contact", label: "Contact" },
+                { to: "/mentions-legales", label: "Mentions légales" },
+                { to: "/politique-confidentialite", label: "Confidentialité" },
+              ].map((item) => (
+                <Link
+                  key={item.label}
+                  to={item.to}
+                  className="block font-mono text-[10px] uppercase tracking-[0.12em] text-ivoire/40 smooth-transition hover:text-or-lumiere"
+                >
+                  {item.label}
+                </Link>
+              ))}
             </nav>
           </div>
 
           {/* Contact */}
           <div>
-            <h3 className="font-mono text-[11px] font-bold uppercase tracking-[0.15em] text-white">Contact</h3>
-            <dl className="mt-4 space-y-2 font-mono text-[10px] leading-relaxed">
+            <h3 className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-or-prestige/60 mb-5">Contact</h3>
+            <dl className="space-y-3 font-mono text-[10px] leading-relaxed">
               <div>
-                <dt className="text-white/50">Localisation</dt>
-                <dd>{COMPANY.city}, {COMPANY.country}</dd>
-              </div>
-              <div>
-                <dt className="text-white/50">Email</dt>
+                <dt className="text-ivoire/25 uppercase tracking-wider mb-1">Burkina Faso</dt>
                 <dd>
-                  <a href={`mailto:${COMPANY.email}`} className="hover:text-amber">
-                    {COMPANY.email}
-                  </a>
+                  <a href={telLink(COMPANY.phoneBf)} className="text-ivoire/50 hover:text-or-lumiere smooth-transition">{COMPANY.phoneBf}</a>
                 </dd>
               </div>
               <div>
-                <dt className="text-white/50">Téléphone</dt>
+                <dt className="text-ivoire/25 uppercase tracking-wider mb-1">Chine</dt>
                 <dd>
-                  <a href={telLink(COMPANY.phoneBf)} className="hover:text-amber">
-                    {COMPANY.phoneBf}
-                  </a>
-                  <br />
-                  <a href={telLink(COMPANY.phoneCn)} className="hover:text-amber">
-                    {COMPANY.phoneCn}
-                  </a>
+                  <a href={telLink(COMPANY.phoneCn)} className="text-ivoire/50 hover:text-or-lumiere smooth-transition">{COMPANY.phoneCn}</a>
                 </dd>
+              </div>
+              <div>
+                <dt className="text-ivoire/25 uppercase tracking-wider mb-1">Email</dt>
+                <dd>
+                  <a href={`mailto:${COMPANY.email}`} className="text-ivoire/50 hover:text-or-lumiere smooth-transition">{COMPANY.email}</a>
+                </dd>
+              </div>
+              <div>
+                <dt className="text-ivoire/25 uppercase tracking-wider mb-1">Adresse</dt>
+                <dd className="text-ivoire/40">{COMPANY.city}, {COMPANY.country}</dd>
               </div>
             </dl>
+
+            <a
+              href={whatsappLink("Bonjour MDG GLOBAL HOLDINGS")}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-6 flex w-full items-center justify-center gap-2 rounded-md border border-or-prestige/30 py-2.5 font-mono text-[10px] uppercase tracking-[0.15em] text-or-lumiere smooth-transition hover:bg-or-prestige/10"
+            >
+              WhatsApp
+            </a>
           </div>
         </div>
       </div>
 
-      <div className="border-t border-white/5">
-        <div className="mx-auto max-w-[1200px] px-5 py-6">
-          <div className="flex flex-col gap-4 md:flex-row md:justify-between md:items-center">
-            <div className="font-mono text-[10px] uppercase tracking-[0.2em]">
-              © {new Date().getFullYear()} {COMPANY.name} · Tous droits réservés
-            </div>
-            <div className="flex flex-wrap gap-4 font-mono text-[10px] uppercase tracking-[0.15em]">
-              <Link to="/mentions-legales" className="hover:text-amber">
-                Mentions
-              </Link>
-              <Link to="/politique-confidentialite" className="hover:text-amber">
-                Politique
-              </Link>
-              <Link to="/conditions-utilisation" className="hover:text-amber">
-                Conditions
-              </Link>
-            </div>
+      {/* Bottom */}
+      <div className="border-t border-or-prestige/10">
+        <div className="mx-auto max-w-[1280px] px-5 py-5 flex flex-col gap-3 md:flex-row md:justify-between md:items-center">
+          <div className="font-mono text-[9px] uppercase tracking-[0.2em] text-ivoire/25">
+            © {new Date().getFullYear()} {COMPANY.name} · Tous droits réservés
+          </div>
+          <div className="flex gap-5 font-mono text-[9px] uppercase tracking-[0.15em]">
+            <Link to="/mentions-legales" className="text-ivoire/25 hover:text-or-lumiere smooth-transition">Mentions</Link>
+            <Link to="/politique-confidentialite" className="text-ivoire/25 hover:text-or-lumiere smooth-transition">Politique</Link>
+            <Link to="/conditions-utilisation" className="text-ivoire/25 hover:text-or-lumiere smooth-transition">Conditions</Link>
           </div>
         </div>
       </div>

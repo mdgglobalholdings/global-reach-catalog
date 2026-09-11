@@ -20,19 +20,27 @@ import { Toaster } from "@/components/ui/sonner";
 
 function NotFoundComponent() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
+    <div className="flex min-h-screen flex-col items-center justify-center bg-ink text-white px-5">
       <div className="max-w-md text-center">
-        <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
-        <p className="mt-2 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
+        <div className="text-8xl mb-6">🔍</div>
+        <h1 className="text-7xl font-bold text-amber">404</h1>
+        <h2 className="mt-6 text-2xl uppercase font-semibold">Page introuvable</h2>
+        <p className="mt-4 text-lg text-chrome/70">
+          La page que vous recherchez n'existe pas ou a été déplacée.
         </p>
-        <div className="mt-6">
+        <div className="mt-8 space-y-3">
           <Link
             to="/"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="pill block rounded-md bg-gradient-to-b from-amberhot to-amber px-6 py-3 font-bold text-ink ring-1 ring-white/40 hover:shadow-lg transition-all"
           >
-            Go home
+            Retourner à l'accueil
+          </Link>
+          <Link
+            to="/catalogue"
+            search={{ categorie: "", q: "", tri: "recent", dispo: "" }}
+            className="block rounded-md bg-white/5 px-6 py-3 font-semibold ring-1 ring-white/15 hover:bg-white/10"
+          >
+            Voir le catalogue
           </Link>
         </div>
       </div>

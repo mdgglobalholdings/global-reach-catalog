@@ -111,6 +111,9 @@ export function Footer() {
               © {new Date().getFullYear()} {COMPANY.name} · Tous droits réservés
             </div>
             <div className="flex flex-wrap gap-4 font-mono text-[10px] uppercase tracking-[0.15em]">
+              <Link to="/mentions-legales" className="hover:text-amber">
+                Mentions
+              </Link>
               <Link to="/politique-confidentialite" className="hover:text-amber">
                 Politique
               </Link>

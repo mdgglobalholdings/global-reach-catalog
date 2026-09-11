@@ -5,9 +5,9 @@ import { ProductCard } from "@/components/site/ProductCard";
 import { getNews, getProducts } from "@/lib/catalog.functions";
 import { COMPANY, SECTORS } from "@/lib/company";
 
-const TITLE = "MDG GLOBAL HOLDINGS — Import-export véhicules, engins et équipements";
+const TITLE = "MDG GLOBAL HOLDINGS — Import-Export Véhicules & Équipements | Sourcing Chine-Afrique";
 const DESCRIPTION =
-  "Négoce international basé à Ouagadougou : véhicules, engins de chantier, pièces détachées, équipements industriels et électronique. Catalogue, sourcing Chine-Afrique et assistance visa.";
+  "Négoce international MDG GLOBAL HOLDINGS à Ouagadougou : véhicules, engins de chantier, pièces détachées, équipements industriels et électronique. Sourcing Chine, logistique internationale, assistance visa et devis sous 24h.";
 
 export const Route = createFileRoute("/")({
   loader: async () => ({

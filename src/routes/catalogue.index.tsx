@@ -5,9 +5,9 @@ import { ProductCard } from "@/components/site/ProductCard";
 import { getCategories, getProducts } from "@/lib/catalog.functions";
 import { AVAILABILITY_OPTIONS } from "@/lib/company";
 
-const TITLE = "Catalogue véhicules, engins et équipements — MDG GLOBAL HOLDINGS";
+const TITLE = "Catalogue Import-Export : Véhicules, Engins & Équipements | MDG GLOBAL HOLDINGS";
 const DESCRIPTION =
-  "Parcourez le catalogue MDG GLOBAL HOLDINGS : véhicules, engins de chantier, pièces détachées, groupes électrogènes et électronique. Filtres par secteur et demande de devis sous 24h.";
+  "Découvrez le catalogue MDG GLOBAL HOLDINGS : véhicules d'occasion, engins de chantier, pièces détachées, groupes électrogènes et électronique. Filtres par secteur, recherche avancée et devis sous 24h. Sourcing Chine-Afrique garanti.";
 
 type Search = {
   categorie: string;

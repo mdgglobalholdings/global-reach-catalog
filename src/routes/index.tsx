@@ -250,6 +250,51 @@ function Home() {
         </section>
       ) : null}
 
+      {/* Cas d'usage */}
+      <section className="bg-chrome/40 py-20">
+        <div className="mx-auto max-w-[1200px] px-5">
+          <div className="text-center">
+            <div className="eyebrow text-amberhot">Cas d'usage</div>
+            <h2 className="mt-3 text-4xl uppercase">Comment nos clients nous font confiance</h2>
+          </div>
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            <div className="rounded-xl bg-card p-6 ring-1 ring-black/5">
+              <div className="text-4xl mb-3">🚜</div>
+              <h3 className="uppercase font-semibold">Exploitant agricole (Mali)</h3>
+              <p className="mt-3 text-sm text-muted-foreground">
+                A acheté 2 engins de chantier reconditionnés pour ses travaux d'exploitation.
+                Délai : 8 semaines. Garantie : 12 mois.
+              </p>
+              <div className="mt-4 flex items-center gap-2 text-amber font-semibold text-sm">
+                ✓ Livraison réussie
+              </div>
+            </div>
+            <div className="rounded-xl bg-card p-6 ring-1 ring-black/5">
+              <div className="text-4xl mb-3">🏢</div>
+              <h3 className="uppercase font-semibold">Entreprise de BTP (Burkina)</h3>
+              <p className="mt-3 text-sm text-muted-foreground">
+                A commandé 50 pneus et pièces de rechange pour sa flotte de véhicules.
+                Livraison mensuelle en flux tendu.
+              </p>
+              <div className="mt-4 flex items-center gap-2 text-amber font-semibold text-sm">
+                ✓ Partenaire régulier
+              </div>
+            </div>
+            <div className="rounded-xl bg-card p-6 ring-1 ring-black/5">
+              <div className="text-4xl mb-3">📱</div>
+              <h3 className="uppercase font-semibold">Revendeur électronique (Sénégal)</h3>
+              <p className="mt-3 text-sm text-muted-foreground">
+                A sourçé 200 unités d'électronique grand public (téléphones, électroménager).
+                Tarifs compétitifs, délai : 6 semaines.
+              </p>
+              <div className="mt-4 flex items-center gap-2 text-amber font-semibold text-sm">
+                ✓ Commande récurrente
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="mx-auto max-w-[1200px] px-5 py-20">
         <div className="text-center">

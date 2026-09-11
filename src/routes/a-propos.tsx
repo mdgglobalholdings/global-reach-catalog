@@ -16,9 +16,9 @@ function AboutPage() {
       {/* Hero */}
       <section className="relative overflow-hidden" style={{ backgroundColor: "#eeeee6" }}>
         <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-or-prestige to-transparent" />
-        <div className="mx-auto max-w-[1280px] px-5 py-20">
+        <div className="mx-auto max-w-[1280px] px-4 sm:px-6 py-14 sm:py-20">
           <div className="eyebrow text-or-prestige">Qui sommes-nous</div>
-          <h1 className="mt-4 max-w-[18ch] text-5xl font-bold uppercase leading-[0.92] text-noir md:text-7xl">{COMPANY.tagline}</h1>
+          <h1 className="mt-4 max-w-[18ch] text-3xl sm:text-3xl sm:text-5xl font-bold uppercase leading-[0.92] text-noir md:text-6xl lg:text-7xl">{COMPANY.tagline}</h1>
           <p className="mt-6 max-w-[60ch] text-noir/65 leading-relaxed text-lg">
             MDG GLOBAL HOLDINGS est un groupe diversifié à vocation internationale, basé à {COMPANY.city}, {COMPANY.country}, connecté aux marchés africains, asiatiques, européens et du Moyen-Orient.
           </p>
@@ -27,10 +27,10 @@ function AboutPage() {
 
       {/* Mission */}
       <section className="py-20" style={{ backgroundColor: "#f5f5ee" }}>
-        <div className="mx-auto max-w-[1280px] px-5 grid gap-12 lg:grid-cols-2 items-center">
+        <div className="mx-auto max-w-[1280px] px-4 sm:px-6 grid gap-12 lg:grid-cols-2 items-center">
           <div>
             <div className="gold-line" />
-            <h2 className="mt-6 text-3xl font-bold uppercase text-noir">Qui sommes-nous ?</h2>
+            <h2 className="mt-6 text-xl sm:text-2xl lg:text-3xl font-bold uppercase text-noir">Qui sommes-nous ?</h2>
             <p className="mt-5 text-noir/70 leading-relaxed">
               MDG GLOBAL HOLDINGS est un groupe diversifié à vocation internationale qui développe des activités dans le commerce international, la logistique, le négoce, les véhicules et équipements, la mobilité, l'agriculture, l'élevage ainsi que l'hôtellerie et la restauration.
             </p>
@@ -46,8 +46,8 @@ function AboutPage() {
 
       {/* Vision & Mission */}
       <section className="py-20" style={{ backgroundColor: "#eeeee6" }}>
-        <div className="mx-auto max-w-[1280px] px-5">
-          <div className="grid gap-6 md:grid-cols-2">
+        <div className="mx-auto max-w-[1280px] px-4 sm:px-6">
+          <div className="grid gap-4 grid-cols-1 sm:grid-cols-2">
             <div className="rounded-2xl bg-white border border-or-prestige/20 p-10 shadow-sm">
               <div className="gold-line" />
               <h2 className="mt-6 text-2xl font-bold uppercase text-noir">Notre vision</h2>
@@ -68,12 +68,12 @@ function AboutPage() {
 
       {/* Valeurs */}
       <section className="py-20" style={{ backgroundColor: "#f5f5ee" }}>
-        <div className="mx-auto max-w-[1280px] px-5">
+        <div className="mx-auto max-w-[1280px] px-4 sm:px-6">
           <div className="text-center">
             <div className="eyebrow text-or-prestige">Nos valeurs</div>
-            <h2 className="mt-4 text-4xl font-bold uppercase text-noir">Ce qui nous définit</h2>
+            <h2 className="mt-4 text-2xl sm:text-3xl lg:text-4xl font-bold uppercase text-noir">Ce qui nous définit</h2>
           </div>
-          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
             {VALUES.map((v) => (
               <div key={v.title} className="rounded-xl bg-white border border-or-prestige/20 p-7 smooth-transition hover:border-or-prestige/50 hover:shadow-lg hover:-translate-y-1">
                 <div className="gold-line" />
@@ -87,12 +87,12 @@ function AboutPage() {
 
       {/* Zones */}
       <section className="py-20" style={{ backgroundColor: "#eeeee6" }}>
-        <div className="mx-auto max-w-[1280px] px-5">
+        <div className="mx-auto max-w-[1280px] px-4 sm:px-6">
           <div className="text-center mb-12">
             <div className="eyebrow text-or-prestige">Présence internationale</div>
-            <h2 className="mt-4 text-4xl font-bold uppercase text-noir">Nos zones d'intervention</h2>
+            <h2 className="mt-4 text-2xl sm:text-3xl lg:text-4xl font-bold uppercase text-noir">Nos zones d'intervention</h2>
           </div>
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
             {[
               { zone: "Afrique de l'Ouest", flag: "🇧🇫", desc: "Siège opérationnel à Ouagadougou, Burkina Faso. Marché principal avec livraisons dans toute la sous-région." },
               { zone: "Asie (Chine)", flag: "🇨🇳", desc: "Relais permanent pour le sourcing, le contrôle qualité avant expédition et les relations fournisseurs." },

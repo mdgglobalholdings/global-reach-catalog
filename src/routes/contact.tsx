@@ -25,9 +25,9 @@ function ContactPage() {
       {/* Hero */}
       <section className="relative overflow-hidden" style={{ backgroundColor: "#eeeee6" }}>
         <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-or-prestige to-transparent" />
-        <div className="mx-auto max-w-[1280px] px-5 py-20">
+        <div className="mx-auto max-w-[1280px] px-4 sm:px-6 py-14 sm:py-20">
           <div className="eyebrow text-or-prestige">Contact</div>
-          <h1 className="mt-4 max-w-[18ch] text-5xl font-bold uppercase leading-[0.92] text-noir md:text-6xl">
+          <h1 className="mt-4 max-w-[18ch] text-3xl sm:text-5xl font-bold uppercase leading-[0.92] text-noir md:text-6xl">
             Parlons de votre projet
           </h1>
           <p className="mt-5 max-w-[52ch] text-noir/65 leading-relaxed text-lg">
@@ -37,14 +37,14 @@ function ContactPage() {
       </section>
 
       <section className="py-16" style={{ backgroundColor: "#f5f5ee" }}>
-        <div className="mx-auto max-w-[1280px] px-5">
+        <div className="mx-auto max-w-[1280px] px-4 sm:px-6">
           <div className="grid gap-10 lg:grid-cols-[1fr_1.4fr]">
 
             {/* Coordonnées */}
             <div>
               <div className="gold-line" />
               <h2 className="mt-6 text-2xl uppercase">Nos coordonnées</h2>
-              <p className="mt-3 text-sm text-muted-foreground">
+              <p className="mt-3 text-sm text-noir/65">
                 Du lundi au samedi, 08h00–18h00 (GMT)
               </p>
 
@@ -93,7 +93,7 @@ function ContactPage() {
               {/* Garanties */}
               <div className="mt-10 space-y-3">
                 {["Réponse sous 24 heures ouvrées", "Devis gratuit et sans engagement", "Interlocuteur unique dédié"].map((g) => (
-                  <div key={g} className="flex items-center gap-3 text-sm text-muted-foreground">
+                  <div key={g} className="flex items-center gap-3 text-sm text-noir/65">
                     <span className="text-or-prestige font-bold">✓</span>
                     {g}
                   </div>
@@ -105,7 +105,7 @@ function ContactPage() {
             <div>
               <div className="gold-line" />
               <h2 className="mt-6 text-2xl uppercase">Demande de devis</h2>
-              <p className="mt-2 text-sm text-muted-foreground">
+              <p className="mt-2 text-sm text-noir/65">
                 Décrivez votre besoin. Notre équipe prépare une offre personnalisée.
               </p>
               <div className="mt-6">

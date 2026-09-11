@@ -64,9 +64,9 @@ function ServicesPage() {
       {/* Hero — même style que À propos */}
       <section className="relative overflow-hidden" style={{ backgroundColor: "#eeeee6" }}>
         <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-or-prestige to-transparent" />
-        <div className="mx-auto max-w-[1280px] px-5 py-20">
+        <div className="mx-auto max-w-[1280px] px-4 sm:px-6 py-14 sm:py-20">
           <div className="eyebrow text-or-prestige">Logistique & Services</div>
-          <h1 className="mt-4 max-w-[18ch] text-5xl font-bold uppercase leading-[0.92] text-noir md:text-7xl">
+          <h1 className="mt-4 max-w-[18ch] text-3xl sm:text-3xl sm:text-5xl font-bold uppercase leading-[0.92] text-noir md:text-6xl lg:text-7xl">
             De la commande à la livraison
           </h1>
           <p className="mt-6 max-w-[58ch] text-noir/65 leading-relaxed text-lg">
@@ -77,8 +77,8 @@ function ServicesPage() {
 
       {/* Services */}
       <section className="py-20" style={{ backgroundColor: "#f5f5ee" }}>
-        <div className="mx-auto max-w-[1280px] px-5">
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto max-w-[1280px] px-4 sm:px-6">
+          <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {SERVICES.map((s) => (
               <article key={s.title} className="rounded-xl bg-white border border-or-prestige/20 p-7 smooth-transition hover:border-or-prestige/50 hover:shadow-lg hover:-translate-y-1">
                 <div className="gold-line" />
@@ -97,10 +97,10 @@ function ServicesPage() {
 
       {/* Méthode */}
       <section className="py-20" style={{ backgroundColor: "#eeeee6" }}>
-        <div className="mx-auto max-w-[1280px] px-5">
+        <div className="mx-auto max-w-[1280px] px-4 sm:px-6">
           <div className="eyebrow text-or-prestige">Notre méthode</div>
-          <h2 className="mt-4 text-3xl font-bold uppercase text-noir">Comment nous travaillons</h2>
-          <div className="mt-10 grid gap-5 md:grid-cols-4">
+          <h2 className="mt-4 text-xl sm:text-2xl lg:text-3xl font-bold uppercase text-noir">Comment nous travaillons</h2>
+          <div className="mt-10 grid gap-4 grid-cols-2 md:grid-cols-4">
             {STEPS.map((s) => (
               <div key={s.n} className="rounded-xl bg-white border border-or-prestige/20 p-6 smooth-transition hover:border-or-prestige/50 hover:shadow-md">
                 <div className="text-gold font-display text-3xl">{s.n}</div>

@@ -40,9 +40,9 @@ function VisaPage() {
       {/* Hero — même style que À propos */}
       <section className="relative overflow-hidden" style={{ backgroundColor: "#eeeee6" }}>
         <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-or-prestige to-transparent" />
-        <div className="mx-auto max-w-[1280px] px-5 py-20">
+        <div className="mx-auto max-w-[1280px] px-4 sm:px-6 py-14 sm:py-20">
           <div className="eyebrow text-or-prestige">Mobilité & Assistance Visa</div>
-          <h1 className="mt-4 max-w-[18ch] text-5xl font-bold uppercase leading-[0.92] text-noir md:text-7xl">
+          <h1 className="mt-4 max-w-[18ch] text-3xl sm:text-3xl sm:text-5xl font-bold uppercase leading-[0.92] text-noir md:text-6xl lg:text-7xl">
             Voyagez sans blocage administratif
           </h1>
           <p className="mt-6 max-w-[58ch] text-noir/65 leading-relaxed text-lg">
@@ -54,10 +54,10 @@ function VisaPage() {
 
       {/* Processus */}
       <section className="py-20" style={{ backgroundColor: "#f5f5ee" }}>
-        <div className="mx-auto max-w-[1280px] px-5">
+        <div className="mx-auto max-w-[1280px] px-4 sm:px-6">
           <div className="eyebrow text-or-prestige">Notre processus</div>
-          <h2 className="mt-4 text-3xl font-bold uppercase text-noir">Quatre étapes</h2>
-          <div className="mt-10 grid gap-5 md:grid-cols-4">
+          <h2 className="mt-4 text-xl sm:text-2xl lg:text-3xl font-bold uppercase text-noir">Quatre étapes</h2>
+          <div className="mt-10 grid gap-4 grid-cols-2 md:grid-cols-4">
             {STEPS.map((s) => (
               <div key={s.n} className="rounded-xl bg-white border border-or-prestige/20 p-6 smooth-transition hover:border-or-prestige/50 hover:shadow-md">
                 <div className="text-gold font-display text-3xl">{s.n}</div>
@@ -74,7 +74,7 @@ function VisaPage() {
         <div className="mx-auto max-w-[1280px] grid gap-10 px-5 lg:grid-cols-[1fr_1.2fr]">
           <div>
             <div className="eyebrow text-or-prestige">Nos prestations</div>
-            <h2 className="mt-4 text-3xl font-bold uppercase text-noir">Ce que nous prenons en charge</h2>
+            <h2 className="mt-4 text-xl sm:text-2xl lg:text-3xl font-bold uppercase text-noir">Ce que nous prenons en charge</h2>
             <ul className="mt-6 space-y-3">
               {SERVICES.map((s) => (
                 <li key={s} className="flex items-start gap-3 text-sm text-noir/70 border-b border-or-prestige/10 pb-3">

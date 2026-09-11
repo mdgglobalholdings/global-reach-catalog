@@ -27,7 +27,7 @@ function SecteursPage() {
   return (
     <main>
       <section className="bg-ink text-noir">
-        <div className="mx-auto max-w-[1200px] px-5 py-16">
+        <div className="mx-auto max-w-[1200px] px-4 sm:px-6 py-12 sm:py-16">
           <div className="eyebrow text-or-prestige">Secteurs</div>
           <h1 className="mt-4 max-w-[20ch] text-4xl uppercase leading-[0.95] md:text-6xl">
             Quatre secteurs, une chaîne d'approvisionnement
@@ -39,7 +39,7 @@ function SecteursPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1200px] space-y-16 px-5 py-16">
+      <section className="mx-auto max-w-[1200px] space-y-16 px-5 py-12 sm:py-16">
         {SECTORS.map((sector, index) => {
           const root = categories.find((c) => c.slug === sector.slug);
           const subs = root ? categories.filter((c) => c.parent_id === root.id) : [];
@@ -61,7 +61,7 @@ function SecteursPage() {
               <div>
                 <div className="eyebrow text-or-prestige">{sector.sub}</div>
                 <h2 className="mt-3 text-3xl uppercase">{sector.name}</h2>
-                <p className="mt-4 text-muted-foreground">
+                <p className="mt-4 text-noir/65">
                   {root?.description ??
                     "Sourcing international, contrôle qualité avant expédition et livraison suivie jusqu'à destination."}
                 </p>

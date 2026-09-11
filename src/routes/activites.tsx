@@ -25,9 +25,9 @@ function ActivitesPage() {
       {/* Hero */}
       <section className="relative overflow-hidden" style={{ backgroundColor: "#eeeee6" }}>
         <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-or-prestige to-transparent" />
-        <div className="mx-auto max-w-[1280px] px-5 py-20">
+        <div className="mx-auto max-w-[1280px] px-4 sm:px-6 py-14 sm:py-20">
           <div className="eyebrow text-or-prestige">Nos activités</div>
-          <h1 className="mt-4 max-w-[18ch] text-5xl font-bold uppercase leading-[0.92] text-noir md:text-7xl">
+          <h1 className="mt-4 max-w-[18ch] text-3xl sm:text-3xl sm:text-5xl font-bold uppercase leading-[0.92] text-noir md:text-6xl lg:text-7xl">
             Un groupe.{" "}<span className="text-gold">Plusieurs expertises.</span>{" "}Une seule vision.
           </h1>
           <p className="mt-6 max-w-[58ch] text-noir/65 leading-relaxed text-lg">
@@ -40,7 +40,7 @@ function ActivitesPage() {
 
       {/* Les 6 pôles */}
       <section className="py-20" style={{ backgroundColor: "#f5f5ee" }}>
-        <div className="mx-auto max-w-[1280px] px-5 space-y-24">
+        <div className="mx-auto max-w-[1280px] px-4 sm:px-6 space-y-24">
           {POLES.map((pole, index) => (
             <article
               key={pole.id}
@@ -62,7 +62,7 @@ function ActivitesPage() {
                 <div className="gold-line mt-4" />
                 <h2 className="mt-5 text-3xl uppercase">{pole.title}</h2>
                 <p className="label-mono mt-2 text-or-prestige">{pole.subtitle}</p>
-                <p className="mt-5 text-muted-foreground leading-relaxed">{pole.description}</p>
+                <p className="mt-5 text-noir/65 leading-relaxed">{pole.description}</p>
 
                 <ul className="mt-6 grid grid-cols-2 gap-2">
                   {pole.services.map((s) => (
@@ -89,7 +89,7 @@ function ActivitesPage() {
 
       {/* Note agriculture & hôtellerie */}
       <section className="py-16 text-noir">
-        <div className="mx-auto max-w-[1280px] px-5 text-center">
+        <div className="mx-auto max-w-[1280px] px-4 sm:px-6 text-center">
           <div className="gold-line mx-auto" />
           <h2 className="mt-8 text-2xl uppercase">Agriculture, Élevage & Hôtellerie</h2>
           <p className="mt-4 max-w-[60ch] mx-auto text-noir/65 leading-relaxed">

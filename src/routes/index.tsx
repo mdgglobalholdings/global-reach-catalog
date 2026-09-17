@@ -153,7 +153,16 @@ Bâtir des ponts<br />entre l'Afrique<br />et le monde.
 <h2 className="text-2xl sm:text-3xl lg:text-4xl uppercase text-noir">Qui sommes-nous ?</h2>
 <div className="mt-4 gold-line" />
 <p className="mt-5 text-noir/70 leading-relaxed text-sm sm:text-base">
-MDG GLOBAL HOLDINGS est un groupe diversifié à vocation internationale, opérant dans plusieurs secteurs stratégiques et développant des solutions adaptées aux besoins de ses clients et partenaires.
+MDG GLOBAL HOLDINGS est un groupe diversifié à vocation internationale, basé à Ouagadougou, au Burkina Faso.
+</p>
+<p className="mt-3 text-noir/70 leading-relaxed text-sm sm:text-base">
+Le groupe développe des activités dans plusieurs secteurs, notamment le commerce international, l'import-export, la logistique et le transport international, le négoce, les véhicules et équipements, la mobilité internationale, l'agriculture et l'élevage, ainsi que l'hôtellerie et la restauration.
+</p>
+<p className="mt-3 text-noir/70 leading-relaxed text-sm sm:text-base">
+Notre vocation est de créer des connexions fiables entre les marchés africains et les opportunités internationales, en nous appuyant sur un réseau de partenaires et de fournisseurs à travers différents marchés.
+</p>
+<p className="mt-3 text-noir/70 leading-relaxed text-sm sm:text-base">
+Nous accompagnons nos clients et partenaires dans leurs projets en proposant des solutions adaptées, un suivi rigoureux et un service fondé sur la fiabilité, la qualité et la transparence.
 </p>
 <Link to="/a-propos"
 className="mt-6 inline-flex items-center gap-2 rounded-md border-2 border-noir/20 px-5 py-3 font-mono text-[10px] uppercase tracking-[0.18em] text-noir smooth-transition hover:border-or-prestige hover:text-or-prestige">

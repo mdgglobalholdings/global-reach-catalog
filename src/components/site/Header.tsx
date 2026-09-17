@@ -26,7 +26,7 @@ className="size-10 sm:size-12 rounded-full object-cover ring-2 ring-or-prestige/
 <div className="hidden sm:block leading-none min-w-0">
 <div
 className="font-display text-sm truncate"
-style={{ color: "#D4A017", letterSpacing: "0.22em" }}
+style={{ color: "#D4A017", letterSpacing: "0.05em" }}
 >MDG GLOBAL HOLDINGS</div>
 <div
 className="label-mono mt-1 font-bold italic"

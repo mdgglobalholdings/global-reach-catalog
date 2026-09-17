@@ -17,7 +17,7 @@ className="size-10 sm:size-12 rounded-full object-cover ring-2 ring-or-prestige/
 <div>
 <div
 className="font-display text-xs sm:text-sm"
-style={{ color: "#D4A017", letterSpacing: "0.22em" }}
+style={{ color: "#D4A017", letterSpacing: "0.05em" }}
 >MDG GLOBAL HOLDINGS</div>
 <div
 className="mt-0.5 font-bold italic"

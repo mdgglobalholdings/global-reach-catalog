@@ -56,13 +56,13 @@ className="absolute inset-0 size-full object-cover object-center" />
 <div className="relative w-full max-w-[1280px] mx-auto px-4 sm:px-6 py-20">
 <div className="w-full flex flex-col items-center text-center">
 
-{/* MDG GLOBAL HOLDINGS — centré, Montserrat Black 900, or métallique */}
+{/* MDG GLOBAL HOLDINGS — centré, une seule ligne, Montserrat Black 900, or métallique */}
 <h1
-className="uppercase leading-none"
+className="uppercase leading-none whitespace-nowrap"
 style={{
 fontFamily: "Montserrat, sans-serif",
 fontWeight: 900,
-fontSize: "clamp(2.4rem, 7.5vw, 6rem)",
+fontSize: "clamp(1.2rem, 5.5vw, 5rem)",
 background: "linear-gradient(135deg, #694A0C 0%, #BF9128 25%, #F2DE83 50%, #E8BD48 75%, #694A0C 100%)",
 WebkitBackgroundClip: "text",
 WebkitTextFillColor: "transparent",
@@ -179,7 +179,6 @@ Pourquoi choisir MDG GLOBAL HOLDINGS ?
 </h2>
 <div className="h-px flex-1 max-w-[60px]" style={{ background: "linear-gradient(90deg,#BF9128,transparent)" }} />
 </div>
-{/* 2 colonnes sur mobile, 4 sur desktop */}
 <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
 {WHY_ITEMS.map((item) => (
 <div key={item.title} className="flex items-start gap-3 sm:gap-4">
@@ -206,7 +205,6 @@ style={{ background: "linear-gradient(135deg,#694A0C 0%,#BF9128 40%,#F2DE83 70%,
 <p className="mt-2 text-white/45 text-xs sm:text-sm max-w-[65ch] mx-auto leading-relaxed px-2">
 MDG GLOBAL HOLDINGS développe un réseau de partenaires, fournisseurs et assureurs commerciaux pour vos projets internationaux.
 </p>
-{/* 2 colonnes sur mobile, 4 sur desktop */}
 <div className="mt-8 sm:mt-10 grid gap-3 sm:gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
 {ZONES.map((z) => (
 <div key={z.name}

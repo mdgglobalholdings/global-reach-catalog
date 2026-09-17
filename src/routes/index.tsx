@@ -77,7 +77,7 @@ L'excellence au-delà des frontières
 </p>
 
 {/* Sous-titre */}
-<p className="mt-5 text-white/90 leading-relaxed text-sm sm:text-base" style={{ maxWidth: "62ch" }}>
+<p className="mt-5 text-white/90 leading-relaxed text-sm sm:text-base" style={{ maxWidth: "100ch" }}>
 Un groupe diversifié à vocation internationale, opérant dans plusieurs secteurs stratégiques et développant des solutions adaptées aux besoins de ses clients et partenaires.
 </p>
 

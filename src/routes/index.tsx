@@ -32,14 +32,10 @@ const WHY_ITEMS = [
 ];
 
 const ZONES = [
-{ name: "Afrique", desc: "Marchés &
-opportunités", map: "/images/map-afrique.png" },
-{ name: "Asie", desc: "Sourcing &
-fournisseurs", map: "/images/map-asie.png" },
-{ name: "Europe", desc: "Partenariats &
-échanges", map: "/images/map-europe.jpg" },
-{ name: "Moyen-Orient", desc: "Commerce &
-développement", map: "/images/map-moyen-orient.png" },
+{ name: "Afrique", desc: "Marchés &\nopportunités", map: "/images/map-afrique.png" },
+{ name: "Asie", desc: "Sourcing &\nfournisseurs", map: "/images/map-asie.png" },
+{ name: "Europe", desc: "Partenariats &\néchanges", map: "/images/map-europe.jpg" },
+{ name: "Moyen-Orient", desc: "Commerce &\ndéveloppement", map: "/images/map-moyen-orient.png" },
 ];
 
 function Home() {

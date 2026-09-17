@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { CtaBand } from "@/components/site/CtaBand";
 import { COMPANY, VALUES } from "@/lib/company";
 
@@ -13,15 +13,12 @@ component: AboutPage,
 function AboutPage() {
 return (
 <main>
-{/* Hero */}
+{/* Hero bandeau */}
 <section className="relative overflow-hidden" style={{ backgroundColor: "#eeeee6" }}>
 <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-or-prestige to-transparent" />
 <div className="mx-auto max-w-[1280px] px-4 sm:px-6 py-12 sm:py-16">
-<p className="text-base sm:text-lg font-bold uppercase tracking-widest text-or-prestige">Qui sommes-nous</p>
-<h1 className="mt-2 text-lg sm:text-xl font-bold uppercase leading-snug text-noir max-w-[36ch]">{COMPANY.tagline}</h1>
-<p className="mt-4 max-w-[60ch] text-noir/65 leading-relaxed text-sm sm:text-base">
-MDG GLOBAL HOLDINGS est un groupe diversifié à vocation internationale, basé à {COMPANY.city}, {COMPANY.country}, connecté aux marchés africains, asiatiques, européens et du Moyen-Orient.
-</p>
+<p className="text-base sm:text-lg font-bold uppercase tracking-widest text-or-prestige">À propos</p>
+<h1 className="mt-2 text-lg sm:text-xl font-bold uppercase leading-snug text-noir max-w-[36ch]">MDG GLOBAL HOLDINGS</h1>
 </div>
 </section>
 

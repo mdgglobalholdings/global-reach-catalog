@@ -159,7 +159,7 @@ export function QuoteForm({ productId, productName, defaultSubject }: Props) {
           </div>
           <div>
             <label className="label-mono text-ink/50" htmlFor="subject">Objet</label>
-            <input id="subject" name="subject" defaultValue={defaultSubject} className={`mt-1 ${inputClass}`} />
+            <input id="subject" name="subject" placeholder="Ex: Demande de devis logistique..." className={`mt-1 ${inputClass}`} />
           </div>
         </div>
 

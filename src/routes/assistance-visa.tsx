@@ -70,8 +70,9 @@ function VisaPage() {
       </section>
 
       {/* Prestations + formulaire */}
-      <section className="py-20" style={{ backgroundColor: "#eeeee6" }}>
-        <div className="mx-auto max-w-[1280px] grid gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_1.2fr]">
+      <section className="py-20 overflow-hidden" style={{ backgroundColor: "#eeeee6" }}>
+        <div className="mx-auto max-w-[1280px] px-4 sm:px-6">
+        <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr]">
           <div>
             <p className="text-base sm:text-lg font-bold uppercase tracking-widest text-or-prestige">Nos prestations</p>
             <h2 className="mt-4 text-xl sm:text-2xl lg:text-3xl font-bold uppercase text-noir">Ce que nous prenons en charge</h2>
@@ -89,6 +90,7 @@ function VisaPage() {
             </p>
           </div>
           <QuoteForm defaultSubject="Assistance visa & mobilité" />
+        </div>
         </div>
       </section>
 

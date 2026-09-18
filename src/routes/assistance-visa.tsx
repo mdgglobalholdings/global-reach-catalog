@@ -57,7 +57,7 @@ function VisaPage() {
         <div className="mx-auto max-w-[1280px] px-4 sm:px-6">
           <p className="text-base sm:text-lg font-bold uppercase tracking-widest text-or-prestige">Notre processus</p>
           <h2 className="mt-4 text-xl sm:text-2xl lg:text-3xl font-bold uppercase text-noir">Quatre étapes</h2>
-          <div className="mt-10 grid gap-4 grid-cols-2 md:grid-cols-4">
+          <div className="mt-10 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
             {STEPS.map((s) => (
               <div key={s.n} className="rounded-xl bg-white border border-or-prestige/20 p-6 smooth-transition hover:border-or-prestige/50 hover:shadow-md">
                 <div className="text-gold font-display text-3xl">{s.n}</div>
@@ -71,7 +71,7 @@ function VisaPage() {
 
       {/* Prestations + formulaire */}
       <section className="py-20" style={{ backgroundColor: "#eeeee6" }}>
-        <div className="mx-auto max-w-[1280px] grid gap-10 px-5 lg:grid-cols-[1fr_1.2fr]">
+        <div className="mx-auto max-w-[1280px] grid gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_1.2fr]">
           <div>
             <p className="text-base sm:text-lg font-bold uppercase tracking-widest text-or-prestige">Nos prestations</p>
             <h2 className="mt-4 text-xl sm:text-2xl lg:text-3xl font-bold uppercase text-noir">Ce que nous prenons en charge</h2>

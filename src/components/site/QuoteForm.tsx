@@ -118,7 +118,7 @@ export function QuoteForm({ productId, productName, defaultSubject }: Props) {
           </div>
         ) : null}
 
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-2">
           <div>
             <label className="label-mono text-ink/50" htmlFor="full_name">
               Nom complet *

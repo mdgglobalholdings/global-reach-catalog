@@ -36,12 +36,12 @@ function ContactPage() {
         </div>
       </section>
 
-      <section className="py-16" style={{ backgroundColor: "#f5f5ee" }}>
+      <section className="py-16 overflow-hidden" style={{ backgroundColor: "#f5f5ee" }}>
         <div className="mx-auto max-w-[1280px] px-4 sm:px-6">
-          <div className="grid gap-10 lg:grid-cols-[1fr_1.4fr]">
+          <div className="grid gap-10 lg:grid-cols-[1fr_1.4fr] min-w-0">
 
             {/* Coordonnées */}
-            <div>
+            <div className="min-w-0">
               <div className="gold-line" />
               <h2 className="mt-6 text-2xl uppercase">Nos coordonnées</h2>
               <p className="mt-3 text-sm text-noir/65">
@@ -102,7 +102,7 @@ function ContactPage() {
             </div>
 
             {/* Formulaire de devis */}
-            <div>
+            <div className="min-w-0 overflow-hidden">
               <div className="gold-line" />
               <h2 className="mt-6 text-2xl uppercase">Demande de devis</h2>
               <p className="mt-2 text-sm text-noir/65">

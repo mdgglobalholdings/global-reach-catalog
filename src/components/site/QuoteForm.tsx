@@ -109,9 +109,9 @@ export function QuoteForm({ productId, productName, defaultSubject }: Props) {
   }
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 w-full min-w-0">
       {/* Formulaire Formspree */}
-      <form onSubmit={onSubmit} className="grid gap-4 rounded-xl bg-white border border-or-prestige/20 p-5 shadow-sm">
+      <form onSubmit={onSubmit} className="grid gap-4 rounded-xl bg-white border border-or-prestige/20 p-5 shadow-sm w-full overflow-hidden">
         {productName ? (
           <div className="label-mono rounded-md bg-muted px-3 py-2 text-ink/60">
             Produit concerné : {productName}

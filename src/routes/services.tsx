@@ -66,7 +66,7 @@ function ServicesPage() {
         <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-or-prestige to-transparent" />
         <div className="mx-auto max-w-[1280px] px-4 sm:px-6 py-12 sm:py-16">
           <p className="text-base sm:text-lg font-bold uppercase tracking-widest text-or-prestige">Logistique & Services</p>
-          <h1 className="mt-2 text-lg sm:text-xl font-bold uppercase leading-none text-noir whitespace-nowrap overflow-hidden text-ellipsis">
+          <h1 className="mt-2 text-lg sm:text-xl font-bold uppercase leading-snug text-noir">
             De la commande à la livraison
           </h1>
           <p className="mt-4 max-w-[58ch] text-noir/65 leading-relaxed text-sm sm:text-base">

@@ -32,35 +32,44 @@ export function Header() {
   const frLabel   = lang === "fr" ? "Français" : "French";
   const enLabel   = lang === "fr" ? "Anglais"  : "English";
 
+  const [langOpen, setLangOpen] = useState(false);
+
   const LangSwitcher = () => (
-    <div className="relative group">
+    <div className="relative">
       {/* Bouton principal */}
       <button
         type="button"
+        onClick={() => setLangOpen(v => !v)}
         className="flex items-center gap-1.5 rounded-md border border-or-prestige/30 px-3 py-1.5 font-mono text-[10px] uppercase tracking-wide text-white/80 smooth-transition hover:border-or-prestige/60 hover:text-or-lumiere"
       >
         {langLabel}
-        <svg className="size-3 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+        <svg className={`size-3 opacity-60 smooth-transition ${langOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
         </svg>
       </button>
+      {/* Overlay transparent pour fermer */}
+      {langOpen && (
+        <div className="fixed inset-0 z-40" onClick={() => setLangOpen(false)} />
+      )}
       {/* Liste déroulante */}
-      <div className="absolute right-0 top-full mt-1 hidden group-hover:flex flex-col rounded-md border border-or-prestige/20 shadow-lg overflow-hidden z-50" style={{ backgroundColor: "#021807", minWidth: "110px" }}>
-        <button
-          type="button"
-          onClick={() => switchLang("fr")}
-          className={`px-4 py-2.5 text-left font-mono text-[10px] uppercase tracking-wide smooth-transition hover:bg-or-prestige/10 ${lang === "fr" ? "text-or-lumiere font-bold" : "text-white/70"}`}
-        >
-          {frLabel}
-        </button>
-        <button
-          type="button"
-          onClick={() => switchLang("en")}
-          className={`px-4 py-2.5 text-left font-mono text-[10px] uppercase tracking-wide smooth-transition hover:bg-or-prestige/10 ${lang === "en" ? "text-or-lumiere font-bold" : "text-white/70"}`}
-        >
-          {enLabel}
-        </button>
-      </div>
+      {langOpen && (
+        <div className="absolute right-0 top-full mt-1 flex flex-col rounded-md border border-or-prestige/20 shadow-xl overflow-hidden z-50" style={{ backgroundColor: "#021807", minWidth: "120px" }}>
+          <button
+            type="button"
+            onClick={() => { switchLang("fr"); setLangOpen(false); }}
+            className={`px-4 py-3 text-left font-mono text-[10px] uppercase tracking-wide smooth-transition hover:bg-or-prestige/10 ${lang === "fr" ? "text-or-lumiere font-bold" : "text-white/70"}`}
+          >
+            {frLabel}
+          </button>
+          <button
+            type="button"
+            onClick={() => { switchLang("en"); setLangOpen(false); }}
+            className={`px-4 py-3 text-left font-mono text-[10px] uppercase tracking-wide smooth-transition hover:bg-or-prestige/10 ${lang === "en" ? "text-or-lumiere font-bold" : "text-white/70"}`}
+          >
+            {enLabel}
+          </button>
+        </div>
+      )}
     </div>
   );
 

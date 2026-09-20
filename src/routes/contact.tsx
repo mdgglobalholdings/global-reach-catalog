@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { QuoteForm } from "@/components/site/QuoteForm";
 import { COMPANY, telLink, whatsappLink } from "@/lib/company";
+import { useLang } from "@/lib/i18n/index";
 
 const TITLE = "Contact & Devis — MDG GLOBAL HOLDINGS | Réponse sous 24h";
 const DESCRIPTION =
@@ -19,6 +20,8 @@ export const Route = createFileRoute("/contact")({
 });
 
 function ContactPage() {
+  const { lang, t } = useLang();
+  const c = t.contact;
   return (
     <main>
 
@@ -109,7 +112,7 @@ function ContactPage() {
                 Décrivez votre besoin. Notre équipe prépare une offre personnalisée.
               </p>
               <div className="mt-6">
-                <QuoteForm defaultSubject="Demande de devis — MDG GLOBAL HOLDINGS" />
+                <QuoteForm defaultSubject={c.formSubject} />
               </div>
             </div>
           </div>
